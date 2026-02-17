@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>تنظيف نخيل - تقليم وتشذيب وإزالة السعف الجاف في الرياض | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="خدمات تنظيف وتقليم النخيل: إزالة السعف الجاف، تشذيب الكرب، تنظيف الجذع، تسليح النخيل، مكافحة الآفات. فرق متخصصة في الرياض بأسعار منافسة.">
+    <meta name="keywords" content="تنظيف نخيل, تقليم نخيل, تشذيب نخيل, تسليح نخيل, إزالة السعف الجاف, تنظيف جذع النخيل, مكافحة سوسة النخيل, صيانة نخيل, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات تنظيف النخيل */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* مميزات الخدمة */
+        .features-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border-right: 4px solid #f5c542;
+        }
+        .feature-item i {
+            color: #f5c542;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-broom"></i> تنظيف نخيل</h1>
+            <p>تقليم وتشذيب وإزالة السعف الجاف - تسليح وتنظيف الجذع</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور تنظيف النخيل مع كلمات مفتاحية (20 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور تنظيف وتقليم النخيل مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7JfKRnxW/IMG-20260212-WA0004olive.jpg" alt="تقليم نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل</span>
+                    <span class="keyword-badge">تشذيب نخيل</span>
+                    <span class="keyword-badge">إزالة السعف الجاف</span>
+                    <span class="keyword-badge">تهذيب النخيل</span>
+                    <span class="keyword-badge">تنظيف نخيل</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gq6HB9y/image-N3.webp" alt="تسليح نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تسليح نخيل</span>
+                    <span class="keyword-badge">إزالة الكرب</span>
+                    <span class="keyword-badge">تنظيف الجذع</span>
+                    <span class="keyword-badge">صيانة النخيل</span>
+                    <span class="keyword-badge">عناية بالنخيل</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/v4Lh8Xm4/image-N4.webp" alt="تنظيف جذع نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تنظيف جذع النخيل</span>
+                    <span class="keyword-badge">إزالة الأوبار</span>
+                    <span class="keyword-badge">تعقيم الجذع</span>
+                    <span class="keyword-badge">مكافحة آفات</span>
+                    <span class="keyword-badge">وقاية نخيل</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/C3nN00tr/Whats-App-Image-2025-08-13-at-4-31-57-PM-2-3.webp" alt="مكافحة سوسة النخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مكافحة سوسة النخيل</span>
+                    <span class="keyword-badge">علاج سوسة النخيل</span>
+                    <span class="keyword-badge">حقن النخيل</span>
+                    <span class="keyword-badge">مبيدات سوسة</span>
+                    <span class="keyword-badge">حماية النخيل</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gzJGm35/Whats-App-Image-2025-08-13-at-4-31-58-PM-2.webp" alt="تقليم نخيل مدجول">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل مدجول</span>
+                    <span class="keyword-badge">عناية بنخيل مدجول</span>
+                    <span class="keyword-badge">تنظيف نخيل مدجول</span>
+                    <span class="keyword-badge">صيانة مدجول</span>
+                    <span class="keyword-badge">نخيل مدجول</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/twhTF9Wv/Whats-App-Image-2025-08-13-at-4-31-58-PM-1.webp" alt="تقليم نخيل برحي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل برحي</span>
+                    <span class="keyword-badge">عناية بنخيل برحي</span>
+                    <span class="keyword-badge">تنظيف نخيل برحي</span>
+                    <span class="keyword-badge">صيانة برحي</span>
+                    <span class="keyword-badge">نخيل برحي</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/ymDcXTYG/Whats-App-Image-2025-08-13-at-4-31-57-PM-4.webp" alt="تقليم نخيل خلاص">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل خلاص</span>
+                    <span class="keyword-badge">عناية بنخيل خلاص</span>
+                    <span class="keyword-badge">تنظيف نخيل خلاص</span>
+                    <span class="keyword-badge">صيانة خلاص</span>
+                    <span class="keyword-badge">نخيل خلاص</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N2Prfj38/Whats-App-Image-2025-08-13-at-4-31-57-PM-3-2.webp" alt="تقليم نخيل سكري">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل سكري</span>
+                    <span class="keyword-badge">عناية بنخيل سكري</span>
+                    <span class="keyword-badge">تنظيف نخيل سكري</span>
+                    <span class="keyword-badge">صيانة سكري</span>
+                    <span class="keyword-badge">نخيل سكري</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3my6vTRJ/Whats-App-Image-2025-08-13-at-4-31-58-PM-3-1.webp" alt="تقليم نخيل صقعي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل صقعي</span>
+                    <span class="keyword-badge">عناية بنخيل صقعي</span>
+                    <span class="keyword-badge">تنظيف نخيل صقعي</span>
+                    <span class="keyword-badge">صيانة صقعي</span>
+                    <span class="keyword-badge">نخيل صقعي</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DDNFCK2q/Whats-App-Image-2025-08-13-at-4-31-59-PM-1-1.webp" alt="تقليم نخل ملكي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخل ملكي</span>
+                    <span class="keyword-badge">عناية بنخل ملكي</span>
+                    <span class="keyword-badge">تنظيف نخل ملكي</span>
+                    <span class="keyword-badge">صيانة نخل ملكي</span>
+                    <span class="keyword-badge">نخل ملكي</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HfzNXF2L/Whats-App-Image-2025-08-13-at-4-31-58-PM.webp" alt="تقليم نخيل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل واشنطن</span>
+                    <span class="keyword-badge">عناية بنخيل واشنطن</span>
+                    <span class="keyword-badge">تنظيف نخيل واشنطن</span>
+                    <span class="keyword-badge">صيانة واشنطنيا</span>
+                    <span class="keyword-badge">نخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/B23fyn1c/Whats-App-Image-2025-08-13-at-4-31-59-PM-2.webp" alt="إزالة السعف الجاف">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">إزالة السعف الجاف</span>
+                    <span class="keyword-badge">قص السعف</span>
+                    <span class="keyword-badge">تنظيف النخلة</span>
+                    <span class="keyword-badge">تشكيل النخيل</span>
+                    <span class="keyword-badge">تهذيب الشكل</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nqs4RLT0/Whats-App-Image-2025-08-13-at-4-32-00-PM-2-1.webp" alt="تنظيف حول النخلة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تنظيف حول النخلة</span>
+                    <span class="keyword-badge">إزالة الحشائش</span>
+                    <span class="keyword-badge">ترتيب المزرعة</span>
+                    <span class="keyword-badge">نظافة المزرعة</span>
+                    <span class="keyword-badge">صيانة عامة</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/RG67v3cp/Whats-App-Image-2025-08-13-at-4-32-00-PM-1.webp" alt="مكافحة آفات النخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مكافحة آفات النخيل</span>
+                    <span class="keyword-badge">رش المبيدات</span>
+                    <span class="keyword-badge">علاج الحشرات</span>
+                    <span class="keyword-badge">وقاية النخيل</span>
+                    <span class="keyword-badge">صحة النخيل</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DD247X87/Whats-App-Image-2025-08-13-at-4-31-59-PM-4.webp" alt="تعقيم جذوع النخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تعقيم جذوع النخيل</span>
+                    <span class="keyword-badge">دهان الجذوع</span>
+                    <span class="keyword-badge">حماية من الآفات</span>
+                    <span class="keyword-badge">عزل الجذع</span>
+                    <span class="keyword-badge">طلاء واقي</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3mY2DTSj/Whats-App-Image-2025-08-13-at-4-31-59-PM-3-1.webp" alt="تسليح الكرب">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تسليح الكرب</span>
+                    <span class="keyword-badge">إزالة الكرب الجاف</span>
+                    <span class="keyword-badge">تنظيف الكرب</span>
+                    <span class="keyword-badge">تهذيب الكرب</span>
+                    <span class="keyword-badge">قص الكرب</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7t49sDqC/Whats-App-Image-2025-08-13-at-4-32-02-PM-3.webp" alt="فرق تنظيف نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">فرق تنظيف نخيل</span>
+                    <span class="keyword-badge">عمال نظافة نخيل</span>
+                    <span class="keyword-badge">فنيو تقليم</span>
+                    <span class="keyword-badge">متخصصون في النخيل</span>
+                    <span class="keyword-badge">عمال مدربون</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fYnBQ2LV/Whats-App-Image-2025-08-13-at-4-32-10-PM-3-1.webp" alt="معدات تنظيف نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">معدات تنظيف نخيل</span>
+                    <span class="keyword-badge">أدوات تقليم</span>
+                    <span class="keyword-badge">سلالم ومعدات</span>
+                    <span class="keyword-badge">مناشير خاصة</span>
+                    <span class="keyword-badge">معدات سلامة</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hJcBWhV9/4630a6bc0fedcb08241db32604cbf7b0.webp" alt="خدمات تنظيف دورية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">خدمات تنظيف دورية</span>
+                    <span class="keyword-badge">عقود صيانة نخيل</span>
+                    <span class="keyword-badge">زيارات منتظمة</span>
+                    <span class="keyword-badge">صيانة شهرية</span>
+                    <span class="keyword-badge">صيانة سنوية</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/1Yb0BYkq/Whats-App-Image-2025-08-13-at-4-32-06-PM-1-1.webp" alt="نتائج تنظيف ممتازة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نتائج تنظيف ممتازة</span>
+                    <span class="keyword-badge">نخيل بعد التنظيف</span>
+                    <span class="keyword-badge">شكل جمالي</span>
+                    <span class="keyword-badge">نخيل صحي</span>
+                    <span class="keyword-badge">إنتاجية أفضل</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات تنظيف النخيل -->
+        <h2><i class="fas fa-list-check"></i> خدمات تنظيف وتقليم النخيل</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>تقليم وتشذيب</h3>
+                <p>تقليم السعف الجاف والكرب العلوي لتجديد النمو وتحسين المظهر والإنتاجية.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-brush"></i>
+                <h3>تنظيف الجذع</h3>
+                <p>إزالة الأوبار والبقايا العالقة في جذع النخلة لتعقيمها وحمايتها من الآفات.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>تسليح النخيل</h3>
+                <p>إزالة الكرب الجاف والمتشقق لتسهيل عملية التسلق للخدمات الأخرى.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h3>مكافحة الآفات</h3>
+                <p>رش وتعقيم النخيل لمكافحة سوسة النخيل والحشرات الضارة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>عقود صيانة دورية</h3>
+                <p>برامج صيانة منتظمة (شهرية، ربع سنوية، سنوية) حسب احتياج مزرعتك.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-check-double"></i>
+                <h3>تنظيف شامل</h3>
+                <p>تنظيف شامل للنخلة من السعف والكرب والجذع مع إزالة المخلفات حولها.</p>
+            </div>
+        </div>
+
+        <!-- مميزات خدمة التنظيف -->
+        <h2><i class="fas fa-star"></i> لماذا تختار خدماتنا لتنظيف النخيل؟</h2>
+        <div class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>فريق متخصص</h4>
+                    <p>عمال مدربون على أعمال تسلق النخيل والتعامل مع المعدات بأمان.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>معدات آمنة</h4>
+                    <p>نستخدم معدات سلامة حديثة لحماية العمال والنخيل أثناء العمل.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>خدمة سريعة</h4>
+                    <p>ننهي أعمال التنظيف في الوقت المحدد دون تأخير.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>خبرة طويلة</h4>
+                    <p>أكثر من 15 عاماً في مجال العناية بالنخيل في السعودية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-percent"></i>
+                    <h4>أسعار منافسة</h4>
+                    <p>نقدم أفضل الأسعار مع خصومات على العقود الدورية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-recycle"></i>
+                    <h4>تخلص من المخلفات</h4>
+                    <p>نقوم بجمع وتحميل جميع مخلفات التنظيف وإزالتها من الموقع.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 250 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة لتنظيف وتقليم النخيل</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 250 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">تنظيف نخيل</span>
+                <span class="keyword">تقليم نخيل</span>
+                <span class="keyword">تشذيب نخيل</span>
+                <span class="keyword">تسليح نخيل</span>
+                <span class="keyword">إزالة السعف الجاف</span>
+                <span class="keyword">تنظيف جذع النخيل</span>
+                <span class="keyword">إزالة الأوبار</span>
+                <span class="keyword">تعقيم النخيل</span>
+                <span class="keyword">مكافحة سوسة النخيل</span>
+                <span class="keyword">صيانة نخيل</span>
+                <span class="keyword">عناية بالنخيل</span>
+                <span class="keyword">خدمات النخيل</span>
+                <span class="keyword">تقليم فسائل النخيل</span>
+                <span class="keyword">تنظيف مزارع النخيل</span>
+                <span class="keyword">عقود صيانة نخيل</span>
+                <span class="keyword">عمال تقليم نخيل</span>
+                <span class="keyword">فنيو نخيل</span>
+                <span class="keyword">متخصصون في النخيل</span>
+                <span class="keyword">تنظيف نخيل الرياض</span>
+                <span class="keyword">تقليم نخيل الرياض</span>
+                <span class="keyword">أفضل شركة تنظيف نخيل</span>
+                <span class="keyword">أسعار تنظيف النخيل</span>
+                <span class="keyword">تكلفة تقليم النخيل</span>
+                <span class="keyword">سعر تنظيف النخلة</span>
+                <span class="keyword">كم تكلفة تنظيف النخيل</span>
+                <span class="keyword">تنظيف نخيل مدجول</span>
+                <span class="keyword">تنظيف نخيل برحي</span>
+                <span class="keyword">تنظيف نخيل خلاص</span>
+                <span class="keyword">تنظيف نخيل سكري</span>
+                <span class="keyword">تنظيف نخيل صقعي</span>
+                <span class="keyword">تنظيف نخل ملكي</span>
+                <span class="keyword">تنظيف نخيل واشنطن</span>
+                <span class="keyword">تنظيف نخيل مثمر</span>
+                <span class="keyword">تنظيف نخيل زينة</span>
+                <span class="keyword">تقليم نخيل مدجول</span>
+                <span class="keyword">تقليم نخيل برحي</span>
+                <span class="keyword">تقليم نخيل خلاص</span>
+                <span class="keyword">تقليم نخيل سكري</span>
+                <span class="keyword">تقليم نخيل صقعي</span>
+                <span class="keyword">تقليم نخل ملكي</span>
+                <span class="keyword">تقليم نخيل واشنطن</span>
+                <span class="keyword">تسليح نخيل مدجول</span>
+                <span class="keyword">تسليح نخيل برحي</span>
+                <span class="keyword">تسليح نخيل خلاص</span>
+                <span class="keyword">إزالة الكرب</span>
+                <span class="keyword">قص الكرب</span>
+                <span class="keyword">تهذيب الكرب</span>
+                <span class="keyword">إزالة السعف</span>
+                <span class="keyword">قص السعف</span>
+                <span class="keyword">تهذيب السعف</span>
+                <span class="keyword">تشكيل النخيل</span>
+                <span class="keyword">تهذيب شكل النخلة</span>
+                <span class="keyword">تحسين مظهر النخيل</span>
+                <span class="keyword">صحة النخيل</span>
+                <span class="keyword">وقاية النخيل</span>
+                <span class="keyword">حماية النخيل</span>
+                <span class="keyword">علاج أمراض النخيل</span>
+                <span class="keyword">مكافحة آفات النخيل</span>
+                <span class="keyword">رش النخيل</span>
+                <span class="keyword">تعقيم جذوع النخيل</span>
+                <span class="keyword">دهان جذوع النخيل</span>
+                <span class="keyword">عزل جذع النخلة</span>
+                <span class="keyword">طلاء واقي للنخيل</span>
+                <span class="keyword">حقن النخيل</span>
+                <span class="keyword">مبيدات النخيل</span>
+                <span class="keyword">أسمدة النخيل</span>
+                <span class="keyword">تغذية النخيل</span>
+                <span class="keyword">ري النخيل</span>
+                <span class="keyword">خدمات شاملة للنخيل</span>
+                <span class="keyword">صيانة مزارع النخيل</span>
+                <span class="keyword">تنظيف المزارع</span>
+                <span class="keyword">ترتيب المزرعة</span>
+                <span class="keyword">نظافة المزرعة</span>
+                <span class="keyword">إزالة الحشائش حول النخيل</span>
+                <span class="keyword">تنظيف محيط النخلة</span>
+                <span class="keyword">جمع مخلفات النخيل</span>
+                <span class="keyword">تحميل مخلفات التنظيف</span>
+                <span class="keyword">التخلص من سعف النخيل</span>
+                <span class="keyword">إعادة تدوير مخلفات النخيل</span>
+                <span class="keyword">عمال مدربون على تسلق النخيل</span>
+                <span class="keyword">متسلقو نخيل</span>
+                <span class="keyword">فني تسلق نخيل</span>
+                <span class="keyword">معدات تسلق النخيل</span>
+                <span class="keyword">أدوات تقليم النخيل</span>
+                <span class="keyword">مناشير تقليم</span>
+                <span class="keyword">مقصات تقليم</span>
+                <span class="keyword">سلالم نخيل</span>
+                <span class="keyword">معدات سلامة</span>
+                <span class="keyword">خدمات تنظيف نخيل 24 ساعة</span>
+                <span class="keyword">طوارئ تنظيف نخيل</span>
+                <span class="keyword">تنظيف نخيل عاجل</span>
+                <span class="keyword">تنظيف نخيل بعد العواصف</span>
+                <span class="keyword">إصلاح أضرار النخيل</span>
+                <span class="keyword">ترميم نخيل</span>
+                <span class="keyword">إنقاذ نخيل</span>
+                <span class="keyword">إحياء نخيل</span>
+                <span class="keyword">تنظيف نخيل قبل التلقيح</span>
+                <span class="keyword">تنظيف نخيل بعد التلقيح</span>
+                <span class="keyword">تنظيف نخيل قبل القطاف</span>
+                <span class="keyword">تنظيف نخيل بعد القطاف</span>
+                <span class="keyword">أفضل وقت لتنظيف النخيل</span>
+                <span class="keyword">موعد تقليم النخيل</span>
+                <span class="keyword">كم مرة ينظف النخيل</span>
+                <span class="keyword">دورية تنظيف النخيل</span>
+                <span class="keyword">تنظيف نخيل في الشتاء</span>
+                <span class="keyword">تنظيف نخيل في الصيف</span>
+                <span class="keyword">تنظيف نخيل في الربيع</span>
+                <span class="keyword">تنظيف نخيل في الخريف</span>
+                <span class="keyword">تنظيف نخيل قبل موسم الإثمار</span>
+                <span class="keyword">تنظيف نخيل بعد موسم الإثمار</span>
+                <span class="keyword">تنظيف نخيل صغير</span>
+                <span class="keyword">تنظيف نخيل كبير</span>
+                <span class="keyword">تنظيف نخيل طويل</span>
+                <span class="keyword">تنظيف نخيل قصير</span>
+                <span class="keyword">تنظيف نخيل في فلل</span>
+                <span class="keyword">تنظيف نخيل في قصور</span>
+                <span class="keyword">تنظيف نخيل في مزارع</span>
+                <span class="keyword">تنظيف نخيل في حدائق</span>
+                <span class="keyword">تنظيف نخيل في شوارع</span>
+                <span class="keyword">تنظيف نخيل في ميادين</span>
+                <span class="keyword">تنظيف نخيل في منتزهات</span>
+                <span class="keyword">تنظيف نخيل في استراحات</span>
+                <span class="keyword">تنظيف نخيل في فنادق</span>
+                <span class="keyword">تنظيف نخيل في شركات</span>
+                <span class="keyword">تنظيف نخيل في مؤسسات</span>
+                <span class="keyword">تنظيف نخيل في مدارس</span>
+                <span class="keyword">تنظيف نخيل في جامعات</span>
+                <span class="keyword">تنظيف نخيل في مساجد</span>
+                <span class="keyword">تنظيف نخيل في مستشفيات</span>
+                <span class="keyword">شركات تنظيف نخيل في الرياض</span>
+                <span class="keyword">مقاول تنظيف نخيل</span>
+                <span class="keyword">أفضل مقاول تنظيف نخيل</span>
+                <span class="keyword">أرخص شركة تنظيف نخيل</span>
+                <span class="keyword">تنظيف نخيل رخيص</span>
+                <span class="keyword">تنظيف نخيل بأسعار مخفضة</span>
+                <span class="keyword">عروض تنظيف نخيل</span>
+                <span class="keyword">خصومات على تنظيف نخيل</span>
+                <span class="keyword">تخفيضات تنظيف نخيل</span>
+                <span class="keyword">تنظيف نخيل بالرياض</span>
+                <span class="keyword">تنظيف نخيل شمال الرياض</span>
+                <span class="keyword">تنظيف نخيل جنوب الرياض</span>
+                <span class="keyword">تنظيف نخيل شرق الرياض</span>
+                <span class="keyword">تنظيف نخيل غرب الرياض</span>
+                <span class="keyword">تنظيف نخيل وسط الرياض</span>
+                <span class="keyword">تنظيف نخيل في جميع أحياء الرياض</span>
+                <span class="keyword">خدمات نخيل على مدار الساعة</span>
+                <span class="keyword">اتصل بنا لتنظيف النخيل</span>
+                <span class="keyword">طلب خدمة تنظيف نخيل</span>
+                <span class="keyword">استعلام عن تنظيف نخيل</span>
+                <span class="keyword">احجز موعد تنظيف نخيل</span>
+                <span class="keyword">معاينة مجانية لتنظيف نخيل</span>
+                <span class="keyword">تقييم حالة النخيل</span>
+                <span class="keyword">استشارات عناية بالنخيل</span>
+                <span class="keyword">نصائح لتنظيف النخيل</span>
+                <span class="keyword">إرشادات تقليم النخيل</span>
+                <span class="keyword">دليل تنظيف النخيل</span>
+                <span class="keyword">أهمية تنظيف النخيل</span>
+                <span class="keyword">فوائد تقليم النخيل</span>
+                <span class="keyword">تأثير التنظيف على إنتاج النخيل</span>
+                <span class="keyword">علاقة التنظيف بجودة التمور</span>
+                <span class="keyword">تنظيف النخيل والآفات</span>
+                <span class="keyword">تنظيف النخيل والأمراض</span>
+                <span class="keyword">تنظيف النخيل والإنتاجية</span>
+                <span class="keyword">تنظيف النخيل والشكل الجمالي</span>
+                <span class="keyword">تنظيف النخيل والسلامة</span>
+                <span class="keyword">تنظيف النخيل والوقاية من الحرائق</span>
+                <span class="keyword">إزالة السعف الجاف للوقاية من الحرائق</span>
+                <span class="keyword">تنظيف النخيل في المنشآت الحكومية</span>
+                <span class="keyword">تنظيف النخيل في المشاريع الكبرى</span>
+                <span class="keyword">عقود صيانة نخيل للشركات</span>
+                <span class="keyword">عقود صيانة نخيل للفلل</span>
+                <span class="keyword">عقود صيانة نخيل للمزارع</span>
+                <span class="keyword">خدمات نخيل للقطاع الخاص</span>
+                <span class="keyword">خدمات نخيل للقطاع العام</span>
+                <span class="keyword">خدمات نخيل للمؤسسات</span>
+                <span class="keyword">خدمات نخيل للفنادق</span>
+                <span class="keyword">خدمات نخيل للمنتجعات</span>
+                <span class="keyword">خدمات نخيل للمطاعم</span>
+                <span class="keyword">خدمات نخيل للكافيهات</span>
+                <span class="keyword">خدمات نخيل للمولات</span>
+                <span class="keyword">خدمات نخيل للأسواق</span>
+                <span class="keyword">خدمات نخيل للمراكز التجارية</span>
+                <span class="keyword">خدمات نخيل للمستشفيات</span>
+                <span class="keyword">خدمات نخيل للمدارس</span>
+                <span class="keyword">خدمات نخيل للجامعات</span>
+                <span class="keyword">خدمات نخيل للمساجد</span>
+                <span class="keyword">خدمات نخيل للحدائق العامة</span>
+                <span class="keyword">خدمات نخيل للمنتزهات</span>
+                <span class="keyword">خدمات نخيل للطرق</span>
+                <span class="keyword">خدمات نخيل للجسور</span>
+                <span class="keyword">خدمات نخيل للميادين العامة</span>
+                <span class="keyword">خدمات نخيل للمدن الجديدة</span>
+                <span class="keyword">خدمات نخيل للمجمعات السكنية</span>
+                <span class="keyword">خدمات نخيل للفلل الخاصة</span>
+                <span class="keyword">خدمات نخيل للقصور الفخمة</span>
+                <span class="keyword">خدمات نخيل للاستراحات الخاصة</span>
+                <span class="keyword">خدمات نخيل للمخيمات</span>
+                <span class="keyword">خدمات نخيل للبر</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-broom"></i> تنظيف نخيل - تقليم - تسليح - صيانة دورية</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

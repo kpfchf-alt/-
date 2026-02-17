@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>مقاول مزارع - تنفيذ وتصميم المشاريع الزراعية في الرياض | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="مقاول مزارع متخصص في تنفيذ المشاريع الزراعية: تسوية أراضي، تصميم مزارع، شبكات ري، استصلاح تربة، توريد وزراعة نخيل وزيتون. خبرة 15 عاماً في الرياض.">
+    <meta name="keywords" content="مقاول مزارع, مقاولات زراعية, تصميم مزارع, تنفيذ مزارع, تسوية أراضي, شبكات ري, استصلاح تربة, توريد نخيل, توريد زيتون, مشاريع زراعية, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات المقاولات الزراعية */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* مميزات المقاول */
+        .features-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border-right: 4px solid #f5c542;
+        }
+        .feature-item i {
+            color: #f5c542;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-tractor"></i> مقاول مزارع</h1>
+            <p>تنفيذ وتصميم المشاريع الزراعية - تسوية أراضي - شبكات ري - استصلاح تربة</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور مشاريع مقاولات مع كلمات مفتاحية (20 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور مشاريعنا مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7JfKRnxW/IMG-20260212-WA0004olive.jpg" alt="مشروع مزرعة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مقاول مزارع</span>
+                    <span class="keyword-badge">تنفيذ مزارع</span>
+                    <span class="keyword-badge">تسوية أراضي</span>
+                    <span class="keyword-badge">تصميم مزرعة</span>
+                    <span class="keyword-badge">مشاريع زراعية</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gq6HB9y/image-N3.webp" alt="تسوية أرض">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تسوية أراضي زراعية</span>
+                    <span class="keyword-badge">تمهيد أرض</span>
+                    <span class="keyword-badge">حرث تربة</span>
+                    <span class="keyword-badge">إعداد مزرعة</span>
+                    <span class="keyword-badge">تجهيز أرض للزراعة</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/v4Lh8Xm4/image-N4.webp" alt="شبكات ري">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبكات ري</span>
+                    <span class="keyword-badge">ري بالتنقيط</span>
+                    <span class="keyword-badge">ري بالرش</span>
+                    <span class="keyword-badge">أنظمة ري حديثة</span>
+                    <span class="keyword-badge">تركيب شبكات ري</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/C3nN00tr/Whats-App-Image-2025-08-13-at-4-31-57-PM-2-3.webp" alt="استصلاح تربة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">استصلاح أراضي</span>
+                    <span class="keyword-badge">تحسين تربة</span>
+                    <span class="keyword-badge">إضافة أسمدة</span>
+                    <span class="keyword-badge">معالجة تربة</span>
+                    <span class="keyword-badge">تأهيل أرض</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gzJGm35/Whats-App-Image-2025-08-13-at-4-31-58-PM-2.webp" alt="توريد نخيل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">توريد نخيل</span>
+                    <span class="keyword-badge">فسائل نخيل</span>
+                    <span class="keyword-badge">غرس نخيل</span>
+                    <span class="keyword-badge">نخيل للمزارع</span>
+                    <span class="keyword-badge">نخيل مثمر</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/twhTF9Wv/Whats-App-Image-2025-08-13-at-4-31-58-PM-1.webp" alt="توريد زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">توريد زيتون</span>
+                    <span class="keyword-badge">شتلات زيتون</span>
+                    <span class="keyword-badge">غرس زيتون</span>
+                    <span class="keyword-badge">أشجار زيتون</span>
+                    <span class="keyword-badge">زيتون للمزارع</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/ymDcXTYG/Whats-App-Image-2025-08-13-at-4-31-57-PM-4.webp" alt="بيوت محمية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">بيوت محمية</span>
+                    <span class="keyword-badge">صوب زراعية</span>
+                    <span class="keyword-badge">زراعة محمية</span>
+                    <span class="keyword-badge">تركيب بيوت محمية</span>
+                    <span class="keyword-badge">بيوت بلاستيكية</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N2Prfj38/Whats-App-Image-2025-08-13-at-4-31-57-PM-3-2.webp" alt="آلات زراعية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">آلات زراعية</span>
+                    <span class="keyword-badge">معدات زراعية</span>
+                    <span class="keyword-badge">جرارات</span>
+                    <span class="keyword-badge">حراثات</span>
+                    <span class="keyword-badge">مكائن زراعية</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3my6vTRJ/Whats-App-Image-2025-08-13-at-4-31-58-PM-3-1.webp" alt="تصميم مزارع">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تصميم مزارع</span>
+                    <span class="keyword-badge">تخطيط مزارع</span>
+                    <span class="keyword-badge">مهندس زراعي</span>
+                    <span class="keyword-badge">استشارات زراعية</span>
+                    <span class="keyword-badge">مخططات مزارع</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DDNFCK2q/Whats-App-Image-2025-08-13-at-4-31-59-PM-1-1.webp" alt="مشاريع كبيرة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مشاريع زراعية كبيرة</span>
+                    <span class="keyword-badge">مزارع نخيل</span>
+                    <span class="keyword-badge">مزارع زيتون</span>
+                    <span class="keyword-badge">مزارع فواكه</span>
+                    <span class="keyword-badge">مزارع خضروات</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HfzNXF2L/Whats-App-Image-2025-08-13-at-4-31-58-PM.webp" alt="تركيب شبوك">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تركيب شبوك</span>
+                    <span class="keyword-badge">شبوك مزارع</span>
+                    <span class="keyword-badge">شبوك حماية</span>
+                    <span class="keyword-badge">تسييج مزارع</span>
+                    <span class="keyword-badge">أسوار زراعية</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/B23fyn1c/Whats-App-Image-2025-08-13-at-4-31-59-PM-2.webp" alt="مظلات للمزارع">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات للمزارع</span>
+                    <span class="keyword-badge">مظلات سيارات</span>
+                    <span class="keyword-badge">مظلات معدات</span>
+                    <span class="keyword-badge">برجولات</span>
+                    <span class="keyword-badge">مظلات استراحات</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nqs4RLT0/Whats-App-Image-2025-08-13-at-4-32-00-PM-2-1.webp" alt="استصلاح أراضي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">استصلاح أراضي صحراوية</span>
+                    <span class="keyword-badge">زراعة في الصحراء</span>
+                    <span class="keyword-badge">تأهيل تربة رملية</span>
+                    <span class="keyword-badge">معالجة ملوحة</span>
+                    <span class="keyword-badge">إصلاح تربة</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/RG67v3cp/Whats-App-Image-2025-08-13-at-4-32-00-PM-1.webp" alt="توريد أشجار">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">توريد أشجار</span>
+                    <span class="keyword-badge">أشجار مثمرة</span>
+                    <span class="keyword-badge">أشجار ظل</span>
+                    <span class="keyword-badge">أشجار زينة</span>
+                    <span class="keyword-badge">شتلات متنوعة</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DD247X87/Whats-App-Image-2025-08-13-at-4-31-59-PM-4.webp" alt="مشروع متكامل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مشروع زراعي متكامل</span>
+                    <span class="keyword-badge">تطوير مزرعة</span>
+                    <span class="keyword-badge">إنشاء مزرعة</span>
+                    <span class="keyword-badge">تجهيز مزرعة</span>
+                    <span class="keyword-badge">بناء مزرعة</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3mY2DTSj/Whats-App-Image-2025-08-13-at-4-31-59-PM-3-1.webp" alt="حفر آبار">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">حفر آبار</span>
+                    <span class="keyword-badge">آبار ارتوازية</span>
+                    <span class="keyword-badge">مصادر مياه</span>
+                    <span class="keyword-badge">ري من الآبار</span>
+                    <span class="keyword-badge">تأمين مياه</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7t49sDqC/Whats-App-Image-2025-08-13-at-4-32-02-PM-3.webp" alt="خزانات مياه">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">خزانات مياه</span>
+                    <span class="keyword-badge">تخزين مياه</span>
+                    <span class="keyword-badge">خزانات أرضية</span>
+                    <span class="keyword-badge">خزانات علوية</span>
+                    <span class="keyword-badge">مستلزمات ري</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fYnBQ2LV/Whats-App-Image-2025-08-13-at-4-32-10-PM-3-1.webp" alt="مضخات مياه">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مضخات مياه</span>
+                    <span class="keyword-badge">مضخات ري</span>
+                    <span class="keyword-badge">مضخات غاطسة</span>
+                    <span class="keyword-badge">مضخات سطحية</span>
+                    <span class="keyword-badge">أنظمة ضخ</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hJcBWhV9/4630a6bc0fedcb08241db32604cbf7b0.webp" alt="محطات تسميد">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">محطات تسميد</span>
+                    <span class="keyword-badge">أسمدة زراعية</span>
+                    <span class="keyword-badge">تسميد آلي</span>
+                    <span class="keyword-badge">برامج تسميد</span>
+                    <span class="keyword-badge">مغذيات نباتية</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/1Yb0BYkq/Whats-App-Image-2025-08-13-at-4-32-06-PM-1-1.webp" alt="معدات حديثة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">معدات زراعية حديثة</span>
+                    <span class="keyword-badge">تكنولوجيا زراعية</span>
+                    <span class="keyword-badge">ميكنة زراعية</span>
+                    <span class="keyword-badge">أتمتة زراعية</span>
+                    <span class="keyword-badge">زراعة ذكية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات المقاولات الزراعية -->
+        <h2><i class="fas fa-list-check"></i> خدمات المقاولات الزراعية</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-mountain"></i>
+                <h3>تسوية وتجهيز الأراضي</h3>
+                <p>تسوية الأراضي وتمهيدها للزراعة باستخدام أحدث المعدات، وإزالة الأحجار والنباتات الضارة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-draw-polygon"></i>
+                <h3>تصميم المزارع</h3>
+                <p>تصميم وتخطيط المزارع حسب المساحة والغرض، مع مراعاة أفضل توزيع للمحاصيل والمرافق.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-water"></i>
+                <h3>شبكات الري</h3>
+                <p>تصميم وتركيب أنظمة الري الحديثة (تنقيط، رش، محوري) لتوفير المياه وزيادة الإنتاجية.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-flask"></i>
+                <h3>استصلاح التربة</h3>
+                <p>تحليل ومعالجة التربة، إضافة الأسمدة والمحسنات لتحسين خصوبتها وجعلها صالحة للزراعة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-seedling"></i>
+                <h3>توريد وزراعة النباتات</h3>
+                <p>توريد جميع أنواع النباتات (نخيل، زيتون، أشجار مثمرة، أشجار ظل) وزراعتها.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-home"></i>
+                <h3>تركيب بيوت محمية</h3>
+                <p>إنشاء بيوت محمية (صوب زراعية) بأنواعها المختلفة للزراعة المحمية.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-fence"></i>
+                <h3>تركيب شبوك</h3>
+                <p>تسييج المزارع بشبوك حماية وأسوار لمنع التعديات وحماية المحاصيل.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-umbrella"></i>
+                <h3>مظلات وبرجولات</h3>
+                <p>إنشاء مظلات وبرجولات للمعدات والمواقف ومناطق الاستراحة داخل المزرعة.</p>
+            </div>
+        </div>
+
+        <!-- مميزات التعاقد معنا -->
+        <h2><i class="fas fa-star"></i> لماذا تختارنا كمقاول لمزرعتك؟</h2>
+        <div class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-trophy"></i>
+                    <h4>خبرة 15 عاماً</h4>
+                    <p>فريقنا لديه خبرة طويلة في تنفيذ المشاريع الزراعية بأنواعها.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h4>فريق متخصص</h4>
+                    <p>مهندسون زراعيون وفنيون متخصصون في جميع مراحل العمل.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>التزام بالمواعيد</h4>
+                    <p>ننهي المشاريع في الوقت المحدد وفق أعلى معايير الجودة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>ضمان على الأعمال</h4>
+                    <p>نقدم ضمانات على جميع الأعمال المنفذة لضمان رضا العملاء.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tag"></i>
+                    <h4>أسعار تنافسية</h4>
+                    <p>نقدم أفضل الأسعار مع إمكانية تقسيط التكاليف حسب الاتفاق.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>استدامة بيئية</h4>
+                    <p>نستخدم تقنيات حديثة تراعي الحفاظ على البيئة والموارد.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 250 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة للمقاولات الزراعية</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 250 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">مقاول مزارع</span>
+                <span class="keyword">مقاولات زراعية</span>
+                <span class="keyword">تنفيذ مزارع</span>
+                <span class="keyword">تصميم مزارع</span>
+                <span class="keyword">تسوية أراضي</span>
+                <span class="keyword">شبكات ري</span>
+                <span class="keyword">استصلاح تربة</span>
+                <span class="keyword">توريد نخيل</span>
+                <span class="keyword">توريد زيتون</span>
+                <span class="keyword">بيوت محمية</span>
+                <span class="keyword">مشاريع زراعية</span>
+                <span class="keyword">مقاول زراعي</span>
+                <span class="keyword">مهندس زراعي</span>
+                <span class="keyword">استشارات زراعية</span>
+                <span class="keyword">تخطيط مزارع</span>
+                <span class="keyword">إنشاء مزارع</span>
+                <span class="keyword">تطوير مزارع</span>
+                <span class="keyword">تأهيل مزارع</span>
+                <span class="keyword">تجهيز مزارع</span>
+                <span class="keyword">بناء مزارع</span>
+                <span class="keyword">مزارع نخيل</span>
+                <span class="keyword">مزارع زيتون</span>
+                <span class="keyword">مزارع فواكه</span>
+                <span class="keyword">مزارع خضروات</span>
+                <span class="keyword">مزارع عضوية</span>
+                <span class="keyword">زراعة مستدامة</span>
+                <span class="keyword">زراعة ذكية</span>
+                <span class="keyword">تكنولوجيا زراعية</span>
+                <span class="keyword">ميكنة زراعية</span>
+                <span class="keyword">آلات زراعية</span>
+                <span class="keyword">معدات زراعية</span>
+                <span class="keyword">جرارات زراعية</span>
+                <span class="keyword">حراثات</span>
+                <span class="keyword">مكائن زراعية</span>
+                <span class="keyword">أنظمة ري</span>
+                <span class="keyword">ري بالتنقيط</span>
+                <span class="keyword">ري بالرش</span>
+                <span class="keyword">ري محوري</span>
+                <span class="keyword">ري بالغمر</span>
+                <span class="keyword">تركيب شبكات ري</span>
+                <span class="keyword">تصميم شبكات ري</span>
+                <span class="keyword">صيانة شبكات ري</span>
+                <span class="keyword">مضخات مياه</span>
+                <span class="keyword">خزانات مياه</span>
+                <span class="keyword">آبار ارتوازية</span>
+                <span class="keyword">حفر آبار</span>
+                <span class="keyword">مصادر مياه</span>
+                <span class="keyword">تأمين مياه</span>
+                <span class="keyword">استصلاح أراضي صحراوية</span>
+                <span class="keyword">زراعة في الصحراء</span>
+                <span class="keyword">تأهيل تربة رملية</span>
+                <span class="keyword">معالجة ملوحة التربة</span>
+                <span class="keyword">إصلاح تربة</span>
+                <span class="keyword">تحسين تربة</span>
+                <span class="keyword">إضافة أسمدة</span>
+                <span class="keyword">أسمدة عضوية</span>
+                <span class="keyword">أسمدة كيماوية</span>
+                <span class="keyword">محسنات تربة</span>
+                <span class="keyword">تسميد آلي</span>
+                <span class="keyword">برامج تسميد</span>
+                <span class="keyword">مغذيات نباتية</span>
+                <span class="keyword">محطات تسميد</span>
+                <span class="keyword">توريد أشجار</span>
+                <span class="keyword">أشجار مثمرة</span>
+                <span class="keyword">أشجار ظل</span>
+                <span class="keyword">أشجار زينة</span>
+                <span class="keyword">شتلات متنوعة</span>
+                <span class="keyword">غرس أشجار</span>
+                <span class="keyword">زراعة أشجار</span>
+                <span class="keyword">فسائل نخيل</span>
+                <span class="keyword">شتلات زيتون</span>
+                <span class="keyword">شتلات حمضيات</span>
+                <span class="keyword">شتلات عنب</span>
+                <span class="keyword">شتلات رمان</span>
+                <span class="keyword">شتلات تين</span>
+                <span class="keyword">بيوت محمية بلاستيكية</span>
+                <span class="keyword">بيوت محمية زجاجية</span>
+                <span class="keyword">صوب زراعية</span>
+                <span class="keyword">زراعة محمية</span>
+                <span class="keyword">تركيب بيوت محمية</span>
+                <span class="keyword">تصميم بيوت محمية</span>
+                <span class="keyword">مستلزمات بيوت محمية</span>
+                <span class="keyword">شبوك بيوت محمية</span>
+                <span class="keyword">مظلات للمزارع</span>
+                <span class="keyword">مظلات سيارات للمزارع</span>
+                <span class="keyword">مظلات معدات زراعية</span>
+                <span class="keyword">برجولات للمزارع</span>
+                <span class="keyword">مظلات استراحات مزرعة</span>
+                <span class="keyword">شبوك مزارع</span>
+                <span class="keyword">تركيب شبوك مزارع</span>
+                <span class="keyword">شبوك حماية مزارع</span>
+                <span class="keyword">أسوار زراعية</span>
+                <span class="keyword">تسييج مزارع</span>
+                <span class="keyword">بوابات مزارع</span>
+                <span class="keyword">مشاريع زراعية في الرياض</span>
+                <span class="keyword">مقاول مزارع في الرياض</span>
+                <span class="keyword">أفضل مقاول مزارع</span>
+                <span class="keyword">شركات مقاولات زراعية</span>
+                <span class="keyword">مقاولون زراعيون</span>
+                <span class="keyword">مقاول زراعي معتمد</span>
+                <span class="keyword">استشارات زراعية في الرياض</span>
+                <span class="keyword">مهندس زراعي في الرياض</span>
+                <span class="keyword">تصميم مزارع في الرياض</span>
+                <span class="keyword">تنفيذ مزارع في الرياض</span>
+                <span class="keyword">تسوية أراضي في الرياض</span>
+                <span class="keyword">شبكات ري في الرياض</span>
+                <span class="keyword">استصلاح تربة في الرياض</span>
+                <span class="keyword">توريد نخيل في الرياض</span>
+                <span class="keyword">توريد زيتون في الرياض</span>
+                <span class="keyword">بيوت محمية في الرياض</span>
+                <span class="keyword">مشاريع زراعية كبرى</span>
+                <span class="keyword">مزارع نموذجية</span>
+                <span class="keyword">مزارع استثمارية</span>
+                <span class="keyword">مشاريع استصلاح أراضي</span>
+                <span class="keyword">مشاريع ري</span>
+                <span class="keyword">دراسة جدوى مزرعة</span>
+                <span class="keyword">تكلفة إنشاء مزرعة</span>
+                <span class="keyword">أسعار إنشاء مزارع</span>
+                <span class="keyword">تكلفة تسوية أرض</span>
+                <span class="keyword">تكلفة شبكات ري</span>
+                <span class="keyword">تكلفة بيوت محمية</span>
+                <span class="keyword">تمويل مشاريع زراعية</span>
+                <span class="keyword">قروض زراعية</span>
+                <span class="keyword">دعم زراعي</span>
+                <span class="keyword">منح زراعية</span>
+                <span class="keyword">مبادرات زراعية</span>
+                <span class="keyword">برامج تطوير زراعي</span>
+                <span class="keyword">مشاريع الأمن الغذائي</span>
+                <span class="keyword">زراعة مستدامة في السعودية</span>
+                <span class="keyword">تنمية زراعية</span>
+                <span class="keyword">تطوير قطاع الزراعة</span>
+                <span class="keyword">فرص استثمار زراعي</span>
+                <span class="keyword">استثمار في المزارع</span>
+                <span class="keyword">عوائد استثمار زراعي</span>
+                <span class="keyword">أرباح مشاريع زراعية</span>
+                <span class="keyword">جدوى اقتصادية للزراعة</span>
+                <span class="keyword">خطة عمل مزرعة</span>
+                <span class="keyword">تسويق منتجات زراعية</span>
+                <span class="keyword">تصدير منتجات زراعية</span>
+                <span class="keyword">بيع منتجات مزرعة</span>
+                <span class="keyword">أسواق زراعية</span>
+                <span class="keyword">مقاول تنسيق حدائق</span>
+                <span class="keyword">مقاول زراعي شامل</span>
+                <span class="keyword">مقاول إنشاء مزارع</span>
+                <span class="keyword">مقاول تطوير مزارع</span>
+                <span class="keyword">مقاول صيانة مزارع</span>
+                <span class="keyword">مقاول تشغيل مزارع</span>
+                <span class="keyword">إدارة مزارع</span>
+                <span class="keyword">تشغيل مزارع</span>
+                <span class="keyword">صيانة مزارع دورية</span>
+                <span class="keyword">عقود صيانة مزارع</span>
+                <span class="keyword">استشارات إدارة مزارع</span>
+                <span class="keyword">خبراء زراعة</span>
+                <span class="keyword">فنيو زراعة</span>
+                <span class="keyword">عمال زراعة</span>
+                <span class="keyword">تأجير عمال زراعيين</span>
+                <span class="keyword">استئجار معدات زراعية</span>
+                <span class="keyword">تأجير آلات زراعية</span>
+                <span class="keyword">بيع معدات زراعية</span>
+                <span class="keyword">صيانة معدات زراعية</span>
+                <span class="keyword">قطع غيار معدات زراعية</span>
+                <span class="keyword">مستلزمات زراعية</span>
+                <span class="keyword">بذور زراعية</span>
+                <span class="keyword">شتلات زراعية</span>
+                <span class="keyword">أسمدة زراعية</span>
+                <span class="keyword">مبيدات زراعية</span>
+                <span class="keyword">مكافحة آفات زراعية</span>
+                <span class="keyword">وقاية نباتات</span>
+                <span class="keyword">علاج أمراض نباتات</span>
+                <span class="keyword">إدارة آفات متكاملة</span>
+                <span class="keyword">مكافحة حشرات زراعية</span>
+                <span class="keyword">مكافحة أعشاب ضارة</span>
+                <span class="keyword">تقليم أشجار</span>
+                <span class="keyword">تشذيب أشجار</span>
+                <span class="keyword">تهذيب أشجار</span>
+                <span class="keyword">تلقيح أشجار</span>
+                <span class="keyword">تطعيم أشجار</span>
+                <span class="keyword">عناية بالنخيل</span>
+                <span class="keyword">عناية بالزيتون</span>
+                <span class="keyword">عناية بالأشجار المثمرة</span>
+                <span class="keyword">زراعة محاصيل حقلية</span>
+                <span class="keyword">زراعة خضروات</span>
+                <span class="keyword">زراعة فواكه</span>
+                <span class="keyword">زراعة حبوب</span>
+                <span class="keyword">زراعة أعلاف</span>
+                <span class="keyword">زراعة نباتات طبية</span>
+                <span class="keyword">زراعة نباتات عطرية</span>
+                <span class="keyword">زراعة ورد</span>
+                <span class="keyword">زراعة نباتات زينة</span>
+                <span class="keyword">تنسيق حدائق المزارع</span>
+                <span class="keyword">تصميم حدائق مزارع</span>
+                <span class="keyword">إنشاء حدائق مزارع</span>
+                <span class="keyword">ممرات داخل المزرعة</span>
+                <span class="keyword">طرق زراعية</span>
+                <span class="keyword">بنية تحتية للمزارع</span>
+                <span class="keyword">مستودعات زراعية</span>
+                <span class="keyword">مخازن منتجات زراعية</span>
+                <span class="keyword">مباني زراعية</span>
+                <span class="keyword">حظائر مواشي</span>
+                <span class="keyword">مزارع دواجن</span>
+                <span class="keyword">مزارع أغنام</span>
+                <span class="keyword">مزارع إبل</span>
+                <span class="keyword">مزارع خيول</span>
+                <span class="keyword">مشاريع زراعية متكاملة</span>
+                <span class="keyword">مزارع سياحية</span>
+                <span class="keyword">مزارع ترفيهية</span>
+                <span class="keyword">منتجعات زراعية</span>
+                <span class="keyword">استراحات زراعية</span>
+                <span class="keyword">مزارع للبيع</span>
+                <span class="keyword">مزارع للإيجار</span>
+                <span class="keyword">أراضي زراعية للبيع</span>
+                <span class="keyword">أراضي زراعية للإيجار</span>
+                <span class="keyword">مقاول استصلاح أراضي</span>
+                <span class="keyword">مقاول حفر آبار</span>
+                <span class="keyword">مقاول شبكات ري</span>
+                <span class="keyword">مقاول بيوت محمية</span>
+                <span class="keyword">مقاول توريد وزراعة</span>
+                <span class="keyword">مقاول تركيب شبوك</span>
+                <span class="keyword">مقاول مظلات مزارع</span>
+                <span class="keyword">مقاول أعمال زراعية</span>
+                <span class="keyword">مقاول مشاريع زراعية</span>
+                <span class="keyword">مقاول تنفيذ مشاريع زراعية</span>
+                <span class="keyword">مقاول إشراف على مشاريع زراعية</span>
+                <span class="keyword">مقاول استشارات زراعية</span>
+                <span class="keyword">مقاول تصميم زراعي</span>
+                <span class="keyword">مقاول تنفيذ تصميم زراعي</span>
+                <span class="keyword">مقاول تسليم مفتاح لمزارع</span>
+                <span class="keyword">مشاريع زراعية جاهزة</span>
+                <span class="keyword">مزارع جاهزة للاستثمار</span>
+                <span class="keyword">فرص استثمارية في الزراعة</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-tractor"></i> مقاول مزارع - تنفيذ مشاريع زراعية - استصلاح أراضي</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
