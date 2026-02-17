@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>نخل واشنطن (Washingtonia) - نخيل زينة سريع النمو للحدائق والشوارع | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="نخل واشنطن (Washingtonia) أجود أنواع نخيل الزينة، سريع النمو، يتحمل الظروف الصحراوية، مثالي لتجميل الشوارع والحدائق والفلل. توريد وزراعة بأحجام مختلفة في الرياض.">
+    <meta name="keywords" content="نخل واشنطن, نخيل واشنطنيا, Washingtonia, نخيل زينة, أشجار واشنطن, نخيل للحدائق, نخيل للشوارع, نخيل سريع النمو, توريد نخيل واشنطن, زراعة نخيل واشنطن, أسعار نخيل واشنطن">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات نخل واشنطن */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* مميزات نخل واشنطن */
+        .features-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border-right: 4px solid #f5c542;
+        }
+        .feature-item i {
+            color: #f5c542;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-palm-tree"></i> نخل واشنطن (Washingtonia)</h1>
+            <p>نخيل زينة سريع النمو لتجميل الشوارع والحدائق والفلل</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور نخل واشنطن مع كلمات مفتاحية (20 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور نخل واشنطن مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/tT27m0NY/washingtonia-seeds.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخل واشنطن</span>
+                    <span class="keyword-badge">نخيل واشنطنيا</span>
+                    <span class="keyword-badge">Washingtonia</span>
+                    <span class="keyword-badge">نخيل زينة</span>
+                    <span class="keyword-badge">أشجار واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hJcBWhV9/4630a6bc0fedcb08241db32604cbf7b0.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل للحدائق</span>
+                    <span class="keyword-badge">نخيل للشوارع</span>
+                    <span class="keyword-badge">نخيل سريع النمو</span>
+                    <span class="keyword-badge">نخيل طويل</span>
+                    <span class="keyword-badge">نخيل زخرفي</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/1Yb0BYkq/Whats-App-Image-2025-08-13-at-4-32-06-PM-1-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">غرس نخل واشنطن</span>
+                    <span class="keyword-badge">زراعة نخل واشنطن</span>
+                    <span class="keyword-badge">توريد نخل واشنطن</span>
+                    <span class="keyword-badge">أسعار نخل واشنطن</span>
+                    <span class="keyword-badge">فسائل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7JfKRnxW/IMG-20260212-WA0004olive.jpg" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل زينة للحدائق</span>
+                    <span class="keyword-badge">نخيل زينة للفلل</span>
+                    <span class="keyword-badge">نخيل زينة للشوارع</span>
+                    <span class="keyword-badge">نخيل زينة للميادين</span>
+                    <span class="keyword-badge">نخيل زينة للمنتزهات</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gq6HB9y/image-N3.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">Washingtonia robusta</span>
+                    <span class="keyword-badge">Washingtonia filifera</span>
+                    <span class="keyword-badge">نخيل كاليفورنيا</span>
+                    <span class="keyword-badge">نخيل صحراوي</span>
+                    <span class="keyword-badge">نخيل أمريكي</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/v4Lh8Xm4/image-N4.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل مقاوم للجفاف</span>
+                    <span class="keyword-badge">نخيل يتحمل الحرارة</span>
+                    <span class="keyword-badge">نخيل يتحمل البرودة</span>
+                    <span class="keyword-badge">نخيل قوي</span>
+                    <span class="keyword-badge">نخيل مستدام</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/C3nN00tr/Whats-App-Image-2025-08-13-at-4-31-57-PM-2-3.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن كبير</span>
+                    <span class="keyword-badge">نخيل واشنطن متوسط</span>
+                    <span class="keyword-badge">نخيل واشنطن صغير</span>
+                    <span class="keyword-badge">أحجام نخيل واشنطن</span>
+                    <span class="keyword-badge">مقاسات نخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gzJGm35/Whats-App-Image-2025-08-13-at-4-31-58-PM-2.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">سعر نخيل واشنطن</span>
+                    <span class="keyword-badge">تكلفة نخيل واشنطن</span>
+                    <span class="keyword-badge">شراء نخيل واشنطن</span>
+                    <span class="keyword-badge">بيع نخيل واشنطن</span>
+                    <span class="keyword-badge">توريد نخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/twhTF9Wv/Whats-App-Image-2025-08-13-at-4-31-58-PM-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن في الرياض</span>
+                    <span class="keyword-badge">نخيل واشنطن في السعودية</span>
+                    <span class="keyword-badge">نخيل واشنطن في الخليج</span>
+                    <span class="keyword-badge">نخيل واشنطن في الصحراء</span>
+                    <span class="keyword-badge">نخيل واشنطن في الحدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/ymDcXTYG/Whats-App-Image-2025-08-13-at-4-31-57-PM-4.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم نخيل واشنطن</span>
+                    <span class="keyword-badge">تشذيب نخيل واشنطن</span>
+                    <span class="keyword-badge">تهذيب نخيل واشنطن</span>
+                    <span class="keyword-badge">صيانة نخيل واشنطن</span>
+                    <span class="keyword-badge">عناية بنخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N2Prfj38/Whats-App-Image-2025-08-13-at-4-31-57-PM-3-2.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">غرس نخيل واشنطن</span>
+                    <span class="keyword-badge">زراعة نخيل واشنطن</span>
+                    <span class="keyword-badge">طريقة زراعة واشنطن</span>
+                    <span class="keyword-badge">كيفية زراعة واشنطن</span>
+                    <span class="keyword-badge">موعد زراعة واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3my6vTRJ/Whats-App-Image-2025-08-13-at-4-31-58-PM-3-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">ري نخيل واشنطن</span>
+                    <span class="keyword-badge">تسميد نخيل واشنطن</span>
+                    <span class="keyword-badge">احتياجات نخيل واشنطن</span>
+                    <span class="keyword-badge">تربة نخيل واشنطن</span>
+                    <span class="keyword-badge">ضوء لنخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DDNFCK2q/Whats-App-Image-2025-08-13-at-4-31-59-PM-1-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">فسائل واشنطن للبيع</span>
+                    <span class="keyword-badge">شتلات واشنطن</span>
+                    <span class="keyword-badge">بذور واشنطن</span>
+                    <span class="keyword-badge">إكثار واشنطن</span>
+                    <span class="keyword-badge">تكاثر واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HfzNXF2L/Whats-App-Image-2025-08-13-at-4-31-58-PM.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">أمراض نخيل واشنطن</span>
+                    <span class="keyword-badge">آفات نخيل واشنطن</span>
+                    <span class="keyword-badge">علاج نخيل واشنطن</span>
+                    <span class="keyword-badge">مشاكل نخيل واشنطن</span>
+                    <span class="keyword-badge">حلول لمشاكل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/B23fyn1c/Whats-App-Image-2025-08-13-at-4-31-59-PM-2.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن مزدوج</span>
+                    <span class="keyword-badge">نخيل واشنطن ثلاثي</span>
+                    <span class="keyword-badge">نخيل واشنطن متعدد</span>
+                    <span class="keyword-badge">تصميم حدائق بواشنطن</span>
+                    <span class="keyword-badge">تنسيق حدائق بواشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nqs4RLT0/Whats-App-Image-2025-08-13-at-4-32-00-PM-2-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن والمناظر الطبيعية</span>
+                    <span class="keyword-badge">نخيل واشنطن والتصميم الحضري</span>
+                    <span class="keyword-badge">نخيل واشنطن للمشاريع الكبرى</span>
+                    <span class="keyword-badge">نخيل واشنطن للفلل الفاخرة</span>
+                    <span class="keyword-badge">نخيل واشنطن للقصور</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/RG67v3cp/Whats-App-Image-2025-08-13-at-4-32-00-PM-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مشاتل نخيل واشنطن</span>
+                    <span class="keyword-badge">أفضل مشاتل لواشنطن</span>
+                    <span class="keyword-badge">شراء من مشاتل واشنطن</span>
+                    <span class="keyword-badge">مشاتل موثوقة لواشنطن</span>
+                    <span class="keyword-badge">مشاتل نخيل زينة</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DD247X87/Whats-App-Image-2025-08-13-at-4-31-59-PM-4.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن مقاوم للرياح</span>
+                    <span class="keyword-badge">نخيل واشنطن مقاوم للعواصف</span>
+                    <span class="keyword-badge">نخيل واشنطن قوي التحمل</span>
+                    <span class="keyword-badge">نخيل واشنطن طويل العمر</span>
+                    <span class="keyword-badge">نخيل واشنطن دائم الخضرة</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3mY2DTSj/Whats-App-Image-2025-08-13-at-4-31-59-PM-3-1.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نخيل واشنطن سريع النمو</span>
+                    <span class="keyword-badge">معدل نمو نخيل واشنطن</span>
+                    <span class="keyword-badge">سرعة نمو واشنطن</span>
+                    <span class="keyword-badge">كم ينمو واشنطن سنوياً</span>
+                    <span class="keyword-badge">ارتفاع نخيل واشنطن</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7t49sDqC/Whats-App-Image-2025-08-13-at-4-32-02-PM-3.webp" alt="نخل واشنطن">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">أفضل أنواع نخيل الزينة</span>
+                    <span class="keyword-badge">أجمل نخيل الزينة</span>
+                    <span class="keyword-badge">أشهر نخيل الزينة</span>
+                    <span class="keyword-badge">نخيل الزينة المميز</span>
+                    <span class="keyword-badge">نخيل الزينة الفاخر</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- مميزات نخل واشنطن -->
+        <h2><i class="fas fa-star"></i> مميزات نخل واشنطن</h2>
+        <div class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>سريع النمو</h4>
+                    <p>من أسرع أنواع النخيل نمواً، يمكن أن يصل إلى ارتفاعات كبيرة في سنوات قليلة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-sun"></i>
+                    <h4>يتحمل الحرارة والجفاف</h4>
+                    <p>مثالي للمناخ الصحراوي، يتحمل درجات الحرارة العالية وقلة المياه.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-wind"></i>
+                    <h4>مقاوم للرياح</h4>
+                    <p>جذعه القوي يجعله مقاوماً للرياح والعواصف الترابية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>شكل جمالي فريد</h4>
+                    <p>أوراقه المروحية وساقه الطويل يضفيان منظراً خلاباً في الحدائق والشوارع.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>سهولة الزراعة</h4>
+                    <p>لا يحتاج إلى عناية خاصة، ويمكن زراعته في معظم أنواع التربة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-city"></i>
+                    <h4>متعدد الاستخدامات</h4>
+                    <p>يصلح لتجميل الشوارع، الحدائق العامة، الفلل، والمنتزهات.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات نخل واشنطن -->
+        <h2><i class="fas fa-list-check"></i> خدمات نخل واشنطن</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-truck"></i>
+                <h3>توريد نخيل واشنطن</h3>
+                <p>نوفر نخيل واشنطن بأحجام مختلفة (صغير، متوسط، كبير) لجميع المشاريع.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-seedling"></i>
+                <h3>غرس وزراعة</h3>
+                <p>فرق متخصصة في غرس نخيل واشنطن بالطرق الصحيحة لضمان النجاح.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>تقليم وتشذيب</h3>
+                <p>خدمات تقليم دورية للحفاظ على الشكل الجمالي وإزالة السعف الجاف.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tint"></i>
+                <h3>ري وتسميد</h3>
+                <p>برامج ري وتسميد مخصصة لضمان نمو صحي وسريع.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h3>مكافحة آفات</h3>
+                <p>حماية نخيل واشنطن من الآفات والأمراض الشائعة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ruler"></i>
+                <h3>استشارات وتصميم</h3>
+                <p>استشارات مجانية لاختيار الأماكن المناسبة وتصميم الحدائق بواشنطن.</p>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 250 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة لنخل واشنطن</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 250 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">نخل واشنطن</span>
+                <span class="keyword">نخيل واشنطنيا</span>
+                <span class="keyword">Washingtonia</span>
+                <span class="keyword">نخيل زينة</span>
+                <span class="keyword">أشجار واشنطن</span>
+                <span class="keyword">نخيل للحدائق</span>
+                <span class="keyword">نخيل للشوارع</span>
+                <span class="keyword">نخيل سريع النمو</span>
+                <span class="keyword">نخيل طويل</span>
+                <span class="keyword">نخيل زخرفي</span>
+                <span class="keyword">Washingtonia robusta</span>
+                <span class="keyword">Washingtonia filifera</span>
+                <span class="keyword">نخيل كاليفورنيا</span>
+                <span class="keyword">نخيل صحراوي</span>
+                <span class="keyword">نخيل أمريكي</span>
+                <span class="keyword">نخيل مقاوم للجفاف</span>
+                <span class="keyword">نخيل يتحمل الحرارة</span>
+                <span class="keyword">نخيل يتحمل البرودة</span>
+                <span class="keyword">نخيل قوي</span>
+                <span class="keyword">نخيل مستدام</span>
+                <span class="keyword">غرس نخل واشنطن</span>
+                <span class="keyword">زراعة نخل واشنطن</span>
+                <span class="keyword">توريد نخل واشنطن</span>
+                <span class="keyword">أسعار نخل واشنطن</span>
+                <span class="keyword">فسائل واشنطن</span>
+                <span class="keyword">نخيل زينة للحدائق</span>
+                <span class="keyword">نخيل زينة للفلل</span>
+                <span class="keyword">نخيل زينة للشوارع</span>
+                <span class="keyword">نخيل زينة للميادين</span>
+                <span class="keyword">نخيل زينة للمنتزهات</span>
+                <span class="keyword">نخيل واشنطن كبير</span>
+                <span class="keyword">نخيل واشنطن متوسط</span>
+                <span class="keyword">نخيل واشنطن صغير</span>
+                <span class="keyword">أحجام نخيل واشنطن</span>
+                <span class="keyword">مقاسات نخيل واشنطن</span>
+                <span class="keyword">سعر نخيل واشنطن</span>
+                <span class="keyword">تكلفة نخيل واشنطن</span>
+                <span class="keyword">شراء نخيل واشنطن</span>
+                <span class="keyword">بيع نخيل واشنطن</span>
+                <span class="keyword">نخيل واشنطن في الرياض</span>
+                <span class="keyword">نخيل واشنطن في السعودية</span>
+                <span class="keyword">نخيل واشنطن في الخليج</span>
+                <span class="keyword">نخيل واشنطن في الصحراء</span>
+                <span class="keyword">نخيل واشنطن في الحدائق</span>
+                <span class="keyword">تقليم نخيل واشنطن</span>
+                <span class="keyword">تشذيب نخيل واشنطن</span>
+                <span class="keyword">تهذيب نخيل واشنطن</span>
+                <span class="keyword">صيانة نخيل واشنطن</span>
+                <span class="keyword">عناية بنخيل واشنطن</span>
+                <span class="keyword">طريقة زراعة واشنطن</span>
+                <span class="keyword">كيفية زراعة واشنطن</span>
+                <span class="keyword">موعد زراعة واشنطن</span>
+                <span class="keyword">ري نخيل واشنطن</span>
+                <span class="keyword">تسميد نخيل واشنطن</span>
+                <span class="keyword">احتياجات نخيل واشنطن</span>
+                <span class="keyword">تربة نخيل واشنطن</span>
+                <span class="keyword">ضوء لنخيل واشنطن</span>
+                <span class="keyword">فسائل واشنطن للبيع</span>
+                <span class="keyword">شتلات واشنطن</span>
+                <span class="keyword">بذور واشنطن</span>
+                <span class="keyword">إكثار واشنطن</span>
+                <span class="keyword">تكاثر واشنطن</span>
+                <span class="keyword">أمراض نخيل واشنطن</span>
+                <span class="keyword">آفات نخيل واشنطن</span>
+                <span class="keyword">علاج نخيل واشنطن</span>
+                <span class="keyword">مشاكل نخيل واشنطن</span>
+                <span class="keyword">حلول لمشاكل واشنطن</span>
+                <span class="keyword">نخيل واشنطن مزدوج</span>
+                <span class="keyword">نخيل واشنطن ثلاثي</span>
+                <span class="keyword">نخيل واشنطن متعدد</span>
+                <span class="keyword">تصميم حدائق بواشنطن</span>
+                <span class="keyword">تنسيق حدائق بواشنطن</span>
+                <span class="keyword">نخيل واشنطن والمناظر الطبيعية</span>
+                <span class="keyword">نخيل واشنطن والتصميم الحضري</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الكبرى</span>
+                <span class="keyword">نخيل واشنطن للفلل الفاخرة</span>
+                <span class="keyword">نخيل واشنطن للقصور</span>
+                <span class="keyword">مشاتل نخيل واشنطن</span>
+                <span class="keyword">أفضل مشاتل لواشنطن</span>
+                <span class="keyword">شراء من مشاتل واشنطن</span>
+                <span class="keyword">مشاتل موثوقة لواشنطن</span>
+                <span class="keyword">مشاتل نخيل زينة</span>
+                <span class="keyword">نخيل واشنطن مقاوم للرياح</span>
+                <span class="keyword">نخيل واشنطن مقاوم للعواصف</span>
+                <span class="keyword">نخيل واشنطن قوي التحمل</span>
+                <span class="keyword">نخيل واشنطن طويل العمر</span>
+                <span class="keyword">نخيل واشنطن دائم الخضرة</span>
+                <span class="keyword">معدل نمو نخيل واشنطن</span>
+                <span class="keyword">سرعة نمو واشنطن</span>
+                <span class="keyword">كم ينمو واشنطن سنوياً</span>
+                <span class="keyword">ارتفاع نخيل واشنطن</span>
+                <span class="keyword">أفضل أنواع نخيل الزينة</span>
+                <span class="keyword">أجمل نخيل الزينة</span>
+                <span class="keyword">أشهر نخيل الزينة</span>
+                <span class="keyword">نخيل الزينة المميز</span>
+                <span class="keyword">نخيل الزينة الفاخر</span>
+                <span class="keyword">نخيل زينة خارجي</span>
+                <span class="keyword">نخيل زينة داخلي</span>
+                <span class="keyword">نخيل زينة للتراس</span>
+                <span class="keyword">نخيل زينة للبلكونة</span>
+                <span class="keyword">نخيل زينة للحديقة المنزلية</span>
+                <span class="keyword">نخيل زينة للمداخل</span>
+                <span class="keyword">نخيل زينة للممرات</span>
+                <span class="keyword">نخيل زينة للمسابح</span>
+                <span class="keyword">نخيل زينة للجلسات الخارجية</span>
+                <span class="keyword">نخيل زينة للاستراحات</span>
+                <span class="keyword">توريد نخيل زينة</span>
+                <span class="keyword">أسعار نخيل الزينة</span>
+                <span class="keyword">أفضل شركة توريد نخيل زينة</span>
+                <span class="keyword">مقاول زراعة نخيل زينة</span>
+                <span class="keyword">فني نخيل زينة</span>
+                <span class="keyword">تصميم حدائق نخيل</span>
+                <span class="keyword">تنسيق حدائق نخيل</span>
+                <span class="keyword">حدائق استوائية</span>
+                <span class="keyword">حدائق صحراوية</span>
+                <span class="keyword">حدائق نخيل واشنطن</span>
+                <span class="keyword">نخيل واشنطن والثيل</span>
+                <span class="keyword">نخيل واشنطن والصبار</span>
+                <span class="keyword">نخيل واشنطن والنباتات الأخرى</span>
+                <span class="keyword">خلطات زراعية لواشنطن</span>
+                <span class="keyword">أسمدة لواشنطن</span>
+                <span class="keyword">مبيدات لواشنطن</span>
+                <span class="keyword">أدوات زراعة لواشنطن</span>
+                <span class="keyword">مستلزمات زراعة واشنطن</span>
+                <span class="keyword">نخيل واشنطن بالجملة</span>
+                <span class="keyword">نخيل واشنطن مفرق</span>
+                <span class="keyword">نخيل واشنطن مع الضمان</span>
+                <span class="keyword">نخيل واشنطن بالتوصيل</span>
+                <span class="keyword">نخيل واشنطن مع التركيب</span>
+                <span class="keyword">عروض على نخيل واشنطن</span>
+                <span class="keyword">خصومات على نخيل واشنطن</span>
+                <span class="keyword">تخفيضات نخيل واشنطن</span>
+                <span class="keyword">أقل سعر نخيل واشنطن</span>
+                <span class="keyword">أفضل سعر نخيل واشنطن</span>
+                <span class="keyword">نخيل واشنطن رخيص</span>
+                <span class="keyword">نخيل واشنطن غالي</span>
+                <span class="keyword">نخيل واشنطن متوسط السعر</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الحكومية</span>
+                <span class="keyword">نخيل واشنطن للشركات</span>
+                <span class="keyword">نخيل واشنطن للمؤسسات</span>
+                <span class="keyword">نخيل واشنطن للفنادق</span>
+                <span class="keyword">نخيل واشنطن للمنتجعات</span>
+                <span class="keyword">نخيل واشنطن للمطاعم</span>
+                <span class="keyword">نخيل واشنطن للكافيهات</span>
+                <span class="keyword">نخيل واشنطن للمولات</span>
+                <span class="keyword">نخيل واشنطن للأسواق</span>
+                <span class="keyword">نخيل واشنطن للمستشفيات</span>
+                <span class="keyword">نخيل واشنطن للمدارس</span>
+                <span class="keyword">نخيل واشنطن للجامعات</span>
+                <span class="keyword">نخيل واشنطن للمساجد</span>
+                <span class="keyword">نخيل واشنطن للطرق</span>
+                <span class="keyword">نخيل واشنطن للجسور</span>
+                <span class="keyword">نخيل واشنطن للميادين العامة</span>
+                <span class="keyword">نخيل واشنطن للمتنزهات</span>
+                <span class="keyword">نخيل واشنطن للحدائق العامة</span>
+                <span class="keyword">نخيل واشنطن للمدن الجديدة</span>
+                <span class="keyword">نخيل واشنطن للمجمعات السكنية</span>
+                <span class="keyword">نخيل واشنطن للفلل الخاصة</span>
+                <span class="keyword">نخيل واشنطن للقصور الفخمة</span>
+                <span class="keyword">نخيل واشنطن للاستراحات الخاصة</span>
+                <span class="keyword">نخيل واشنطن للمخيمات</span>
+                <span class="keyword">نخيل واشنطن للبر</span>
+                <span class="keyword">نخيل واشنطن للمزارع</span>
+                <span class="keyword">نخيل واشنطن للاستثمار الزراعي</span>
+                <span class="keyword">نخيل واشنطن للمشاريع السياحية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع التجارية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع السكنية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الصناعية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الخدمية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الترفيهية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الرياضية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع التعليمية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الصحية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الدينية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الثقافية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الإعلامية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع التقنية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الرقمية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الخضراء</span>
+                <span class="keyword">نخيل واشنطن للمشاريع المستدامة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الذكية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الحديثة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع المستقبلية</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الضخمة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع العملاقة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الرائدة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع المتميزة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الفاخرة</span>
+                <span class="keyword">نخيل واشنطن للمشاريع الراقية</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-palm-tree"></i> نخل واشنطن - نخيل زينة - توريد وزراعة</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
