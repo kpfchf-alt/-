@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
     <title>نخيل - زيتون - شبوك - مظلات - الرياض</title>
-    <!-- تحسين محركات البحث والشعار -->
+    <!-- علامة التحقق من جوجل -->
     <meta name="google-site-verification" content="Aqm8dbjdlkmD_GsxaHuXyYVRs-r3xeNJ6THUVm5fG10" />
+    <!-- تحسين محركات البحث والشعار -->
     <meta name="description" content="نخيل - زيتون - شبوك - مظلات - الرياض: توريد وزراعة جميع أنواع النخيل والزيتون، تركيب شبوك، مظلات، مقاولات زراعية، بيع ونقل.">
     <meta name="keywords" content="نخيل, زيتون, شبوك, مظلات, زراعة, الرياض, توريد نخيل, نخل واشنطن, مقاول مزارع, صيانة حدائق">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
@@ -17,20 +18,18 @@
         /* حماية الصور */
         img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
         
-        /* منع التمرير الزائد */
+        /* إعادة تعيين الهوامش */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-        }
+        html, body { overflow-x: hidden; width: 100%; height: 100%; }
         body {
             font-family: 'Tajawal', sans-serif;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            background: #f5f9f5;
         }
 
-        /* الترويسة ثابتة */
+        /* الترويسة الجديدة */
         .header {
             height: 15vh;
             min-height: 100px;
@@ -38,40 +37,63 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 20px;
+            padding: 0 30px;
             color: white;
             width: 100%;
             border-bottom: 4px solid #f5c542;
             position: relative;
             z-index: 1000;
             flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .right-images {
+        /* الشعار الجديد (أيقونة نخيل) */
+        .logo {
             display: flex;
             align-items: center;
-            gap: 0;
-            z-index: 10;
-            position: relative;
-            left: -30px;
+            gap: 10px;
         }
-        .right-images img {
-            height: 80px;
-            width: auto;
-            display: block;
+        .logo-icon {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #f5c542;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .logo-icon i {
+            font-size: 40px;
+            color: #0a4d2e;
+        }
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-text .main-title {
+            font-size: 1.4rem;
+            font-weight: 900;
+            line-height: 1.3;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .logo-text .sub-title {
+            font-size: 0.9rem;
+            color: #f5c542;
+            font-weight: 600;
         }
 
         .title-section {
             text-align: center;
             flex: 1;
             padding: 0 15px;
-            white-space: nowrap;
-            z-index: 5;
         }
         .title-section h1 {
             font-size: 1.8rem;
             font-weight: 700;
             text-shadow: 2px 2px 0 #0a3a1e;
+            white-space: nowrap;
         }
         .title-section p {
             font-size: 1rem;
@@ -81,7 +103,7 @@
             border-radius: 50px;
         }
 
-        /* زر القائمة بدون حركة */
+        /* زر القائمة */
         .menu-toggle {
             width: 40px;
             height: 40px;
@@ -101,9 +123,10 @@
             height: 3px;
             background: white;
             border-radius: 3px;
+            transition: 0.3s;
         }
 
-        /* القائمة الجانبية بدون تأثير حركي */
+        /* القائمة الجانبية */
         .sidebar {
             position: fixed;
             top: 0;
@@ -118,7 +141,7 @@
             border-left: 2px solid #f5c542;
             overflow-y: auto;
             box-shadow: -5px 0 15px rgba(0,0,0,0.3);
-            transition: none;
+            transition: right 0.3s ease;
         }
         .sidebar.active { right: 0; }
         .sidebar ul { list-style: none; }
@@ -140,7 +163,7 @@
         .sidebar a i { margin-left: 10px; color: #f5c542; }
         .sidebar a:hover i { color: #1a4d2e; }
 
-        /* المحتوى الرئيسي مع الخلفية */
+        /* المحتوى الرئيسي */
         .main-content {
             flex: 1;
             padding: 30px;
@@ -165,21 +188,23 @@
             pointer-events: none;
         }
 
-        /* أقسام المحتوى */
+        /* أقسام المحتوى - أصبحت شفافة داكنة */
         .content-section {
             max-width: 1200px;
             margin: 0 auto 60px auto;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(0, 0, 0, 0.5); /* خلفية شفافة داكنة */
+            backdrop-filter: blur(3px);
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            backdrop-filter: blur(5px);
+            border: 1px solid rgba(245, 197, 66, 0.3);
             position: relative;
             z-index: 2;
+            color: white; /* النص أصبح أبيض ليتناسب مع الخلفية الداكنة */
         }
         .content-section h2 {
             font-size: 2.5rem;
-            color: #0a4d2e;
+            color: #f5c542; /* لون ذهبي للعناوين */
             margin-bottom: 20px;
             text-align: center;
             position: relative;
@@ -196,36 +221,39 @@
         }
         .content-section h3 {
             font-size: 1.8rem;
-            color: #1e6b3b;
+            color: #f5c542;
             margin: 30px 0 15px;
         }
         .content-section h4 {
             font-size: 1.4rem;
-            color: #0a4d2e;
+            color: #f5c542;
             margin: 20px 0 10px;
         }
         .content-section h5 {
             font-size: 1.2rem;
-            color: #333;
+            color: #f5c542;
             margin: 15px 0 8px;
         }
         .content-section h6 {
             font-size: 1rem;
-            color: #666;
+            color: #f5c542;
             margin: 10px 0 5px;
         }
         .content-section p {
             line-height: 1.8;
-            color: #444;
+            color: #eee; /* نص فاتح */
             margin-bottom: 15px;
         }
         .content-section ul, .content-section ol {
             margin-right: 30px;
             margin-bottom: 20px;
-            color: #555;
+            color: #eee;
         }
         .content-section li {
             margin-bottom: 8px;
+        }
+        .content-section strong {
+            color: #f5c542;
         }
 
         .services-grid {
@@ -235,47 +263,50 @@
             margin: 30px 0;
         }
         .service-card {
-            background: white;
+            background: rgba(255, 255, 255, 0.1); /* شفاف فاتح */
+            backdrop-filter: blur(3px);
             border-radius: 20px;
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e0e0e0;
-        }
-        .service-card:hover {
-            border-color: #f5c542;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 1px solid rgba(245, 197, 66, 0.3);
         }
         .service-card i {
             font-size: 2.5rem;
-            color: #0a4d2e;
+            color: #f5c542;
             margin-bottom: 15px;
         }
         .service-card h4 {
             margin: 0 0 10px 0;
-            color: #0a4d2e;
+            color: #f5c542;
+        }
+        .service-card p {
+            color: #eee;
         }
         .service-card .btn {
             display: inline-block;
             margin-top: 15px;
-            background: #0a4d2e;
-            color: white;
+            background: #f5c542;
+            color: #0a4d2e;
             padding: 8px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.2s;
+            border: none;
         }
         .service-card .btn:hover {
-            background: #f5c542;
+            background: white;
             color: #0a4d2e;
         }
 
         .stats-bar {
-            background: #0a4d2e;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
             color: white;
             padding: 30px 0;
             text-align: center;
             margin: 40px 0;
             border-radius: 30px;
+            border: 1px solid rgba(245, 197, 66, 0.3);
         }
         .stats-grid {
             display: flex;
@@ -297,7 +328,8 @@
         }
 
         .faq-item {
-            background: #f9f9f9;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(3px);
             border-radius: 15px;
             padding: 20px;
             margin-bottom: 15px;
@@ -305,7 +337,7 @@
         }
         .faq-item h5 {
             margin-bottom: 10px;
-            color: #0a4d2e;
+            color: #f5c542;
         }
 
         .float-buttons {
@@ -330,46 +362,19 @@
             text-decoration: none;
             border: 2.5px solid;
         }
-        .float-btn i {
-            font-size: 26px;
-            margin-bottom: 2px;
-        }
-        .float-btn span {
-            font-size: 10px;
-            font-weight: 700;
-        }
-        .whatsapp-btn {
-            background: #25d366;
-            border-color: #075e54;
-            color: white;
-        }
-        .call-btn {
-            background: #0a4d2e;
-            border-color: #f5c542;
-            color: white;
-        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
 
         .designer-signature {
             background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             color: white;
             border-top: 4px solid #f5c542;
             border-bottom: 4px solid #f5c542;
             margin-top: 40px;
-        }
-        .signature-wa {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            background: rgba(255,255,255,0.1);
-            border: 2px solid #f5c542;
-            border-radius: 60px;
-            padding: 12px 25px;
-            color: #f5c542;
-            text-decoration: none;
-            font-size: 1.2rem;
-            margin-top: 15px;
         }
 
         @media (max-width: 700px) {
@@ -378,11 +383,15 @@
                 height: auto;
                 padding: 10px;
             }
-            .right-images {
-                left: -15px;
+            .logo-icon {
+                width: 50px;
+                height: 50px;
             }
-            .right-images img {
-                height: 60px;
+            .logo-icon i {
+                font-size: 28px;
+            }
+            .logo-text .main-title {
+                font-size: 1rem;
             }
             .title-section {
                 white-space: normal;
@@ -392,21 +401,26 @@
             }
             .title-section h1 {
                 font-size: 1.2rem;
-            }
-            .content-section h2 {
-                font-size: 2rem;
+                white-space: normal;
             }
         }
     </style>
 </head>
 <body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
 
-    <!-- الترويسة -->
+    <!-- الترويسة الجديدة -->
     <header class="header">
-        <div class="right-images">
-            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
-            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        <!-- الشعار الجديد (أيقونة نخيل) -->
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-palm-tree"></i>
+            </div>
+            <div class="logo-text">
+                <span class="main-title">نخيل وزيتون</span>
+                <span class="sub-title">الرياض</span>
+            </div>
         </div>
+
         <div class="title-section">
             <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
             <p>توفير جميع أنواع النخيل والزيتون</p>
@@ -436,9 +450,9 @@
         </ul>
     </aside>
 
-    <!-- المحتوى الرئيسي مع الخلفية -->
+    <!-- المحتوى الرئيسي الطويل -->
     <main class="main-content">
-        <!-- قسم تعريف عام (H2) -->
+        <!-- قسم تعريف عام -->
         <section class="content-section">
             <h2>مرحباً بكم في نخيل وزيتون الرياض</h2>
             <p>نحن رواد في مجال توريد وزراعة جميع أنواع النخيل والزيتون، بالإضافة إلى تركيب الشبوك والمظلات والمقاولات الزراعية في الرياض وجميع أنحاء المملكة. نتميز بفريق عمل محترف وخبرة تمتد لأكثر من 15 عاماً.</p>
@@ -447,81 +461,30 @@
         <!-- قسم الإحصائيات -->
         <section class="stats-bar">
             <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">+500</div>
-                    <div class="stat-label">مشروع مكتمل</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">+300</div>
-                    <div class="stat-label">عميل سعيد</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">عام خبرة</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">+50</div>
-                    <div class="stat-label">فني متخصص</div>
-                </div>
+                <div class="stat-item"><div class="stat-number">+500</div><div class="stat-label">مشروع مكتمل</div></div>
+                <div class="stat-item"><div class="stat-number">+300</div><div class="stat-label">عميل سعيد</div></div>
+                <div class="stat-item"><div class="stat-number">15</div><div class="stat-label">عام خبرة</div></div>
+                <div class="stat-item"><div class="stat-number">+50</div><div class="stat-label">فني متخصص</div></div>
             </div>
         </section>
 
-        <!-- قسم تفصيلي عن النخيل -->
+        <!-- قسم النخيل -->
         <section class="content-section">
             <h2>أشجار النخيل: كنوز الصحراء</h2>
             <p>نقدم لكم أجود أنواع فسائل النخيل المحلية والمستوردة، مع ضمان الجودة والتأصيل.</p>
-            
             <h3>أنواع النخيل المتوفرة لدينا</h3>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-palm-tree"></i>
-                    <h4>نخيل مدجول</h4>
-                    <p>ملك التمور الفاخرة، يتميز بحجمه الكبير وطعمه الحلو. مناسب للاستثمار والتصدير.</p>
-                    <h5>تفاصيل إضافية:</h5>
-                    <p>يصل إنتاجه إلى 100 كجم سنوياً، يحتاج إلى عناية متوسطة.</p>
-                    <a href="nakheel.html" class="btn">اقرأ المزيد عن النخيل</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-palm-tree"></i>
-                    <h4>نخيل برحي</h4>
-                    <p>تمور ناعمة مثالية للرطب، ذات إنتاجية عالية.</p>
-                    <h5>ملاحظات:</h5>
-                    <p>يتحمل درجات الحرارة العالية، وينمو بسرعة.</p>
-                    <a href="nakheel.html" class="btn">اقرأ المزيد عن النخيل</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-palm-tree"></i>
-                    <h4>نخيل خلاص</h4>
-                    <p>الأشهر في الخليج، يتميز بمذاقه الفريد.</p>
-                    <a href="nakheel.html" class="btn">اقرأ المزيد عن النخيل</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-palm-tree"></i>
-                    <h4>نخيل سكري</h4>
-                    <p>قليل الرطوبة، مناسب للتخزين الطويل.</p>
-                    <a href="nakheel.html" class="btn">اقرأ المزيد عن النخيل</a>
-                </div>
+                <div class="service-card"><i class="fas fa-palm-tree"></i><h4>نخيل مدجول</h4><p>ملك التمور الفاخرة، يتميز بحجمه الكبير وطعمه الحلو.</p><a href="nakheel.html" class="btn">اقرأ المزيد</a></div>
+                <div class="service-card"><i class="fas fa-palm-tree"></i><h4>نخيل برحي</h4><p>تمور ناعمة مثالية للرطب، إنتاجية عالية.</p><a href="nakheel.html" class="btn">اقرأ المزيد</a></div>
+                <div class="service-card"><i class="fas fa-palm-tree"></i><h4>نخيل خلاص</h4><p>الأشهر في الخليج، مذاقه فريد.</p><a href="nakheel.html" class="btn">اقرأ المزيد</a></div>
+                <div class="service-card"><i class="fas fa-palm-tree"></i><h4>نخيل سكري</h4><p>قليل الرطوبة، مناسب للتخزين الطويل.</p><a href="nakheel.html" class="btn">اقرأ المزيد</a></div>
             </div>
-
-            <h3>خدماتنا الإضافية للنخيل</h3>
-            <h4>التلقيح والتقليم</h4>
-            <p>نقوم بتلقيح النخيل يدوياً بأيدي خبراء لضمان إنتاج عالي الجودة. كما نقدم خدمات التقليم والتشكيل.</p>
-            <h4>مكافحة الآفات</h4>
-            <p>نستخدم أحدث المبيدات الآمنة لمكافحة سوسة النخيل والحشرات الضارة.</p>
-            <h5>طرق المكافحة:</h5>
-            <ul>
-                <li>المكافحة البيولوجية باستخدام الأعداء الطبيعية.</li>
-                <li>المكافحة الكيميائية الآمنة.</li>
-                <li>المكافحة الميكانيكية (إزالة الأجزاء المصابة).</li>
-            </ul>
-            <h6>ملاحظة: نضمن لك القضاء على الآفات بنسبة 100%.</h6>
         </section>
 
         <!-- قسم الزيتون -->
         <section class="content-section">
             <h2>الزيتون: شجرة الخير والبركة</h2>
             <p>نوفر شتلات زيتون أوروبية ومحلية، مثمرة وعالية الجودة.</p>
-            
             <h3>أصناف الزيتون المتوفرة</h3>
             <ul>
                 <li><strong>زيتون إسباني</strong>: كبير الحجم، مناسب للعصر والمخلل.</li>
@@ -529,9 +492,6 @@
                 <li><strong>زيتون شملالي</strong>: يتحمل الظروف الصحراوية، مثمر بكثرة.</li>
                 <li><strong>زيتون صوراني</strong>: مخصص لإنتاج زيت الزيتون البكر.</li>
             </ul>
-
-            <h3>أسعار شتلات الزيتون</h3>
-            <p>تختلف الأسعار حسب العمر والحجم، تبدأ من 35 ريال للشتلة الصغيرة وتصل إلى 150 ريال للأشجار الكبيرة المثمرة.</p>
             <a href="zaytoon.html" class="btn" style="margin-top: 15px;">اقرأ المزيد عن الزيتون</a>
         </section>
 
@@ -540,28 +500,13 @@
             <h2>شبوك زراعية وملاعب بجودة عالية</h2>
             <p>نقوم بتوريد وتركيب جميع أنواع الشبوك:</p>
             <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-fence"></i>
-                    <h4>شبوك زراعية</h4>
-                    <p>لحماية المزروعات من الحيوانات والطيور.</p>
-                    <a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد عن الشبوك</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>شبوك ملاعب</h4>
-                    <p>لكرة القدم، التنس، والخماسي.</p>
-                    <a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد عن الشبوك</a>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-home"></i>
-                    <h4>شبوك استراحات</h4>
-                    <p>للخصوصية والأمان.</p>
-                    <a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد عن الشبوك</a>
-                </div>
+                <div class="service-card"><i class="fas fa-fence"></i><h4>شبوك زراعية</h4><p>لحماية المزروعات من الحيوانات والطيور.</p><a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد</a></div>
+                <div class="service-card"><i class="fas fa-shield-alt"></i><h4>شبوك ملاعب</h4><p>لكرة القدم، التنس، والخماسي.</p><a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد</a></div>
+                <div class="service-card"><i class="fas fa-home"></i><h4>شبوك استراحات</h4><p>للخصوصية والأمان.</p><a href="tarkeeb-shabouk.html" class="btn">اقرأ المزيد</a></div>
             </div>
         </section>
 
-        <!-- قسم المظلات والبرجولات -->
+        <!-- قسم المظلات -->
         <section class="content-section">
             <h2>مظلات وبرجولات عصرية</h2>
             <h3>أنواع المظلات</h3>
@@ -593,7 +538,7 @@
             <a href="nakheel-washingtonia.html" class="btn" style="margin-top: 15px;">اقرأ المزيد عن نخل واشنطن</a>
         </section>
 
-        <!-- قسم مقاولات زراعية -->
+        <!-- قسم مقاولات -->
         <section class="content-section">
             <h2>مقاولات زراعية متكاملة</h2>
             <p>ننفذ لك مشروعك الزراعي من الألف إلى الياء:</p>
@@ -607,53 +552,44 @@
             <a href="muqawil-mazarea.html" class="btn" style="margin-top: 15px;">اقرأ المزيد عن المقاولات</a>
         </section>
 
-        <!-- قسم الأسئلة الشائعة -->
+        <!-- الأسئلة الشائعة -->
         <section class="content-section">
             <h2>أسئلة شائعة</h2>
-            <div class="faq-item">
-                <h5>ما هي أفضل أنواع النخيل للزراعة في الرياض؟</h5>
-                <p>أنواع مثل المدجول والبرحي والخلاص هي الأكثر نجاحاً في مناخ الرياض.</p>
-            </div>
-            <div class="faq-item">
-                <h5>كم تكلفة تركيب شبوك لمزرعة مساحة 1000 متر؟</h5>
-                <p>تختلف حسب نوع الشبك، ولكن تبدأ من 3000 ريال.</p>
-            </div>
-            <div class="faq-item">
-                <h5>هل توفرون صيانة دورية للنخيل؟</h5>
-                <p>نعم، نوفر عقود صيانة سنوية تشمل التقليم والتسميد والمكافحة.</p>
-            </div>
+            <div class="faq-item"><h5>ما هي أفضل أنواع النخيل للزراعة في الرياض؟</h5><p>أنواع مثل المدجول والبرحي والخلاص هي الأكثر نجاحاً في مناخ الرياض.</p></div>
+            <div class="faq-item"><h5>كم تكلفة تركيب شبوك لمزرعة مساحة 1000 متر؟</h5><p>تختلف حسب نوع الشبك، ولكن تبدأ من 3000 ريال.</p></div>
+            <div class="faq-item"><h5>هل توفرون صيانة دورية للنخيل؟</h5><p>نعم، نوفر عقود صيانة سنوية تشمل التقليم والتسميد والمكافحة.</p></div>
         </section>
 
-        <!-- قسم الكلمات المفتاحية -->
+        <!-- الكلمات المفتاحية -->
         <section class="content-section">
             <h2>الكلمات المفتاحية الأكثر بحثاً</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">أفضل نخيل في الرياض</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">أسعار النخيل</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">فسائل نخيل للبيع</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">نخيل مدجول</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">نخيل برحي</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">نخيل خلاص</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">نخيل سكري</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">نخل واشنطن</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">زيتون إسباني</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">شتلات زيتون</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">تركيب شبوك</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">مظلات سيارات</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">برجولات</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">مقاول مزارع الرياض</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">صيانة حدائق</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px;">سدر وزيتون</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">أفضل نخيل في الرياض</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">أسعار النخيل</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">فسائل نخيل للبيع</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">نخيل مدجول</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">نخيل برحي</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">نخيل خلاص</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">نخيل سكري</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">نخل واشنطن</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">زيتون إسباني</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">شتلات زيتون</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">تركيب شبوك</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">مظلات سيارات</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">برجولات</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">مقاول مزارع الرياض</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">صيانة حدائق</span>
+                <span style="background: rgba(245, 197, 66, 0.2); border:1px solid #f5c542; border-radius: 40px; padding: 8px 16px; color: white;">سدر وزيتون</span>
             </div>
         </section>
     </main>
 
-    <!-- توقيع المصمم -->
-    <div class="designer-signature">
-        <h4><i class="fas fa-code"></i> صمم الموقع</h4>
-        <p style="font-size:2rem; font-weight:900;">سليمان الحكمي</p>
-        <a href="https://wa.me/966551987351" class="signature-wa" target="_blank"><i class="fab fa-whatsapp"></i> 0551987351</a>
-    </div>
+    <!-- توقيع المصمم (نسخة واحدة صغيرة) -->
+    <footer class="designer-signature">
+        <h6 style="font-size: 0.9rem; opacity: 0.9; color: #f5c542; margin: 0;">
+            <i class="fas fa-code"></i> تصميم وبرمجة: سليمان الحكمي - 0551987351 - جميع الحقوق محفوظة 2026
+        </h6>
+    </footer>
 
     <!-- الأزرار العائمة -->
     <div class="float-buttons">
@@ -665,21 +601,23 @@
         // منع النسخ والحفظ
         document.addEventListener('copy', e => e.preventDefault());
         document.addEventListener('dragstart', e => e.preventDefault());
-        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+        document.addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
 
         // فتح/إغلاق القائمة الجانبية
         const menuToggle = document.getElementById('menuToggle');
         const sidebar = document.getElementById('sidebar');
 
-        menuToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-        });
+        if (menuToggle && sidebar) {
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
 
-        document.addEventListener('click', (e) => {
-            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active')) {
-                sidebar.classList.remove('active');
-            }
-        });
+            document.addEventListener('click', (event) => {
+                if (!sidebar.contains(event.target) && !menuToggle.contains(event.target) && sidebar.classList.contains('active')) {
+                    sidebar.classList.remove('active');
+                }
+            });
+        }
     </script>
 </body>
 </html>
