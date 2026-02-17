@@ -65,6 +65,37 @@
         .stat-label{font-size:1.2rem}
         .faq-item{background:#f9f9f9;border-radius:15px;padding:20px;margin-bottom:15px;border-right:4px solid #f5c542}
         .faq-item h5{margin-bottom:10px;color:#0a4d2e}
+        /* قسم الكلمات المفتاحية الجديد */
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .keyword-item {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .keyword-item:hover {
+            border-color: #f5c542;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .keyword-item strong {
+            color: #0a4d2e;
+            font-size: 1.2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .keyword-item p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
         .float-buttons{position:fixed;bottom:20px;left:20px;display:flex;flex-direction:column;gap:10px;z-index:9999}
         .float-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;background:white;box-shadow:0 8px 20px rgba(0,0,0,0.3);text-decoration:none;border:2.5px solid}
         .float-btn i{font-size:26px;margin-bottom:2px}
@@ -289,26 +320,166 @@
             </div>
         </section>
 
-        <!-- الكلمات المفتاحية -->
+        <!-- قسم الكلمات المفتاحية الجديد (نصوص وتعاريف) -->
         <section class="content-section">
-            <h2>الكلمات المفتاحية الأكثر بحثاً</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">أفضل نخيل في الرياض</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">أسعار النخيل</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">فسائل نخيل للبيع</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">نخيل مدجول</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">نخيل برحي</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">نخيل خلاص</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">نخيل سكري</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">نخل واشنطن</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">زيتون إسباني</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">شتلات زيتون</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">تركيب شبوك</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">مظلات سيارات</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">برجولات</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">مقاول مزارع الرياض</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">صيانة حدائق</span>
-                <span style="background: #f0f9f0; border:1px solid #c9e0c9; border-radius: 40px; padding: 8px 16px; color: #0a4d2e;">سدر وزيتون</span>
+            <h2>دليل الكلمات المفتاحية لخدماتنا</h2>
+            <div class="keywords-grid">
+                <div class="keyword-item">
+                    <strong>فسائل نخيل</strong>
+                    <p>شتلات نخيل صغيرة تنتج من النخلة الأم، تستخدم للزراعة وإنتاج نخيل جديد بنفس الصفات الوراثية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نخيل مدجول</strong>
+                    <p>أفخر أنواع النخيل، يتميز بتموره الكبيرة الحلوة، ويُعرف بملك التمور، مناسب للاستثمار والتصدير.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نخيل برحي</strong>
+                    <p>نخيل ينتج تموراً ناعمة طرية، مثالية للرطب والمائدة، يتميز بإنتاجيته العالية وتحمل للحرارة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نخيل خلاص</strong>
+                    <p>من أشهر أنواع النخيل في الخليج، يتميز بطعمه الفريد وحلاوته المعتدلة، ويُفضل للزراعة المنزلية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نخيل سكري</strong>
+                    <p>نخيل ينتج تموراً قليلة الرطوبة، مناسبة للتخزين الطويل، وذات مذاق حلو مميز.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نخل واشنطن</strong>
+                    <p>نخيل زينة سريع النمو، يصلح لتجميل الشوارع والحدائق، يتحمل الظروف الصحراوية القاسية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زيتون إسباني</strong>
+                    <p>أشجار زيتون مثمرة ذات ثمار كبيرة، مناسبة للعصر واستخراج الزيت، وللتخليل والمائدة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زيتون روماني</strong>
+                    <p>صنف من الزيتون مقاوم للأمراض، إنتاجه وفير، يستخدم للزيت والمخلل، ويتكيف مع ظروف السعودية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زيتون شملالي</strong>
+                    <p>زيتون محلي يتحمل الظروف الصحراوية، مثمر بكثرة، يستخدم للزيت والمخلل، ويزرع في المناطق الجافة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زيت زيتون بكر</strong>
+                    <p>زيت زيتون ناتج عن العصر الأول للثمار، يتميز بجودته العالية وفوائده الصحية للقلب والشرايين.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>شبوك زراعية</strong>
+                    <p>أسوار شبكية تستخدم لحماية المزروعات من الحيوانات والطيور، مصنوعة من مواد متينة كالألمنيوم والمجلفن.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>تركيب شبوك ملاعب</strong>
+                    <p>خدمة تركيب شبوك عالية الجودة للملاعب الرياضية (كرة قدم، تنس، خماسي) لضمان سلامة اللاعبين والكرة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>شبوك استراحات</strong>
+                    <p>شبوك توفر الخصوصية والأمان للاستراحات والفلل، وتمنع دخول الغرباء أو الحيوانات.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مظلات سيارات</strong>
+                    <p>هياكل تغطي مواقف السيارات لحمايتها من أشعة الشمس الحارقة والأمطار والغبار، تتوفر بأشكال وخامات متعددة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>برجولات خشبية</strong>
+                    <p>هياكل معمارية من الخشب تستخدم لتزيين الحدائق والجلسات الخارجية، توفر ظلاً وجمالية للمكان.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مظلات مدارس</strong>
+                    <p>مظلات كبيرة تغطي ساحات المدارس والملاعب، تحمي الطلاب من حرارة الشمس وتوفر بيئة آمنة للأنشطة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مظلات قماش بي في سي</strong>
+                    <p>مظلات مصنوعة من قماش PVC عازل للحرارة والماء، متينة وتدوم طويلاً، مثالية للمواقف والحدائق.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>تسوية أراضي زراعية</strong>
+                    <p>عملية تمهيد وتعديل سطح الأرض للزراعة، تشمل إزالة الحجارة وتسوية الميول لتحسين الري.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>شبكات ري بالتنقيط</strong>
+                    <p>نظام ري حديث يوفر المياه ويوصلها مباشرة إلى جذور النباتات، يزيد الإنتاج ويقلل الفاقد.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>استصلاح أراضي صحراوية</strong>
+                    <p>تحويل الأراضي الصحراوية إلى أراضٍ زراعية خصبة عبر تحسين التربة وإضافة المواد العضوية وأنظمة الري.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>تنظيف وتقليم نخيل</strong>
+                    <p>خدمة تشمل إزالة السعف الجاف والكرب، وتنظيف الجذع، مما يحسن مظهر النخلة وإنتاجيتها.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مكافحة سوسة النخيل</strong>
+                    <p>علاج وقائي وعلاجي للقضاء على سوسة النخيل الحمراء، باستخدام مبيدات آمنة وحقن متخصصة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>صيانة حدائق</strong>
+                    <p>خدمات متكاملة للعناية بالحدائق، تشمل قص النجيلة، تقليم الأشجار، مكافحة الآفات، وتسميد النباتات.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>تصميم حدائق فلل</strong>
+                    <p>تخطيط وتصميم حدائق الفلل بشكل جمالي وعملي، يتضمن اختيار النباتات المناسبة وتوزيع المساحات الخضراء.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>قص نجيلة</strong>
+                    <p>خدمة دورية لقص النجيلة للحفاظ على مظهرها الأخضر الجميل، باستخدام معدات حديثة واحترافية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>بيع شتلات سدر</strong>
+                    <p>توريد شتلات سدر بلدي وسدر نبقي، أشجار مثمرة وظليلة، مناسبة للحدائق والمزارع.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>عسل سدر</strong>
+                    <p>عسل طبيعي فاخر ينتجه النحل من رحيق أزهار السدر، له فوائد علاجية وقيمة غذائية عالية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نبق</strong>
+                    <p>ثمرة شجرة السدر، فاكهة صغيرة حلوة المذاق، غنية بالفيتامينات ومضادات الأكسدة، تؤكل طازجة أو مجففة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مخلل زيتون</strong>
+                    <p>زيتون أخضر أو أسود محضر بالتخليل، من أشهر المقبلات في المطبخ العربي، يضاف للسلطات والأطباق.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>نقل أشجار كبيرة</strong>
+                    <p>خدمة متخصصة لنقل الأشجار الكبيرة من موقع إلى آخر باستخدام معدات رفع وسيارات مجهزة للحفاظ على سلامتها.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>تأجير عمال زراعيين</strong>
+                    <p>توفير عمالة مدربة للقيام بالأعمال الزراعية المختلفة كالغرس والتقليم والتنظيف، حسب الطلب.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مقاول مزارع الرياض</strong>
+                    <p>مقاول متخصص في تنفيذ مشاريع المزارع بجميع مراحلها، من تسوية الأرض إلى الزراعة والتشغيل.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زراعة نخيل في الرياض</strong>
+                    <p>خدمات زراعة النخيل في منطقة الرياض، مع مراعاة الظروف المناخية والتربة المحلية لضمان نجاح الزراعة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>سدر نبقي (جهينة)</strong>
+                    <p>نوع من أشجار السدر ينتج ثمار النبق، يتميز بكثافة ظله وإنتاجه الجيد، يستخدم في الظل والثمار.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>زيتون صوراني</strong>
+                    <p>صنف زيتون سوري الأصل، مخصص لإنتاج زيت الزيتون البكر عالي الجودة، يتميز بنكهته المميزة.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>مظلات سحاب متحركة</strong>
+                    <p>مظلات كهربائية أو يدوية يمكن فتحها وغلقها بسهولة، مثالية للجلسات الخارجية والمطاعم والكافيهات.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>بيوت محمية زراعية</strong>
+                    <p>هياكل مغطاة بالبلاستيك أو الزجاج لحماية المحاصيل من الظروف الجوية القاسية، تسمح بالزراعة على مدار العام.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>آبار ارتوازية</strong>
+                    <p>آبار عميقة تستخرج المياه الجوفية، تعتبر مصدراً رئيسياً للري في المزارع والمناطق الصحراوية.</p>
+                </div>
+                <div class="keyword-item">
+                    <strong>خزانات مياه زراعية</strong>
+                    <p>خزانات كبيرة لتخزين المياه المستخدمة في الري، مصنوعة من مواد آمنة ومناسبة للاستخدام الزراعي.</p>
+                </div>
             </div>
         </section>
     </main>
@@ -349,4 +520,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
