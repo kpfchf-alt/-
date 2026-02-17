@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>صيانة حدائق - تنسيق وتشذيب وخدمات العناية بالحدائق في الرياض | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="خدمات صيانة الحدائق المتكاملة: قص النجيلة، تقليم الأشجار، تشذيب السياج، مكافحة الحشرات، تسميد، ري، تصميم وتنسيق حدائق. فرق متخصصة في الرياض.">
+    <meta name="keywords" content="صيانة حدائق, تنسيق حدائق, تصميم حدائق, قص نجيلة, تقليم أشجار, تشذيب سياج, مكافحة حشرات, تسميد, ري, عناية بالحدائق, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات صيانة الحدائق */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* مميزات الخدمة */
+        .features-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border-right: 4px solid #f5c542;
+        }
+        .feature-item i {
+            color: #f5c542;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-leaf"></i> صيانة حدائق</h1>
+            <p>تنسيق وتشذيب وخدمات العناية بالحدائق - قص نجيلة - تقليم أشجار - مكافحة حشرات</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور صيانة الحدائق مع كلمات مفتاحية (20 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور صيانة الحدائق مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7JfKRnxW/IMG-20260212-WA0004olive.jpg" alt="قص نجيلة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">قص نجيلة</span>
+                    <span class="keyword-badge">تشذيب حديقة</span>
+                    <span class="keyword-badge">عناية بالنجيلة</span>
+                    <span class="keyword-badge">صيانة حدائق</span>
+                    <span class="keyword-badge">تنسيق حدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gq6HB9y/image-N3.webp" alt="تقليم أشجار">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم أشجار</span>
+                    <span class="keyword-badge">تشذيب أشجار</span>
+                    <span class="keyword-badge">تهذيب أشجار</span>
+                    <span class="keyword-badge">قص أغصان</span>
+                    <span class="keyword-badge">عناية بالأشجار</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/v4Lh8Xm4/image-N4.webp" alt="تشذيب سياج">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تشذيب سياج</span>
+                    <span class="keyword-badge">قص سياج نباتي</span>
+                    <span class="keyword-badge">تهذيب الأسوار الخضراء</span>
+                    <span class="keyword-badge">عناية بالسياج</span>
+                    <span class="keyword-badge">تنسيق سياج</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/C3nN00tr/Whats-App-Image-2025-08-13-at-4-31-57-PM-2-3.webp" alt="مكافحة حشرات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مكافحة حشرات</span>
+                    <span class="keyword-badge">رش مبيدات</span>
+                    <span class="keyword-badge">مكافحة آفات</span>
+                    <span class="keyword-badge">وقاية نباتات</span>
+                    <span class="keyword-badge">علاج أمراض نباتات</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8gzJGm35/Whats-App-Image-2025-08-13-at-4-31-58-PM-2.webp" alt="تسميد حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تسميد حدائق</span>
+                    <span class="keyword-badge">أسمدة عضوية</span>
+                    <span class="keyword-badge">أسمدة كيماوية</span>
+                    <span class="keyword-badge">تغذية نباتات</span>
+                    <span class="keyword-badge">برامج تسميد</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/twhTF9Wv/Whats-App-Image-2025-08-13-at-4-31-58-PM-1.webp" alt="ري حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">ري حدائق</span>
+                    <span class="keyword-badge">أنظمة ري</span>
+                    <span class="keyword-badge">ري بالتنقيط</span>
+                    <span class="keyword-badge">ري بالرش</span>
+                    <span class="keyword-badge">برامج ري</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/ymDcXTYG/Whats-App-Image-2025-08-13-at-4-31-57-PM-4.webp" alt="تصميم حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تصميم حدائق</span>
+                    <span class="keyword-badge">تخطيط حدائق</span>
+                    <span class="keyword-badge">مهندس تنسيق حدائق</span>
+                    <span class="keyword-badge">مخطط حدائق</span>
+                    <span class="keyword-badge">ديكور حدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N2Prfj38/Whats-App-Image-2025-08-13-at-4-31-57-PM-3-2.webp" alt="زراعة زهور">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زراعة زهور</span>
+                    <span class="keyword-badge">شتلات زهور</span>
+                    <span class="keyword-badge">ورود</span>
+                    <span class="keyword-badge">نباتات زينة</span>
+                    <span class="keyword-badge">تجميل حدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3my6vTRJ/Whats-App-Image-2025-08-13-at-4-31-58-PM-3-1.webp" alt="زراعة نخيل زينة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زراعة نخيل زينة</span>
+                    <span class="keyword-badge">نخيل للحدائق</span>
+                    <span class="keyword-badge">نخيل واشنطن</span>
+                    <span class="keyword-badge">نخيل ملكي</span>
+                    <span class="keyword-badge">نخيل ظل</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DDNFCK2q/Whats-App-Image-2025-08-13-at-4-31-59-PM-1-1.webp" alt="زراعة أشجار مثمرة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زراعة أشجار مثمرة</span>
+                    <span class="keyword-badge">أشجار فاكهة</span>
+                    <span class="keyword-badge">أشجار ليمون</span>
+                    <span class="keyword-badge">أشجار برتقال</span>
+                    <span class="keyword-badge">حدائق مثمرة</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HfzNXF2L/Whats-App-Image-2025-08-13-at-4-31-58-PM.webp" alt="تركيب شبوك حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تركيب شبوك حدائق</span>
+                    <span class="keyword-badge">شبوك زينة</span>
+                    <span class="keyword-badge">شبوك حماية</span>
+                    <span class="keyword-badge">أسوار حدائق</span>
+                    <span class="keyword-badge">تسييج حدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/B23fyn1c/Whats-App-Image-2025-08-13-at-4-31-59-PM-2.webp" alt="تركيب مظلات حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تركيب مظلات حدائق</span>
+                    <span class="keyword-badge">برجولات</span>
+                    <span class="keyword-badge">مظلات جلسات</span>
+                    <span class="keyword-badge">مظلات خشبية</span>
+                    <span class="keyword-badge">مظلات خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nqs4RLT0/Whats-App-Image-2025-08-13-at-4-32-00-PM-2-1.webp" alt="إنشاء بحيرات صناعية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">بحيرات صناعية</span>
+                    <span class="keyword-badge">نوافير</span>
+                    <span class="keyword-badge">شلالات</span>
+                    <span class="keyword-badge">برك زينة</span>
+                    <span class="keyword-badge">مسطحات مائية</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/RG67v3cp/Whats-App-Image-2025-08-13-at-4-32-00-PM-1.webp" alt="إنارة حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">إنارة حدائق</span>
+                    <span class="keyword-badge">لمبات حدائق</span>
+                    <span class="keyword-badge">أعمدة إنارة</span>
+                    <span class="keyword-badge">إضاءة خارجية</span>
+                    <span class="keyword-badge">ديكور إنارة</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/DD247X87/Whats-App-Image-2025-08-13-at-4-31-59-PM-4.webp" alt="أثاث حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">أثاث حدائق</span>
+                    <span class="keyword-badge">كراسي حدائق</span>
+                    <span class="keyword-badge">طاولات حدائق</span>
+                    <span class="keyword-badge">أرجوحات</span>
+                    <span class="keyword-badge">مقاعد خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/3mY2DTSj/Whats-App-Image-2025-08-13-at-4-31-59-PM-3-1.webp" alt="ممرات حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">ممرات حدائق</span>
+                    <span class="keyword-badge">بلاط حدائق</span>
+                    <span class="keyword-badge">أحجار زينة</span>
+                    <span class="keyword-badge">ديكور ممرات</span>
+                    <span class="keyword-badge">تبليط خارجي</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/7t49sDqC/Whats-App-Image-2025-08-13-at-4-32-02-PM-3.webp" alt="عقود صيانة حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">عقود صيانة حدائق</span>
+                    <span class="keyword-badge">صيانة دورية</span>
+                    <span class="keyword-badge">زيارات منتظمة</span>
+                    <span class="keyword-badge">صيانة شهرية</span>
+                    <span class="keyword-badge">صيانة سنوية</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fYnBQ2LV/Whats-App-Image-2025-08-13-at-4-32-10-PM-3-1.webp" alt="معدات صيانة حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">معدات صيانة حدائق</span>
+                    <span class="keyword-badge">آلات قص نجيلة</span>
+                    <span class="keyword-badge">مناشير تقليم</span>
+                    <span class="keyword-badge">مضخات ري</span>
+                    <span class="keyword-badge">معدات زراعية</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hJcBWhV9/4630a6bc0fedcb08241db32604cbf7b0.webp" alt="فرق صيانة حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">فرق صيانة حدائق</span>
+                    <span class="keyword-badge">عمال حدائق</span>
+                    <span class="keyword-badge">بستانيين</span>
+                    <span class="keyword-badge">مهندسي حدائق</span>
+                    <span class="keyword-badge">متخصصون في الحدائق</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/1Yb0BYkq/Whats-App-Image-2025-08-13-at-4-32-06-PM-1-1.webp" alt="نتائج صيانة حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">نتائج صيانة حدائق</span>
+                    <span class="keyword-badge">حدائق بعد الصيانة</span>
+                    <span class="keyword-badge">شكل جمالي</span>
+                    <span class="keyword-badge">حدائق خضراء</span>
+                    <span class="keyword-badge">حدائق مثالية</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات صيانة الحدائق -->
+        <h2><i class="fas fa-list-check"></i> خدمات صيانة الحدائق</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>قص وتشذيب النجيلة</h3>
+                <p>قص النجيلة بانتظام للحفاظ على شكلها الأخضر الجذاب، وإزالة الحشائش الضارة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>تقليم الأشجار والشجيرات</h3>
+                <p>تقليم الأشجار والشجيرات لإزالة الأغصان الجافة وتحسين المظهر والنمو.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-fence"></i>
+                <h3>تشذيب السياج النباتي</h3>
+                <p>تهذيب الأسوار النباتية لإعطائها شكلاً منتظماً وجذاباً.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h3>مكافحة الحشرات والآفات</h3>
+                <p>رش ومكافحة الحشرات والقوارض التي تضر بالنباتات وجمال الحديقة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-flask"></i>
+                <h3>تسميد وتغذية النباتات</h3>
+                <p>برامج تسميد متوازنة باستخدام أفضل الأسمدة العضوية والكيماوية.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-water"></i>
+                <h3>أنظمة الري</h3>
+                <p>تصميم وتركيب وصيانة أنظمة الري الآلي لتوفير المياه والعناية بالنباتات.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-paint-brush"></i>
+                <h3>تصميم وتنسيق الحدائق</h3>
+                <p>تصميم حدائق جديدة أو إعادة تنسيق القائم بأحدث الأساليب.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>عقود صيانة دورية</h3>
+                <p>برامج صيانة منتظمة (أسبوعية، شهرية) تناسب احتياجات حديقتك.</p>
+            </div>
+        </div>
+
+        <!-- مميزات خدمة صيانة الحدائق -->
+        <h2><i class="fas fa-star"></i> لماذا تختار خدماتنا لصيانة حديقتك؟</h2>
+        <div class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>فريق متخصص</h4>
+                    <p>مهندسون زراعيون وفنيون وبستانيون ذوو خبرة في العناية بالحدائق.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>خدمة منتظمة</h4>
+                    <p>نلتزم بالمواعيد المحددة للزيارات الدورية حسب خطة الصيانة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-leaf"></i>
+                    <h4>خبرة طويلة</h4>
+                    <p>أكثر من 15 عاماً في مجال تنسيق وصيانة الحدائق في السعودية.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-percent"></i>
+                    <h4>أسعار منافسة</h4>
+                    <p>نقدم أفضل الأسعار مع خصومات على العقود الطويلة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-recycle"></i>
+                    <h4>تخلص من المخلفات</h4>
+                    <p>نقوم بجمع وتحميل جميع مخلفات الصيانة وإزالتها من الموقع.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-smile"></i>
+                    <h4>ضمان الرضا</h4>
+                    <p>نضمن رضاك التام عن خدماتنا، ونعمل على تلبية جميع طلباتك.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 250 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة لصيانة الحدائق</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 250 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">صيانة حدائق</span>
+                <span class="keyword">تنسيق حدائق</span>
+                <span class="keyword">تصميم حدائق</span>
+                <span class="keyword">قص نجيلة</span>
+                <span class="keyword">تقليم أشجار</span>
+                <span class="keyword">تشذيب سياج</span>
+                <span class="keyword">مكافحة حشرات</span>
+                <span class="keyword">تسميد حدائق</span>
+                <span class="keyword">ري حدائق</span>
+                <span class="keyword">عناية بالحدائق</span>
+                <span class="keyword">زراعة زهور</span>
+                <span class="keyword">شتلات زينة</span>
+                <span class="keyword">نباتات ظل</span>
+                <span class="keyword">نخيل زينة</span>
+                <span class="keyword">أشجار مثمرة</span>
+                <span class="keyword">حدائق فلل</span>
+                <span class="keyword">حدائق قصور</span>
+                <span class="keyword">حدائق منازل</span>
+                <span class="keyword">حدائق عامة</span>
+                <span class="keyword">حدائق استراحات</span>
+                <span class="keyword">مهندس تنسيق حدائق</span>
+                <span class="keyword">بستاني</span>
+                <span class="keyword">عمال حدائق</span>
+                <span class="keyword">فرق صيانة حدائق</span>
+                <span class="keyword">شركة صيانة حدائق</span>
+                <span class="keyword">أفضل شركة صيانة حدائق</span>
+                <span class="keyword">صيانة حدائق الرياض</span>
+                <span class="keyword">تنسيق حدائق الرياض</span>
+                <span class="keyword">تصميم حدائق الرياض</span>
+                <span class="keyword">أسعار صيانة الحدائق</span>
+                <span class="keyword">تكلفة تنسيق حديقة</span>
+                <span class="keyword">سعر قص النجيلة</span>
+                <span class="keyword">عقود صيانة حدائق</span>
+                <span class="keyword">صيانة دورية للحدائق</span>
+                <span class="keyword">خدمات حدائق</span>
+                <span class="keyword">عناية بالنخيل في الحدائق</span>
+                <span class="keyword">تقليم نخيل زينة</span>
+                <span class="keyword">تشذيب أشجار الظل</span>
+                <span class="keyword">زراعة ورد</span>
+                <span class="keyword">زراعة ورود</span>
+                <span class="keyword">أجمل الزهور للحدائق</span>
+                <span class="keyword">نباتات معمرة</span>
+                <span class="keyword">نباتات حولية</span>
+                <span class="keyword">نباتات موسمية</span>
+                <span class="keyword">أسمدة عضوية للحدائق</span>
+                <span class="keyword">أسمدة كيماوية للحدائق</span>
+                <span class="keyword">مبيدات حشرية للحدائق</span>
+                <span class="keyword">مكافحة النمل</span>
+                <span class="keyword">مكافحة الصراصير</span>
+                <span class="keyword">مكافحة البعوض</span>
+                <span class="keyword">مكافحة القوارض</span>
+                <span class="keyword">أنظمة ري حديثة</span>
+                <span class="keyword">ري بالتنقيط للحدائق</span>
+                <span class="keyword">ري بالرش للحدائق</span>
+                <span class="keyword">برمجة أنظمة الري</span>
+                <span class="keyword">تصميم شبكات ري</span>
+                <span class="keyword">تركيب مؤقتات ري</span>
+                <span class="keyword">أجهزة تحكم بالري</span>
+                <span class="keyword">مضخات مياه للحدائق</span>
+                <span class="keyword">خزانات مياه للحدائق</span>
+                <span class="keyword">إنارة حدائق</span>
+                <span class="keyword">لمبات حدائق</span>
+                <span class="keyword">أعمدة إنارة حدائق</span>
+                <span class="keyword">إضاءة خارجية للحدائق</span>
+                <span class="keyword">ديكور إنارة حدائق</span>
+                <span class="keyword">أثاث حدائق</span>
+                <span class="keyword">كراسي حدائق</span>
+                <span class="keyword">طاولات حدائق</span>
+                <span class="keyword">أرجوحات حدائق</span>
+                <span class="keyword">مقاعد خارجية</span>
+                <span class="keyword">برجولات حدائق</span>
+                <span class="keyword">مظلات حدائق</span>
+                <span class="keyword">شبوك حدائق</span>
+                <span class="keyword">أسوار حدائق</span>
+                <span class="keyword">ممرات حدائق</span>
+                <span class="keyword">بلاط حدائق</span>
+                <span class="keyword">أحجار زينة للحدائق</span>
+                <span class="keyword">ديكورات حدائق</span>
+                <span class="keyword">تماثيل حدائق</span>
+                <span class="keyword">نوافير حدائق</span>
+                <span class="keyword">شلالات حدائق</span>
+                <span class="keyword">بحيرات صناعية</span>
+                <span class="keyword">برك زينة</span>
+                <span class="keyword">مسطحات خضراء</span>
+                <span class="keyword">نجيلة طبيعية</span>
+                <span class="keyword">نجيلة صناعية</span>
+                <span class="keyword">بذور نجيلة</span>
+                <span class="keyword">لفات نجيلة</span>
+                <span class="keyword">تربة زراعية</span>
+                <span class="keyword">بيتموس</span>
+                <span class="keyword">بيرلايت</span>
+                <span class="keyword">فيرميكيوليت</span>
+                <span class="keyword">كمبوست</span>
+                <span class="keyword">أسمدة بطيئة الذوبان</span>
+                <span class="keyword">منشطات جذور</span>
+                <span class="keyword">هرمونات تجذير</span>
+                <span class="keyword">مبيدات فطرية</span>
+                <span class="keyword">مبيدات حشرية</span>
+                <span class="keyword">مبيدات أعشاب</span>
+                <span class="keyword">مكافحة الآفات المتكاملة</span>
+                <span class="keyword">أمراض النباتات</span>
+                <span class="keyword">علاج أمراض النباتات</span>
+                <span class="keyword">إصفرار الأوراق</span>
+                <span class="keyword">ذبول النباتات</span>
+                <span class="keyword">نقص عناصر غذائية</span>
+                <span class="keyword">تحليل تربة</span>
+                <span class="keyword">استشارات زراعية للحدائق</span>
+                <span class="keyword">تصميم حدائق منزلية</span>
+                <span class="keyword">تنسيق حدائق فلل</span>
+                <span class="keyword">حدائق استوائية</span>
+                <span class="keyword">حدائق صحراوية</span>
+                <span class="keyword">حدائق إسلامية</span>
+                <span class="keyword">حدائق فرنسية</span>
+                <span class="keyword">حدائق إنجليزية</span>
+                <span class="keyword">حدائق يابانية</span>
+                <span class="keyword">حدائق حديثة</span>
+                <span class="keyword">حدائق كلاسيكية</span>
+                <span class="keyword">حدائق مودرن</span>
+                <span class="keyword">حدائق بسيطة</span>
+                <span class="keyword">حدائق صغيرة</span>
+                <span class="keyword">حدائق وسطية</span>
+                <span class="keyword">حدائق أمام المنزل</span>
+                <span class="keyword">حدائق خلف المنزل</span>
+                <span class="keyword">حدائق سطح المنزل</span>
+                <span class="keyword">أسطح خضراء</span>
+                <span class="keyword">جدران خضراء</span>
+                <span class="keyword">حدائق عمودية</span>
+                <span class="keyword">تنسيق حدائق بالصور</span>
+                <span class="keyword">أفكار تنسيق حدائق</span>
+                <span class="keyword">نباتات تتحمل الحرارة</span>
+                <span class="keyword">نباتات تتحمل البرودة</span>
+                <span class="keyword">نباتات تتحمل الجفاف</span>
+                <span class="keyword">نباتات تتحمل الملوحة</span>
+                <span class="keyword">أفضل نباتات للحدائق في الرياض</span>
+                <span class="keyword">زراعة في الرياض</span>
+                <span class="keyword">مناخ الرياض والزراعة</span>
+                <span class="keyword">مواسم الزراعة في الرياض</span>
+                <span class="keyword">تقويم زراعي للرياض</span>
+                <span class="keyword">شركات تنسيق حدائق في الرياض</span>
+                <span class="keyword">مقاول تنسيق حدائق</span>
+                <span class="keyword">أفضل مقاول تنسيق حدائق</span>
+                <span class="keyword">أرخص شركة تنسيق حدائق</span>
+                <span class="keyword">عروض تنسيق حدائق</span>
+                <span class="keyword">خصومات على صيانة حدائق</span>
+                <span class="keyword">تخفيضات تنسيق حدائق</span>
+                <span class="keyword">صيانة حدائق شمال الرياض</span>
+                <span class="keyword">صيانة حدائق جنوب الرياض</span>
+                <span class="keyword">صيانة حدائق شرق الرياض</span>
+                <span class="keyword">صيانة حدائق غرب الرياض</span>
+                <span class="keyword">صيانة حدائق وسط الرياض</span>
+                <span class="keyword">صيانة حدائق في جميع أحياء الرياض</span>
+                <span class="keyword">خدمات حدائق 24 ساعة</span>
+                <span class="keyword">طلب صيانة حدائق</span>
+                <span class="keyword">استعلام عن صيانة حدائق</span>
+                <span class="keyword">احجز موعد صيانة حدائق</span>
+                <span class="keyword">معاينة مجانية للحدائق</span>
+                <span class="keyword">تقييم حالة الحديقة</span>
+                <span class="keyword">نصائح للعناية بالحدائق</span>
+                <span class="keyword">إرشادات صيانة حدائق</span>
+                <span class="keyword">دليل العناية بالحدائق</span>
+                <span class="keyword">أهمية صيانة الحدائق</span>
+                <span class="keyword">فوائد تنسيق الحدائق</span>
+                <span class="keyword">تأثير الحدائق على البيئة</span>
+                <span class="keyword">الحدائق والصحة النفسية</span>
+                <span class="keyword">الحدائق وتحسين جودة الحياة</span>
+                <span class="keyword">صيانة حدائق للفلل</span>
+                <span class="keyword">صيانة حدائق للقصور</span>
+                <span class="keyword">صيانة حدائق للشركات</span>
+                <span class="keyword">صيانة حدائق للمؤسسات</span>
+                <span class="keyword">صيانة حدائق للفنادق</span>
+                <span class="keyword">صيانة حدائق للمنتجعات</span>
+                <span class="keyword">صيانة حدائق للمطاعم</span>
+                <span class="keyword">صيانة حدائق للكافيهات</span>
+                <span class="keyword">صيانة حدائق للمولات</span>
+                <span class="keyword">صيانة حدائق للأسواق</span>
+                <span class="keyword">صيانة حدائق للمستشفيات</span>
+                <span class="keyword">صيانة حدائق للمدارس</span>
+                <span class="keyword">صيانة حدائق للجامعات</span>
+                <span class="keyword">صيانة حدائق للمساجد</span>
+                <span class="keyword">صيانة حدائق للحدائق العامة</span>
+                <span class="keyword">صيانة حدائق للمنتزهات</span>
+                <span class="keyword">صيانة حدائق للمشاريع الحكومية</span>
+                <span class="keyword">صيانة حدائق للمشاريع الخاصة</span>
+                <span class="keyword">عقود صيانة حدائق للفلل</span>
+                <span class="keyword">عقود صيانة حدائق للشركات</span>
+                <span class="keyword">عقود صيانة حدائق للمؤسسات</span>
+                <span class="keyword">عقود صيانة حدائق للفنادق</span>
+                <span class="keyword">عقود صيانة حدائق للمنتجعات</span>
+                <span class="keyword">عقود صيانة حدائق للمطاعم</span>
+                <span class="keyword">عقود صيانة حدائق للكافيهات</span>
+                <span class="keyword">عقود صيانة حدائق للمولات</span>
+                <span class="keyword">عقود صيانة حدائق للمستشفيات</span>
+                <span class="keyword">عقود صيانة حدائق للمدارس</span>
+                <span class="keyword">عقود صيانة حدائق للجامعات</span>
+                <span class="keyword">عقود صيانة حدائق للمساجد</span>
+                <span class="keyword">عقود صيانة حدائق للحدائق العامة</span>
+                <span class="keyword">عقود صيانة حدائق للمنتزهات</span>
+                <span class="keyword">عقود صيانة حدائق للمشاريع الحكومية</span>
+                <span class="keyword">عقود صيانة حدائق للمشاريع الخاصة</span>
+                <span class="keyword">صيانة حدائق تجارية</span>
+                <span class="keyword">صيانة حدائق سكنية</span>
+                <span class="keyword">صيانة حدائق صناعية</span>
+                <span class="keyword">صيانة حدائق زراعية</span>
+                <span class="keyword">صيانة حدائق سياحية</span>
+                <span class="keyword">صيانة حدائق ترفيهية</span>
+                <span class="keyword">صيانة حدائق رياضية</span>
+                <span class="keyword">صيانة حدائق تعليمية</span>
+                <span class="keyword">صيانة حدائق صحية</span>
+                <span class="keyword">صيانة حدائق دينية</span>
+                <span class="keyword">صيانة حدائق ثقافية</span>
+                <span class="keyword">صيانة حدائق إعلامية</span>
+                <span class="keyword">صيانة حدائق تقنية</span>
+                <span class="keyword">صيانة حدائق رقمية</span>
+                <span class="keyword">صيانة حدائق خضراء</span>
+                <span class="keyword">صيانة حدائق مستدامة</span>
+                <span class="keyword">صيانة حدائق ذكية</span>
+                <span class="keyword">صيانة حدائق حديثة</span>
+                <span class="keyword">صيانة حدائق مستقبلية</span>
+                <span class="keyword">صيانة حدائق ضخمة</span>
+                <span class="keyword">صيانة حدائق عملاقة</span>
+                <span class="keyword">صيانة حدائق رائدة</span>
+                <span class="keyword">صيانة حدائق متميزة</span>
+                <span class="keyword">صيانة حدائق فاخرة</span>
+                <span class="keyword">صيانة حدائق راقية</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-leaf"></i> صيانة حدائق - تنسيق - تقليم - قص نجيلة - ري</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
