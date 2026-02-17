@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>شبوك زراعية وملاعب - نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="تركيب جميع أنواع الشبوك: شبوك زراعية، شبوك ملاعب، شبوك حماية، شبوك ألمنيوم، شبوك مجلفنة. توريد وتركيب في الرياض.">
+    <meta name="keywords" content="شبوك, شبوك زراعية, شبوك ملاعب, شبوك حماية, شبوك ألمنيوم, شبوك مجلفنة, تركيب شبوك, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات الشبوك */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="torid-nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-fence"></i> الشبوك الزراعية والملاعب</h1>
+            <p>جميع أنواع الشبوك - تركيب وتوريد وصيانة</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور الشبوك مع كلمات مفتاحية (20 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور الشبوك مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 (استخدم روابط الشبوك من المحادثة السابقة) -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/4ZcHHh3M/IMG-20251225-WA0029.jpg" alt="شبوك زراعية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك زراعية</span>
+                    <span class="keyword-badge">شبوك مزارع</span>
+                    <span class="keyword-badge">شبوك حماية</span>
+                    <span class="keyword-badge">شبوك ألمنيوم</span>
+                    <span class="keyword-badge">شبوك مجلفنة</span>
+                    <span class="keyword-badge">شبوك ضد الطيور</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nszyxDXq/IMG-20251225-WA0027.jpg" alt="شبوك ملاعب">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك ملاعب</span>
+                    <span class="keyword-badge">شبوك خماسي</span>
+                    <span class="keyword-badge">شبوك تنس</span>
+                    <span class="keyword-badge">شبوك ملاعب رياضية</span>
+                    <span class="keyword-badge">شبوك أمان</span>
+                    <span class="keyword-badge">شبوك عزل</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fVyB7zgR/IMG-20251225-WA0026.jpg" alt="شبوك استراحات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك استراحات</span>
+                    <span class="keyword-badge">شبوك فلل</span>
+                    <span class="keyword-badge">شبوك قصور</span>
+                    <span class="keyword-badge">شبوك حدائق</span>
+                    <span class="keyword-badge">شبوك خصوصية</span>
+                    <span class="keyword-badge">شبوك خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/JW7YzjtY/IMG-20251225-WA0031.jpg" alt="شبوك ألمنيوم">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك ألمنيوم</span>
+                    <span class="keyword-badge">شبوك خفيفة</span>
+                    <span class="keyword-badge">شبوك قوية</span>
+                    <span class="keyword-badge">شبوك مقاومة للصدأ</span>
+                    <span class="keyword-badge">شبوك عصرية</span>
+                    <span class="keyword-badge">شبوك حديثة</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/5h3YcpRC/IMG-20251225-WA0032.jpg" alt="شبوك مجلفنة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك مجلفنة</span>
+                    <span class="keyword-badge">شبوك مجلفن</span>
+                    <span class="keyword-badge">شبوك مقاومة للصدأ</span>
+                    <span class="keyword-badge">شبوك متينة</span>
+                    <span class="keyword-badge">شبوك صناعية</span>
+                    <span class="keyword-badge">شبوك مصانع</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/dw5zbWsw/IMG-20251225-WA0033.jpg" alt="شبوك حماية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك حماية</span>
+                    <span class="keyword-badge">شبوك أمنية</span>
+                    <span class="keyword-badge">شبوك حراسة</span>
+                    <span class="keyword-badge">شبوك محيطية</span>
+                    <span class="keyword-badge">شبوك أسوار</span>
+                    <span class="keyword-badge">شبوك عازلة</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nMLyVqC2/IMG-20251225-WA0034.jpg" alt="شبوك مزارع">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك مزارع</span>
+                    <span class="keyword-badge">شبوك أغنام</span>
+                    <span class="keyword-badge">شبوك مواشي</span>
+                    <span class="keyword-badge">شبوك إبل</span>
+                    <span class="keyword-badge">شبوك دواجن</span>
+                    <span class="keyword-badge">شبوك زراعية</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HLyrt39Y/Whats-App-Image-2025-08-13-at-4-35-33-PM-4.webp" alt="شبوك ملاعب خماسي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك ملاعب خماسي</span>
+                    <span class="keyword-badge">شبوك كرة قدم</span>
+                    <span class="keyword-badge">شبوك رياضية</span>
+                    <span class="keyword-badge">شبوك أكاديميات</span>
+                    <span class="keyword-badge">شبوك نوادي</span>
+                    <span class="keyword-badge">شبوك ملاعب عشب</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/BVD3bFPw/Whats-App-Image-2025-08-13-at-4-35-32-PM-3.webp" alt="شبوك ملاعب تنس">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك تنس</span>
+                    <span class="keyword-badge">شبوك كرة طائرة</span>
+                    <span class="keyword-badge">شبوك كرة سلة</span>
+                    <span class="keyword-badge">شبوك ملاعب خاصة</span>
+                    <span class="keyword-badge">شبوك محترفة</span>
+                    <span class="keyword-badge">شبوك معتمدة</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/C3Mr14v4/Whats-App-Image-2025-08-13-at-4-34-42-PM-2.webp" alt="شبوك حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك حدائق</span>
+                    <span class="keyword-badge">شبوك منازل</span>
+                    <span class="keyword-badge">شبوك فلل صغيرة</span>
+                    <span class="keyword-badge">شبوك زينة</span>
+                    <span class="keyword-badge">شبوك خشبية</span>
+                    <span class="keyword-badge">شبوك ديكور</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/S7BzP9jR/IMG-20251225-WA0037.jpg" alt="شبوك مصانع">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك مصانع</span>
+                    <span class="keyword-badge">شبوك شركات</span>
+                    <span class="keyword-badge">شبوك صناعية</span>
+                    <span class="keyword-badge">شبوك مخازن</span>
+                    <span class="keyword-badge">شبوك مستودعات</span>
+                    <span class="keyword-badge">شبوك أمن صناعي</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/kspmQQPx/IMG-20251225-WA0036.jpg" alt="شبوك مدارس">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك مدارس</span>
+                    <span class="keyword-badge">شبوك جامعات</span>
+                    <span class="keyword-badge">شبوك معاهد</span>
+                    <span class="keyword-badge">شبوك أطفال</span>
+                    <span class="keyword-badge">شبوك آمنة</span>
+                    <span class="keyword-badge">شبوك تعليمية</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/kgDg3xHs/IMG-20251225-WA0035.jpg" alt="شبوك مسابح">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك مسابح</span>
+                    <span class="keyword-badge">شبوك حمامات</span>
+                    <span class="keyword-badge">شبوك أمان</span>
+                    <span class="keyword-badge">شبوك حماية أطفال</span>
+                    <span class="keyword-badge">شبوك قابلة للإزالة</span>
+                    <span class="keyword-badge">شبوك مؤقتة</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/yctZstRm/Whats-App-Image-2025-08-13-at-4-34-41-PM.webp" alt="شبوك حدائق عامة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك حدائق عامة</span>
+                    <span class="keyword-badge">شبوك منتزهات</span>
+                    <span class="keyword-badge">شبوك متنزهات</span>
+                    <span class="keyword-badge">شبوك مشايات</span>
+                    <span class="keyword-badge">شبوك ممرات</span>
+                    <span class="keyword-badge">شبوك جمالية</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/8n1TSnYn/Whats-App-Image-2025-08-13-at-4-34-43-PM.webp" alt="شبوك استراحات خاصة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك استراحات خاصة</span>
+                    <span class="keyword-badge">شبوك مخيمات</span>
+                    <span class="keyword-badge">شبوك بر</span>
+                    <span class="keyword-badge">شبوك صحراء</span>
+                    <span class="keyword-badge">شبوك متنقلة</span>
+                    <span class="keyword-badge">شبوك مؤقتة</span>
+                </div>
+            </div>
+            <!-- الصورة 16 (نكرر بعض الصور لاستكمال العدد 20، أو يمكن إضافة المزيد من الروابط) -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/4ZcHHh3M/IMG-20251225-WA0029.jpg" alt="شبوك حماية الطيور">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك ضد الطيور</span>
+                    <span class="keyword-badge">شبوك حمام</span>
+                    <span class="keyword-badge">شبوك عصافير</span>
+                    <span class="keyword-badge">شبوك مزارع نخيل</span>
+                    <span class="keyword-badge">شبوك بيوت محمية</span>
+                    <span class="keyword-badge">شبوك زراعية متقدمة</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nszyxDXq/IMG-20251225-WA0027.jpg" alt="شبوك ملاعب خماسي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك خماسي</span>
+                    <span class="keyword-badge">شبوك ملاعب نجيل</span>
+                    <span class="keyword-badge">شبوك ملاعب صابون</span>
+                    <span class="keyword-badge">شبوك ملاعب أطفال</span>
+                    <span class="keyword-badge">شبوك أكاديميات كرة</span>
+                    <span class="keyword-badge">شبوك ملاعب مدرسية</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fVyB7zgR/IMG-20251225-WA0026.jpg" alt="شبوك أسوار">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك أسوار</span>
+                    <span class="keyword-badge">شبوك محيطات</span>
+                    <span class="keyword-badge">شبوك حدودية</span>
+                    <span class="keyword-badge">شبوك أمنية</span>
+                    <span class="keyword-badge">شبوك عالية</span>
+                    <span class="keyword-badge">شبوك شائكة</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/JW7YzjtY/IMG-20251225-WA0031.jpg" alt="شبوك ملاعب تنس">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك تنس أرضي</span>
+                    <span class="keyword-badge">شبوك تنس طاولة</span>
+                    <span class="keyword-badge">شبوك رياضية متعددة</span>
+                    <span class="keyword-badge">شبوك محترفة</span>
+                    <span class="keyword-badge">شبوك أولمبية</span>
+                    <span class="keyword-badge">شبوك ملاعب معتمدة</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/5h3YcpRC/IMG-20251225-WA0032.jpg" alt="شبوك مزارع أغنام">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شبوك أغنام</span>
+                    <span class="keyword-badge">شبوك ماشية</span>
+                    <span class="keyword-badge">شبوك حظائر</span>
+                    <span class="keyword-badge">شبوك تربية حيوانات</span>
+                    <span class="keyword-badge">شبوك رعوية</span>
+                    <span class="keyword-badge">شبوك مزارع خاصة</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات الشبوك -->
+        <h2><i class="fas fa-list-check"></i> خدمات الشبوك</h2>
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-fence"></i><h3>شبوك زراعية</h3><p>لحماية المزارع والمحاصيل من الحيوانات والطيور، شبوك متينة وعالية الجودة.</p></div>
+            <div class="service-card"><i class="fas fa-baseball-ball"></i><h3>شبوك ملاعب</h3><p>شبوك ملاعب كرة قدم، خماسي، تنس، كرة طائرة، بمواصفات احترافية.</p></div>
+            <div class="service-card"><i class="fas fa-shield-alt"></i><h3>شبوك حماية</h3><p>شبوك أمنية للمصانع والشركات والفلل والاستراحات.</p></div>
+            <div class="service-card"><i class="fas fa-dove"></i><h3>شبوك ضد الطيور</h3><p>حماية البيوت المحمية وأشجار الفاكهة من الطيور.</p></div>
+            <div class="service-card"><i class="fas fa-home"></i><h3>شبوك استراحات</h3><p>شبوك خصوصية وأمان للاستراحات والفلل والمنتجعات.</p></div>
+            <div class="service-card"><i class="fas fa-tools"></i><h3>تركيب وصيانة</h3><p>توريد وتركيب وصيانة جميع أنواع الشبوك بضمان.</p></div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 200 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة للشبوك</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 200 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">شبوك</span>
+                <span class="keyword">شبوك زراعية</span>
+                <span class="keyword">شبوك ملاعب</span>
+                <span class="keyword">شبوك حماية</span>
+                <span class="keyword">شبوك ألمنيوم</span>
+                <span class="keyword">شبوك مجلفنة</span>
+                <span class="keyword">تركيب شبوك</span>
+                <span class="keyword">توريد شبوك</span>
+                <span class="keyword">صيانة شبوك</span>
+                <span class="keyword">شبوك مزارع</span>
+                <span class="keyword">شبوك فلل</span>
+                <span class="keyword">شبوك قصور</span>
+                <span class="keyword">شبوك استراحات</span>
+                <span class="keyword">شبوك حدائق</span>
+                <span class="keyword">شبوك ملاعب خماسي</span>
+                <span class="keyword">شبوك ملاعب تنس</span>
+                <span class="keyword">شبوك ملاعب كرة قدم</span>
+                <span class="keyword">شبوك ملاعب رياضية</span>
+                <span class="keyword">شبوك ضد الطيور</span>
+                <span class="keyword">شبوك حمام</span>
+                <span class="keyword">شبوك عصافير</span>
+                <span class="keyword">شبوك بيوت محمية</span>
+                <span class="keyword">شبوك أغنام</span>
+                <span class="keyword">شبوك مواشي</span>
+                <span class="keyword">شبوك إبل</span>
+                <span class="keyword">شبوك دواجن</span>
+                <span class="keyword">شبوك خيول</span>
+                <span class="keyword">شبوك حظائر</span>
+                <span class="keyword">شبوك مصانع</span>
+                <span class="keyword">شبوك شركات</span>
+                <span class="keyword">شبوك مدارس</span>
+                <span class="keyword">شبوك جامعات</span>
+                <span class="keyword">شبوك مساجد</span>
+                <span class="keyword">شبوك مستشفيات</span>
+                <span class="keyword">شبوك فنادق</span>
+                <span class="keyword">شبوك مطاعم</span>
+                <span class="keyword">شبوك كافيهات</span>
+                <span class="keyword">شبوك مخازن</span>
+                <span class="keyword">شبوك مستودعات</span>
+                <span class="keyword">شبوك أسوار</span>
+                <span class="keyword">شبوك محيطية</span>
+                <span class="keyword">شبوك أمنية</span>
+                <span class="keyword">شبوك عازلة</span>
+                <span class="keyword">شبوك خصوصية</span>
+                <span class="keyword">شبوك خارجية</span>
+                <span class="keyword">شبوك داخلية</span>
+                <span class="keyword">شبوك مؤقتة</span>
+                <span class="keyword">شبوك دائمة</span>
+                <span class="keyword">شبوك متحركة</span>
+                <span class="keyword">شبوك ثابتة</span>
+                <span class="keyword">شبوك قابلة للفك</span>
+                <span class="keyword">شبوك سلكية</span>
+                <span class="keyword">شبوك حديدية</span>
+                <span class="keyword">شبوك بلاستيكية</span>
+                <span class="keyword">شبوك بلاستيك</span>
+                <span class="keyword">شبوك بولي إيثيلين</span>
+                <span class="keyword">شبوك بولي بروبلين</span>
+                <span class="keyword">شبوك بولي كربونات</span>
+                <span class="keyword">شبوك أكريليك</span>
+                <span class="keyword">شبوك فايبر جلاس</span>
+                <span class="keyword">شبوك ستانلس ستيل</span>
+                <span class="keyword">شبوك مقاومة للصدأ</span>
+                <span class="keyword">شبوك مقاومة للعوامل الجوية</span>
+                <span class="keyword">شبوك مقاومة للأشعة فوق البنفسجية</span>
+                <span class="keyword">شبوك مقاومة للحرارة</span>
+                <span class="keyword">شبوك مقاومة للرطوبة</span>
+                <span class="keyword">شبوك عالية الجودة</span>
+                <span class="keyword">شبوك متينة</span>
+                <span class="keyword">شبوك طويلة العمر</span>
+                <span class="keyword">شبوك اقتصادية</span>
+                <span class="keyword">شبوك رخيصة</span>
+                <span class="keyword">شبوك بالجملة</span>
+                <span class="keyword">شبوك مفرق</span>
+                <span class="keyword">شبوك حسب الطلب</span>
+                <span class="keyword">شبوك مقاسات خاصة</span>
+                <span class="keyword">شبوك ألوان</span>
+                <span class="keyword">شبوك أخضر</span>
+                <span class="keyword">شبوك أسود</span>
+                <span class="keyword">شبوك أبيض</span>
+                <span class="keyword">شبوك شفاف</span>
+                <span class="keyword">شبوك ملون</span>
+                <span class="keyword">شبوك للحدائق</span>
+                <span class="keyword">شبوك للمنازل</span>
+                <span class="keyword">شبوك للفلل</span>
+                <span class="keyword">شبوك للقصور</span>
+                <span class="keyword">شبوك للاستراحات</span>
+                <span class="keyword">شبوك للمزارع</span>
+                <span class="keyword">شبوك للمصانع</span>
+                <span class="keyword">شبوك للمدارس</span>
+                <span class="keyword">شبوك للجامعات</span>
+                <span class="keyword">شبوك للمستشفيات</span>
+                <span class="keyword">شبوك للفنادق</span>
+                <span class="keyword">شبوك للمطاعم</span>
+                <span class="keyword">شبوك للكافيهات</span>
+                <span class="keyword">شبوك للمخازن</span>
+                <span class="keyword">شبوك للمستودعات</span>
+                <span class="keyword">شبوك للشركات</span>
+                <span class="keyword">شبوك للمؤسسات</span>
+                <span class="keyword">شبوك للحكومة</span>
+                <span class="keyword">شبوك للقطاع الخاص</span>
+                <span class="keyword">شبوك للمشاريع</span>
+                <span class="keyword">شبوك للمقاولات</span>
+                <span class="keyword">شبوك للإنشاءات</span>
+                <span class="keyword">شبوك للبنية التحتية</span>
+                <span class="keyword">شبوك للطرق</span>
+                <span class="keyword">شبوك للجسور</span>
+                <span class="keyword">شبوك للأنفاق</span>
+                <span class="keyword">شبوك للمطارات</span>
+                <span class="keyword">شبوك للموانئ</span>
+                <span class="keyword">شبوك للسكك الحديدية</span>
+                <span class="keyword">شبوك للمترو</span>
+                <span class="keyword">شبوك للمحطات</span>
+                <span class="keyword">شبوك للمجمعات</span>
+                <span class="keyword">شبوك للمراكز التجارية</span>
+                <span class="keyword">شبوك للمولات</span>
+                <span class="keyword">شبوك للأسواق</span>
+                <span class="keyword">شبوك للمعارض</span>
+                <span class="keyword">شبوك للمؤتمرات</span>
+                <span class="keyword">شبوك للمهرجانات</span>
+                <span class="keyword">شبوك للحفلات</span>
+                <span class="keyword">شبوك للمناسبات</span>
+                <span class="keyword">شبوك للفعاليات</span>
+                <span class="keyword">شبوك للأنشطة</span>
+                <span class="keyword">شبوك للرياضة</span>
+                <span class="keyword">شبوك للترفيه</span>
+                <span class="keyword">شبوك للسياحة</span>
+                <span class="keyword">شبوك للضيافة</span>
+                <span class="keyword">شبوك للخدمات</span>
+                <span class="keyword">شبوك للتجارة</span>
+                <span class="keyword">شبوك للصناعة</span>
+                <span class="keyword">شبوك للزراعة</span>
+                <span class="keyword">شبوك للثروة الحيوانية</span>
+                <span class="keyword">شبوك للدواجن</span>
+                <span class="keyword">شبوك للأسماك</span>
+                <span class="keyword">شبوك للنحل</span>
+                <span class="keyword">شبوك للطيور</span>
+                <span class="keyword">شبوك للحيوانات</span>
+                <span class="keyword">شبوك للحدائق العامة</span>
+                <span class="keyword">شبوك للمتنزهات</span>
+                <span class="keyword">شبوك للمنتزهات</span>
+                <span class="keyword">شبوك للغابات</span>
+                <span class="keyword">شبوك للمحميات</span>
+                <span class="keyword">شبوك للصحراء</span>
+                <span class="keyword">شبوك للبر</span>
+                <span class="keyword">شبوك للبحر</span>
+                <span class="keyword">شبوك للشواطئ</span>
+                <span class="keyword">شبوك للمسابح</span>
+                <span class="keyword">شبوك للحمامات</span>
+                <span class="keyword">شبوك للساونا</span>
+                <span class="keyword">شبوك للجاكوزي</span>
+                <span class="keyword">شبوك للحدائق المنزلية</span>
+                <span class="keyword">شبوك للأسطح</span>
+                <span class="keyword">شبوك للشرفات</span>
+                <span class="keyword">شبوك للبلكونات</span>
+                <span class="keyword">شبوك للتراسات</span>
+                <span class="keyword">شبوك للمداخل</span>
+                <span class="keyword">شبوك للممرات</span>
+                <span class="keyword">شبوك للمشايات</span>
+                <span class="keyword">شبوك للممرات الخارجية</span>
+                <span class="keyword">شبوك للممرات الداخلية</span>
+                <span class="keyword">شبوك للممرات المائية</span>
+                <span class="keyword">شبوك للقنوات</span>
+                <span class="keyword">شبوك للأنهار</span>
+                <span class="keyword">شبوك للبحيرات</span>
+                <span class="keyword">شبوك للبرك</span>
+                <span class="keyword">شبوك للنوافير</span>
+                <span class="keyword">شبوك للشلالات</span>
+                <span class="keyword">شبوك للمسطحات المائية</span>
+                <span class="keyword">شبوك للحدائق المائية</span>
+                <span class="keyword">شبوك للمنتجعات السياحية</span>
+                <span class="keyword">شبوك للقرى السياحية</span>
+                <span class="keyword">شبوك للمخيمات</span>
+                <span class="keyword">شبوك للكرفانات</span>
+                <span class="keyword">شبوك للبيوت المتنقلة</span>
+                <span class="keyword">شبوك للمقطورات</span>
+                <span class="keyword">شبوك للمركبات</span>
+                <span class="keyword">شبوك للقوارب</span>
+                <span class="keyword">شبوك لليخوت</span>
+                <span class="keyword">شبوك للسفن</span>
+                <span class="keyword">شبوك للطائرات</span>
+                <span class="keyword">شبوك للمطارات الخاصة</span>
+                <span class="keyword">شبوك للمهابط</span>
+                <span class="keyword">شبوك للمراكب</span>
+                <span class="keyword">شبوك للسيارات</span>
+                <span class="keyword">شبوك للشاحنات</span>
+                <span class="keyword">شبوك للحافلات</span>
+                <span class="keyword">شبوك للقطارات</span>
+                <span class="keyword">شبوك للدراجات</span>
+                <span class="keyword">شبوك للدراجات النارية</span>
+                <span class="keyword">شبوك للدراجات الهوائية</span>
+                <span class="keyword">شبوك للدراجات الكهربائية</span>
+                <span class="keyword">شبوك للدراجات البخارية</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn" style="background: #0a4d2e; color: white; box-shadow: 0 10px 0 #1a4d2e;"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-fence"></i> شبوك - مظلات - نخيل - زيتون - برجولات</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+                  </html>
