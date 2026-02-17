@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>بيع ونقل - خدمات بيع وشراء ونقل المنتجات الزراعية في الرياض | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="خدمات بيع وشراء ونقل المنتجات الزراعية: بيع نخيل، بيع زيتون، بيع شبوك، بيع مظلات، نقل فسائل، نقل أشجار، نقل معدات. اتصل بنا لأفضل العروض.">
+    <meta name="keywords" content="بيع نخيل, شراء نخيل, بيع زيتون, شراء زيتون, نقل نخيل, نقل أشجار, نقل فسائل, نقل معدات زراعية, خدمات نقل, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* إعادة تعيين الهوامش ومنع الحركة الأفقية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+            min-height: 100vh;
+        }
+
+        /* الترويسة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+            pointer-events: none;
+            user-select: none;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة (الهامبرغر) */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* القائمة الجانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+        h3 {
+            color: #0a4d2e;
+            font-size: 1.5rem;
+            margin: 25px 0 15px;
+        }
+        p {
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-right: 30px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        li { margin-bottom: 8px; }
+        .highlight { color: #f5c542; font-weight: 700; }
+
+        /* بطاقات الخدمات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* مميزات الخدمة */
+        .features-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .feature-item {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            border-right: 4px solid #f5c542;
+        }
+        .feature-item i {
+            color: #f5c542;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-size: 1.3rem;
+            color: #0a4d2e;
+            margin-bottom: 10px;
+        }
+
+        /* قسم الكلمات المفتاحية */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        /* التذييل */
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-truck"></i> بيع ونقل</h1>
+            <p>خدمات بيع وشراء ونقل المنتجات الزراعية - نخيل - زيتون - شبوك - مظلات</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- قسم تعريف بخدمات البيع والنقل -->
+        <section>
+            <h2>مرحباً بكم في خدمات البيع والنقل</h2>
+            <p>نقدم في <span class="highlight">نخيل وزيتون الرياض</span> خدمات متكاملة لبيع وشراء جميع المنتجات الزراعية، بالإضافة إلى خدمات النقل المتخصصة للأشجار والفسائل والمعدات. سواء كنت تبحث عن شراء نخيل ممتاز، أو بيع محصول الزيتون، أو تحتاج إلى نقل أشجار كبيرة إلى موقعك الجديد، فنحن هنا لخدمتك بأسعار تنافسية وجودة عالية.</p>
+        </section>
+
+        <!-- خدمات البيع -->
+        <h2><i class="fas fa-shopping-cart"></i> خدمات البيع والشراء</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>بيع نخيل</h3>
+                <p>نوفر جميع أنواع النخيل للبيع: مدجول، برحي، خلاص، سكري، نخل ملكي، واشنطنيا. بأحجام وأسعار مختلفة تناسب احتياجاتك.</p>
+                <p><strong>أسعار تبدأ من:</strong> 350 ريال للفسيلة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-olive"></i>
+                <h3>بيع زيتون</h3>
+                <p>شتلات زيتون إسباني، روماني، شملالي، صوراني. أشجار زيتون مثمرة بأعمار مختلفة. نوفر أيضاً زيتون مائدة وزيت زيتون بكر.</p>
+                <p><strong>أسعار تبدأ من:</strong> 35 ريال للشتلة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-fence"></i>
+                <h3>بيع شبوك</h3>
+                <p>جميع أنواع الشبوك الزراعية والملاعب: شبوك ألمنيوم، مجلفنة، بلاستيكية. توريد بالجملة والقطاعي.</p>
+                <p><strong>استفسر عن الأسعار حسب النوع والكمية.</strong></p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-umbrella"></i>
+                <h3>بيع مظلات وبرجولات</h3>
+                <p>مظلات سيارات، مظلات مدارس، برجولات خشبية وحديدية. خامات عالية الجودة مع ضمان.</p>
+                <p><strong>خصومات على الكميات.</strong></p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-seedling"></i>
+                <h3>بيع سدر</h3>
+                <p>شتلات سدر بلدي وسدر نبقي، مثمرة وظليلة، مثالية للحدائق والمزارع.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tools"></i>
+                <h3>بيع معدات زراعية</h3>
+                <p>معدات ري، خزانات، مضخات، أدوات تقليم، مستلزمات حدائق. استفسر عن توفر القطع.</p>
+            </div>
+        </div>
+
+        <!-- خدمات النقل -->
+        <h2><i class="fas fa-truck-moving"></i> خدمات النقل المتخصصة</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-palm-tree"></i>
+                <h3>نقل نخيل</h3>
+                <p>نقل فسائل النخيل وأشجار النخيل الكبيرة بأمان تام باستخدام معدات حديثة وسيارات مخصصة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-seedling"></i>
+                <h3>نقل أشجار</h3>
+                <p>نقل أشجار الزيتون والسدر وأشجار الظل مع الحفاظ على كرة الجذور لضمان نجاح إعادة الزراعة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-box"></i>
+                <h3>نقل مواد بناء</h3>
+                <p>نقل الشبوك، المظلات، البرجولات، ومواد البناء الزراعية إلى موقعك.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tractor"></i>
+                <h3>نقل معدات</h3>
+                <p>نقل الجرارات والمعدات الزراعية الثقيلة بسيارات مجهزة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-home"></i>
+                <h3>نقل أثاث حدائق</h3>
+                <p>نقل كراسي الحدائق والطاولات والأرجوحات والبرجولات.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-road"></i>
+                <h3>نقل لمسافات طويلة</h3>
+                <p>خدمات نقل داخل الرياض وخارجها إلى جميع مدن المملكة.</p>
+            </div>
+        </div>
+
+        <!-- خطوات البيع والنقل -->
+        <h2><i class="fas fa-list-ol"></i> كيف تتم عملية البيع والنقل؟</h2>
+        <div class="features-section">
+            <ol style="font-size: 1.1rem; margin-right: 20px;">
+                <li><strong>استشارة مجانية:</strong> تواصل معنا لتحديد احتياجاتك (بيع، شراء، نقل).</li>
+                <li><strong>معاينة المنتج:</strong> نعاين المنتج المطلوب (نخيل، زيتون، إلخ) أو الموقع لتحديد متطلبات النقل.</li>
+                <li><strong>عرض سعر:</strong> نقدم لك عرض سعر مفصل يشمل التكلفة والخدمات.</li>
+                <li><strong>اتفاق:</strong> بعد الاتفاق، نحدد موعد التنفيذ.</li>
+                <li><strong>تنفيذ العملية:</strong> فريقنا المتخصص يقوم بالبيع أو النقل بكل دقة وأمان.</li>
+                <li><strong>متابعة بعد الخدمة:</strong> نتابع معك للتأكد من رضاك عن الخدمة.</li>
+            </ol>
+        </div>
+
+        <!-- مميزات خدماتنا -->
+        <h2><i class="fas fa-star"></i> لماذا تختار خدمات البيع والنقل لدينا؟</h2>
+        <div class="features-section">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-truck"></i>
+                    <h4>أسطول نقل حديث</h4>
+                    <p>نمتلك سيارات مجهزة خصيصاً لنقل الأشجار والمعدات.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-user-shield"></i>
+                    <h4>فريق مدرب</h4>
+                    <p>عمالة مدربة على تحميل وتفريغ المواد الحساسة.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>سرعة في التنفيذ</h4>
+                    <p>نلتزم بالمواعيد المتفق عليها دون تأخير.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-percent"></i>
+                    <h4>أسعار منافسة</h4>
+                    <p>أفضل الأسعار في السوق مع خصومات للكميات.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>ضمان على الخدمة</h4>
+                    <p>نضمن سلامة المنتجات المنقولة ورضاك عن عملية البيع.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-headset"></i>
+                    <h4>دعم مستمر</h4>
+                    <p>فريق دعم جاهز للرد على استفساراتك 24/7.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 250 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة للبيع والنقل</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 250 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <!-- تم إدراج 250+ كلمة مفتاحية، لكن يمكن اختصارها هنا للعرض -->
+                <span class="keyword">بيع نخيل</span>
+                <span class="keyword">شراء نخيل</span>
+                <span class="keyword">بيع زيتون</span>
+                <span class="keyword">شراء زيتون</span>
+                <span class="keyword">بيع شبوك</span>
+                <span class="keyword">شراء شبوك</span>
+                <span class="keyword">بيع مظلات</span>
+                <span class="keyword">شراء مظلات</span>
+                <!-- ... باقي الكلمات (يمكنك الاحتفاظ بها كاملة من الكود السابق) ... -->
+                <!-- نكتفي بذكر مثال -->
+                <span class="keyword">نقل نخيل</span>
+                <span class="keyword">نقل أشجار</span>
+                <span class="keyword">نقل فسائل</span>
+                <span class="keyword">نقل زيتون</span>
+                <span class="keyword">نقل سدر</span>
+                <span class="keyword">نقل شبوك</span>
+                <span class="keyword">نقل مظلات</span>
+                <span class="keyword">نقل برجولات</span>
+                <span class="keyword">نقل مواد بناء</span>
+                <span class="keyword">نقل معدات زراعية</span>
+                <span class="keyword">نقل أثاث حدائق</span>
+                <span class="keyword">نقل ثقيل</span>
+                <span class="keyword">نقل خفيف</span>
+                <span class="keyword">نقل لمسافات طويلة</span>
+                <span class="keyword">نقل داخل الرياض</span>
+                <span class="keyword">نقل خارج الرياض</span>
+                <span class="keyword">خدمات نقل</span>
+                <span class="keyword">شركة نقل</span>
+                <span class="keyword">مقاول نقل</span>
+                <span class="keyword">سيارات نقل</span>
+                <span class="keyword">شاحنات نقل</span>
+                <span class="keyword">ونش نقل أشجار</span>
+                <span class="keyword">كرين نقل</span>
+                <span class="keyword">تحميل وتفريغ</span>
+                <span class="keyword">فك وتركيب</span>
+                <span class="keyword">توصيل للموقع</span>
+                <span class="keyword">شحن</span>
+                <span class="keyword">لوجستيات</span>
+                <span class="keyword">سلسلة توريد</span>
+                <span class="keyword">توزيع</span>
+                <span class="keyword">أسعار النقل</span>
+                <span class="keyword">تكلفة النقل</span>
+                <span class="keyword">عروض نقل</span>
+                <span class="keyword">خصومات نقل</span>
+                <span class="keyword">أفضل شركة نقل</span>
+                <span class="keyword">أرخص شركة نقل</span>
+                <span class="keyword">نقل رخيص</span>
+                <span class="keyword">نقل سريع</span>
+                <span class="keyword">نقل آمن</span>
+                <span class="keyword">نقل مضمون</span>
+                <span class="keyword">تأمين على النقل</span>
+                <span class="keyword">تغليف</span>
+                <span class="keyword">تعبئة</span>
+                <span class="keyword">كرتون</span>
+                <span class="keyword">أخشاب</span>
+                <span class="keyword">حزام</span>
+                <span class="keyword">حبال</span>
+                <span class="keyword">ونش</span>
+                <span class="keyword">رافعة</span>
+                <span class="keyword">معدات رفع</span>
+                <span class="keyword">سائقين</span>
+                <span class="keyword">عمال نقل</span>
+                <span class="keyword">فرق نقل</span>
+                <span class="keyword">استشارات نقل</span>
+                <span class="keyword">تخطيط نقل</span>
+                <span class="keyword">جدولة نقل</span>
+                <span class="keyword">تتبع شحنات</span>
+                <span class="keyword">نقل دولي</span>
+                <span class="keyword">نقل محلي</span>
+                <span class="keyword">نقل بري</span>
+                <span class="keyword">نقل بحري</span>
+                <span class="keyword">نقل جوي</span>
+                <span class="keyword">نقل سكك حديدية</span>
+                <span class="keyword">خدمات لوجستية متكاملة</span>
+                <span class="keyword">مستودعات</span>
+                <span class="keyword">تخزين</span>
+                <span class="keyword">توزيع محلي</span>
+                <span class="keyword">توصيل طلبات</span>
+                <span class="keyword">شحن سريع</span>
+                <span class="keyword">شحن عادي</span>
+                <span class="keyword">شحن بحري</span>
+                <span class="keyword">شحن جوي</span>
+                <span class="keyword">شحن بري</span>
+                <span class="keyword">شركات شحن</span>
+                <span class="keyword">مكاتب شحن</span>
+                <span class="keyword">أجرة شحن</span>
+                <span class="keyword">أسعار الشحن</span>
+                <span class="keyword">وزن شحن</span>
+                <span class="keyword">حجم شحن</span>
+                <span class="keyword">شحن فاسل</span>
+                <span class="keyword">شحن حاوية</span>
+                <span class="keyword">شحن سيارات</span>
+                <span class="keyword">شحن معدات</span>
+                <span class="keyword">شحن آلات</span>
+                <span class="keyword">شحن مواد</span>
+                <span class="keyword">شحن منتجات زراعية</span>
+                <span class="keyword">شحن نخيل</span>
+                <span class="keyword">شحن زيتون</span>
+                <span class="keyword">شحن سدر</span>
+                <span class="keyword">شحن شبوك</span>
+                <span class="keyword">شحن مظلات</span>
+                <span class="keyword">شحن برجولات</span>
+                <span class="keyword">استيراد نخيل</span>
+                <span class="keyword">تصدير نخيل</span>
+                <span class="keyword">استيراد زيتون</span>
+                <span class="keyword">تصدير زيتون</span>
+                <span class="keyword">تجارة نخيل</span>
+                <span class="keyword">تجارة زيتون</span>
+                <span class="keyword">تجارة شبوك</span>
+                <span class="keyword">تجارة مظلات</span>
+                <span class="keyword">سوق نخيل</span>
+                <span class="keyword">سوق زيتون</span>
+                <span class="keyword">سوق شبوك</span>
+                <span class="keyword">سوق مظلات</span>
+                <span class="keyword">أسعار السوق</span>
+                <span class="keyword">تاجر نخيل</span>
+                <span class="keyword">تاجر زيتون</span>
+                <span class="keyword">تاجر شبوك</span>
+                <span class="keyword">تاجر مظلات</span>
+                <span class="keyword">موزع نخيل</span>
+                <span class="keyword">موزع زيتون</span>
+                <span class="keyword">موزع شبوك</span>
+                <span class="keyword">موزع مظلات</span>
+                <span class="keyword">وكيل نخيل</span>
+                <span class="keyword">وكيل زيتون</span>
+                <span class="keyword">وكيل شبوك</span>
+                <span class="keyword">وكيل مظلات</span>
+                <span class="keyword">مشاتل للبيع</span>
+                <span class="keyword">مزارع للبيع</span>
+                <span class="keyword">أراضي زراعية للبيع</span>
+                <span class="keyword">عقارات زراعية</span>
+                <span class="keyword">استثمار زراعي</span>
+                <span class="keyword">مشاريع زراعية للبيع</span>
+                <span class="keyword">فرص استثمارية</span>
+                <span class="keyword">بيع بالتقسيط</span>
+                <span class="keyword">شراء بالتقسيط</span>
+                <span class="keyword">تمويل شراء</span>
+                <span class="keyword">دفع آجل</span>
+                <span class="keyword">عروض خاصة</span>
+                <span class="keyword">تخفيضات</span>
+                <span class="keyword">حسم</span>
+                <span class="keyword">كوبون خصم</span>
+                <span class="keyword">هدايا</span>
+                <span class="keyword">عروض موسمية</span>
+                <span class="keyword">عروض رمضان</span>
+                <span class="keyword">عروض الصيف</span>
+                <span class="keyword">عروض الشتاء</span>
+                <span class="keyword">عروض نهاية العام</span>
+                <span class="keyword">عروض رأس السنة</span>
+                <span class="keyword">عروض اليوم الوطني</span>
+                <span class="keyword">توصيل مجاني</span>
+                <span class="keyword">شحن مجاني</span>
+                <span class="keyword">تركيب مجاني</span>
+                <span class="keyword">ضمان مجاني</span>
+                <span class="keyword">صيانة مجانية</span>
+                <span class="keyword">استشارة مجانية</span>
+                <span class="keyword">معاينة مجانية</span>
+                <span class="keyword">تقييم مجاني</span>
+                <span class="keyword">خدمة عملاء</span>
+                <span class="keyword">اتصل بنا</span>
+                <span class="keyword">واتساب</span>
+                <span class="keyword">رقم هاتف</span>
+                <span class="keyword">بريد إلكتروني</span>
+                <span class="keyword">موقع إلكتروني</span>
+                <span class="keyword">صفحة فيسبوك</span>
+                <span class="keyword">حساب تويتر</span>
+                <span class="keyword">حساب انستغرام</span>
+                <span class="keyword">قناة يوتيوب</span>
+                <span class="keyword">تيك توك</span>
+                <span class="keyword">سناب شات</span>
+                <span class="keyword">تقييمات العملاء</span>
+                <span class="keyword">آراء العملاء</span>
+                <span class="keyword">تجارب ناجحة</span>
+                <span class="keyword">مشاريع سابقة</span>
+                <span class="keyword">صور أعمالنا</span>
+                <span class="keyword">فيديوهات أعمالنا</span>
+                <span class="keyword">شهادات تقدير</span>
+                <span class="keyword">تراخيص</span>
+                <span class="keyword">عضوية</span>
+                <span class="keyword">انتماءات</span>
+                <span class="keyword">جوائز</span>
+                <span class="keyword">تكريم</span>
+                <span class="keyword">أفضل شركة</span>
+                <span class="keyword">أفضل تاجر</span>
+                <span class="keyword">أفضل مزود</span>
+                <span class="keyword">أفضل خدمة</span>
+                <span class="keyword">الأكثر ثقة</span>
+                <span class="keyword">الأكثر خبرة</span>
+                <span class="keyword">الأقدم</span>
+                <span class="keyword">الأكبر</span>
+                <span class="keyword">الأشهر</span>
+                <span class="keyword">الرائدة</span>
+                <span class="keyword">الموثوقة</span>
+                <span class="keyword">المعتمدة</span>
+                <span class="keyword">المرخصة</span>
+                <span class="keyword">المهنية</span>
+                <span class="keyword">الاحترافية</span>
+                <span class="keyword">المتخصصة</span>
+                <span class="keyword">الشاملة</span>
+                <span class="keyword">المتكاملة</span>
+                <span class="keyword">الحديثة</span>
+                <span class="keyword">المتطورة</span>
+                <span class="keyword">المبتكرة</span>
+                <span class="keyword">الرقمية</span>
+                <span class="keyword">الذكية</span>
+                <span class="keyword">الخضراء</span>
+                <span class="keyword">المستدامة</span>
+                <span class="keyword">الصديقة للبيئة</span>
+                <span class="keyword">الزراعية</span>
+                <span class="keyword">البيئية</span>
+                <span class="keyword">الاستثمارية</span>
+                <span class="keyword">التجارية</span>
+                <span class="keyword">الخدمية</span>
+                <span class="keyword">الصناعية</span>
+                <span class="keyword">اللوجستية</span>
+                <span class="keyword">النقل</span>
+                <span class="keyword">الشحن</span>
+                <span class="keyword">التخزين</span>
+                <span class="keyword">التوزيع</span>
+                <span class="keyword">التوريد</span>
+                <span class="keyword">البيع</span>
+                <span class="keyword">الشراء</span>
+                <span class="keyword">المقايضة</span>
+                <span class="keyword">الاستبدال</span>
+                <span class="keyword">المرتجعات</span>
+                <span class="keyword">الضمانات</span>
+                <span class="keyword">العقود</span>
+                <span class="keyword">الاتفاقيات</span>
+                <span class="keyword">الشروط</span>
+                <span class="keyword">الأحكام</span>
+                <span class="keyword">سياسة الخصوصية</span>
+                <span class="keyword">الشروط والأحكام</span>
+                <span class="keyword">حقوق النشر</span>
+                <span class="keyword">الملكية الفكرية</span>
+                <span class="keyword">العلامة التجارية</span>
+                <span class="keyword">الشعار</span>
+                <span class="keyword">الهوية البصرية</span>
+                <span class="keyword">التصميم</span>
+                <span class="keyword">التطوير</span>
+                <span class="keyword">البرمجة</span>
+                <span class="keyword">الاستضافة</span>
+                <span class="keyword">النطاق</span>
+                <span class="keyword">الدومين</span>
+                <span class="keyword">السيرفر</span>
+                <span class="keyword">الموقع الإلكتروني</span>
+                <span class="keyword">المتجر الإلكتروني</span>
+                <span class="keyword">التسويق الإلكتروني</span>
+                <span class="keyword">الإعلان</span>
+                <span class="keyword">الترويج</span>
+                <span class="keyword">العلامات التجارية</span>
+                <span class="keyword">الكلمات المفتاحية</span>
+                <span class="keyword">تحسين محركات البحث</span>
+                <span class="keyword">SEO</span>
+                <span class="keyword">SEM</span>
+                <span class="keyword">وسائل التواصل الاجتماعي</span>
+                <span class="keyword">الإعلانات المدفوعة</span>
+                <span class="keyword">تحليلات الموقع</span>
+                <span class="keyword">إحصاءات الزوار</span>
+                <span class="keyword">معدل التحويل</span>
+                <span class="keyword">المبيعات</span>
+                <span class="keyword">الإيرادات</span>
+                <span class="keyword">الأرباح</span>
+                <span class="keyword">التكاليف</span>
+                <span class="keyword">المصروفات</span>
+                <span class="keyword">الاستثمار</span>
+                <span class="keyword">العائد على الاستثمار</span>
+                <span class="keyword">ROI</span>
+                <span class="keyword">النمو</span>
+                <span class="keyword">التوسع</span>
+                <span class="keyword">التطوير</span>
+                <span class="keyword">التحسين</span>
+                <span class="keyword">التجديد</span>
+                <span class="keyword">الابتكار</span>
+                <span class="keyword">الإبداع</span>
+                <span class="keyword">التميز</span>
+                <span class="keyword">الريادة</span>
+                <span class="keyword">القيادة</span>
+                <span class="keyword">الاستدامة</span>
+                <span class="keyword">الاستمرارية</span>
+                <span class="keyword">النجاح</span>
+                <span class="keyword">التفوق</span>
+                <span class="keyword">التمكن</span>
+                <span class="keyword">الخبرة</span>
+                <span class="keyword">المعرفة</span>
+                <span class="keyword">الكفاءة</span>
+                <span class="keyword">الفعالية</span>
+                <span class="keyword">الجودة</span>
+                <span class="keyword">الموثوقية</span>
+                <span class="keyword">الأمانة</span>
+                <span class="keyword">المصداقية</span>
+                <span class="keyword">الشفافية</span>
+                <span class="keyword">النزاهة</span>
+                <span class="keyword">الاحترام</span>
+                <span class="keyword">التقدير</span>
+                <span class="keyword">التعاون</span>
+                <span class="keyword">الشراكة</span>
+                <span class="keyword">العلاقات</span>
+                <span class="keyword">الشبكات</span>
+                <span class="keyword">التحالفات</span>
+                <span class="keyword">الاندماجات</span>
+                <span class="keyword">الاستحواذات</span>
+                <span class="keyword">التمويل</span>
+                <span class="keyword">الاستثمارات</span>
+                <span class="keyword">المستثمرون</span>
+                <span class="keyword">الشركاء</span>
+                <span class="keyword">العملاء</span>
+                <span class="keyword">الموردون</span>
+                <span class="keyword">الموزعون</span>
+                <span class="keyword">الوكلاء</span>
+                <span class="keyword">الموظفون</span>
+                <span class="keyword">الفريق</span>
+                <span class="keyword">الإدارة</span>
+                <span class="keyword">القيادة</span>
+                <span class="keyword">الرؤية</span>
+                <span class="keyword">الرسالة</span>
+                <span class="keyword">الأهداف</span>
+                <span class="keyword">الغايات</span>
+                <span class="keyword">الخطط</span>
+                <span class="keyword">الاستراتيجيات</span>
+                <span class="keyword">البرامج</span>
+                <span class="keyword">المشاريع</span>
+                <span class="keyword">المبادرات</span>
+                <span class="keyword">الأنشطة</span>
+                <span class="keyword">الفعاليات</span>
+                <span class="keyword">الأحداث</span>
+                <span class="keyword">المؤتمرات</span>
+                <span class="keyword">المعارض</span>
+                <span class="keyword">الندوات</span>
+                <span class="keyword">ورش العمل</span>
+                <span class="keyword">الدورات التدريبية</span>
+                <span class="keyword">الاستشارات</span>
+                <span class="keyword">الدراسات</span>
+                <span class="keyword">الأبحاث</span>
+                <span class="keyword">التقارير</span>
+                <span class="keyword">التحليلات</span>
+                <span class="keyword">الإحصائيات</span>
+                <span class="keyword">البيانات</span>
+                <span class="keyword">المعلومات</span>
+                <span class="keyword">المعرفة</span>
+                <span class="keyword">الخبرات</span>
+                <span class="keyword">التجارب</span>
+                <span class="keyword">الدروس</span>
+                <span class="keyword">النصائح</span>
+                <span class="keyword">الإرشادات</span>
+                <span class="keyword">التوجيهات</span>
+                <span class="keyword">القوانين</span>
+                <span class="keyword">اللوائح</span>
+                <span class="keyword">الأنظمة</span>
+                <span class="keyword">السياسات</span>
+                <span class="keyword">الإجراءات</span>
+                <span class="keyword">العمليات</span>
+                <span class="keyword">المهام</span>
+                <span class="keyword">المسؤوليات</span>
+                <span class="keyword">الصلاحيات</span>
+                <span class="keyword">الأدوار</span>
+                <span class="keyword">الوظائف</span>
+                <span class="keyword">التخصصات</span>
+                <span class="keyword">المجالات</span>
+                <span class="keyword">القطاعات</span>
+                <span class="keyword">الأسواق</span>
+                <span class="keyword">المناطق</span>
+                <span class="keyword">الدول</span>
+                <span class="keyword">المدن</span>
+                <span class="keyword">الأحياء</span>
+                <span class="keyword">المواقع</span>
+                <span class="keyword">العناوين</span>
+                <span class="keyword">الخرائط</span>
+                <span class="keyword">الاتجاهات</span>
+                <span class="keyword">المسافات</span>
+                <span class="keyword">الأوقات</span>
+                <span class="keyword">المواعيد</span>
+                <span class="keyword">الجداول</span>
+                <span class="keyword">المواسم</span>
+                <span class="keyword">الأعياد</span>
+                <span class="keyword">المناسبات</span>
+                <span class="keyword">الاحتفالات</span>
+                <span class="keyword">المهرجانات</span>
+                <span class="keyword">المسابقات</span>
+                <span class="keyword">الجوائز</span>
+                <span class="keyword">التكريم</span>
+                <span class="keyword">التقدير</span>
+                <span class="keyword">الشكر</span>
+                <span class="keyword">الامتنان</span>
+                <span class="keyword">الولاء</span>
+                <span class="keyword">الانتماء</span>
+                <span class="keyword">الهوية</span>
+                <span class="keyword">الثقافة</span>
+                <span class="keyword">القيم</span>
+                <span class="keyword">المبادئ</span>
+                <span class="keyword">المعايير</span>
+                <span class="keyword">الأخلاقيات</span>
+                <span class="keyword">السلوكيات</span>
+                <span class="keyword">التصرفات</span>
+                <span class="keyword">العادات</span>
+                <span class="keyword">التقاليد</span>
+                <span class="keyword">التراث</span>
+                <span class="keyword">التاريخ</span>
+                <span class="keyword">الماضي</span>
+                <span class="keyword">الحاضر</span>
+                <span class="keyword">المستقبل</span>
+                <span class="keyword">التحديات</span>
+                <span class="keyword">الفرص</span>
+                <span class="keyword">المخاطر</span>
+                <span class="keyword">التهديدات</span>
+                <span class="keyword">نقاط القوة</span>
+                <span class="keyword">نقاط الضعف</span>
+                <span class="keyword">المزايا</span>
+                <span class="keyword">العيوب</span>
+                <span class="keyword">الإيجابيات</span>
+                <span class="keyword">السلبيات</span>
+                <span class="keyword">الفوائد</span>
+                <span class="keyword">الأضرار</span>
+                <span class="keyword">المخاطر</span>
+                <span class="keyword">الاحتياطات</span>
+                <span class="keyword">التحذيرات</span>
+                <span class="keyword">التنبيهات</span>
+                <span class="keyword">الملاحظات</span>
+                <span class="keyword">التعليقات</span>
+                <span class="keyword">الاقتراحات</span>
+                <span class="keyword">الشكاوى</span>
+                <span class="keyword">الاستفسارات</span>
+                <span class="keyword">الأسئلة</span>
+                <span class="keyword">الأجوبة</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- التذييل مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p><i class="fas fa-truck"></i> بيع ونقل - نخيل - زيتون - شبوك - مظلات</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>واتساب</span>
+        </a>
+        <a href="tel:0504152836" class="float-btn call-btn">
+            <i class="fas fa-phone-alt"></i>
+            <span>اتصل</span>
+        </a>
+    </div>
+
+    <script>
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target) && sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+                                                                        </html>
