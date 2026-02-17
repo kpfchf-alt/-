@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>زيتون - شتلات، غرس، عصر، زيت بكر | نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="خدمات الزيتون المتكاملة: شتلات زيتون إسباني وروماني، غرس، تقليم، تطعيم، مكافحة ذبابة الزيتون، قطاف، عصر، زيت زيتون بكر. اتصل الآن 0504152836">
+    <meta name="keywords" content="زيتون, شتلات زيتون, زيتون إسباني, زيتون روماني, زيتون شملالي, زيتون صوراني, زيتون كالاماتا, غرس زيتون, تقليم زيتون, تطعيم زيتون, مكافحة ذبابة الزيتون, قطاف الزيتون, عصر زيتون, زيت زيتون بكر, زيتون مخلل">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور مع كلمات مفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات الزيتون */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* أصناف الزيتون */
+        .varieties-section {
+            background: rgba(245, 197, 66, 0.05);
+            border-radius: 30px;
+            padding: 30px;
+            border: 2px solid #f5c542;
+            margin-bottom: 40px;
+        }
+        .varieties-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        .variety-item {
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+        .btn-call {
+            background: #0a4d2e;
+            color: white;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="torid-nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html"><i class="fas fa-umbrella"></i> مظلات</a></li>
+            <li><a href="zaytoon.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-olive"></i> زيتون</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-olive"></i> الزيتون</h1>
+            <p>شتلات زيتون - غرس - تقليم - عصر - زيت بكر</p>
+        </div>
+
+        <!-- رقم الهاتف (خاص بالزيتون) -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0504152836</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض صور الزيتون مع كلمات مفتاحية (22 صورة) -->
+        <h2><i class="fas fa-images"></i> معرض صور الزيتون مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/CsYkWnPF/Whats-App-Image-2025-08-13-at-4-32-04-PM-1-1olive.webp" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون إسباني</span>
+                    <span class="keyword-badge">شتلات زيتون</span>
+                    <span class="keyword-badge">زيتون مثمر</span>
+                    <span class="keyword-badge">أشجار زيتون</span>
+                    <span class="keyword-badge">غرس زيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/N2MxqZ7T/Whats-App-Image-2025-08-13-at-4-32-04-PM-2-1olive.webp" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون روماني</span>
+                    <span class="keyword-badge">زيتون أسود</span>
+                    <span class="keyword-badge">ثمار زيتون</span>
+                    <span class="keyword-badge">قطاف الزيتون</span>
+                    <span class="keyword-badge">موسم الزيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/b57W0xmw/Whats-App-Image-2025-08-13-at-4-32-04-PM-3olive.webp" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون شملالي</span>
+                    <span class="keyword-badge">زيتون أخضر</span>
+                    <span class="keyword-badge">زيتون طري</span>
+                    <span class="keyword-badge">مخلل زيتون</span>
+                    <span class="keyword-badge">زيتون مائدة</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/jkncN7NP/image1.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون صوراني</span>
+                    <span class="keyword-badge">زيتون للعصر</span>
+                    <span class="keyword-badge">زيت زيتون</span>
+                    <span class="keyword-badge">عصر زيتون</span>
+                    <span class="keyword-badge">معصرة زيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/HfSSPqjf/image2.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون كالاماتا</span>
+                    <span class="keyword-badge">زيتون يوناني</span>
+                    <span class="keyword-badge">زيتون مخلل</span>
+                    <span class="keyword-badge">زيتون معلب</span>
+                    <span class="keyword-badge">زيتون بالزيت</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hRZLHW1t/image3.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون أربيكينا</span>
+                    <span class="keyword-badge">زيتون بري</span>
+                    <span class="keyword-badge">زيتون جبلي</span>
+                    <span class="keyword-badge">زيتون عضوي</span>
+                    <span class="keyword-badge">زيتون طبيعي</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/FqqQ5TSw/image4.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون مانزانيلو</span>
+                    <span class="keyword-badge">زيتون إيطالي</span>
+                    <span class="keyword-badge">زيتون تركي</span>
+                    <span class="keyword-badge">زيتون مغربي</span>
+                    <span class="keyword-badge">زيتون تونسي</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/FkkqQwdx/image7.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">أشجار زيتون</span>
+                    <span class="keyword-badge">مزرعة زيتون</span>
+                    <span class="keyword-badge">بستان زيتون</span>
+                    <span class="keyword-badge">حقل زيتون</span>
+                    <span class="keyword-badge">غرس زيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/Z1GMYJy6/67d0d5bdcc3baolive.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">تقليم زيتون</span>
+                    <span class="keyword-badge">تطعيم زيتون</span>
+                    <span class="keyword-badge">تشذيب زيتون</span>
+                    <span class="keyword-badge">تهذيب زيتون</span>
+                    <span class="keyword-badge">رعاية زيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/rGF1fF4B/image6.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مكافحة ذبابة الزيتون</span>
+                    <span class="keyword-badge">آفات الزيتون</span>
+                    <span class="keyword-badge">أمراض الزيتون</span>
+                    <span class="keyword-badge">علاج الزيتون</span>
+                    <span class="keyword-badge">مبيدات الزيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/Qv1bstWj/image5.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">قطاف الزيتون</span>
+                    <span class="keyword-badge">جني الزيتون</span>
+                    <span class="keyword-badge">حصاد الزيتون</span>
+                    <span class="keyword-badge">قطف الزيتون</span>
+                    <span class="keyword-badge">عمال قطاف</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/hFw0RPXS/image8.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">عصر زيتون</span>
+                    <span class="keyword-badge">معصرة زيتون</span>
+                    <span class="keyword-badge">زيت زيتون بكر</span>
+                    <span class="keyword-badge">زيت زيتون ممتاز</span>
+                    <span class="keyword-badge">زيت زيتون عضوي</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/5gqk9Mhw/image9.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون أخضر مخلل</span>
+                    <span class="keyword-badge">زيتون أسود مخلل</span>
+                    <span class="keyword-badge">زيتون محشي</span>
+                    <span class="keyword-badge">زيتون مشكل</span>
+                    <span class="keyword-badge">زيتون بالثوم</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/1tbRw7gg/image10.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون الجوف</span>
+                    <span class="keyword-badge">زيتون سعودي</span>
+                    <span class="keyword-badge">زيتون تبوك</span>
+                    <span class="keyword-badge">زيتون حائل</span>
+                    <span class="keyword-badge">زيتون الرياض</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/JwjVQ5CX/image11.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون فلسطيني</span>
+                    <span class="keyword-badge">زيتون سوري</span>
+                    <span class="keyword-badge">زيتون لبناني</span>
+                    <span class="keyword-badge">زيتون أردني</span>
+                    <span class="keyword-badge">زيتون مصري</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/qL465zc9/IMG-20260212-WA0006olive.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">شتلات زيتون للبيع</span>
+                    <span class="keyword-badge">شراء شتلات زيتون</span>
+                    <span class="keyword-badge">سعر شتلة زيتون</span>
+                    <span class="keyword-badge">توريد شتلات زيتون</span>
+                    <span class="keyword-badge">مشاتل زيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/gFjf69kw/image13.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون بري</span>
+                    <span class="keyword-badge">زيتون جبلي</span>
+                    <span class="keyword-badge">زيتون نابلسي</span>
+                    <span class="keyword-badge">زيتون عبري</span>
+                    <span class="keyword-badge">زيتون عتيق</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/5hczLs6q/image12.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون مائدة</span>
+                    <span class="keyword-badge">زيتون للطبخ</span>
+                    <span class="keyword-badge">زيتون للسلطة</span>
+                    <span class="keyword-badge">زيتون للمقبلات</span>
+                    <span class="keyword-badge">زيتون للبيتزا</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/TDmFgg4Z/image16.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيت زيتون للطبخ</span>
+                    <span class="keyword-badge">زيت زيتون للقلي</span>
+                    <span class="keyword-badge">زيت زيتون للسلطة</span>
+                    <span class="keyword-badge">زيت زيتون للبشرة</span>
+                    <span class="keyword-badge">زيت زيتون للشعر</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/Q3HTVP7s/image15.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">فوائد زيت الزيتون</span>
+                    <span class="keyword-badge">فوائد الزيتون</span>
+                    <span class="keyword-badge">زيتون صحي</span>
+                    <span class="keyword-badge">زيتون طبيعي</span>
+                    <span class="keyword-badge">زيتون عضوي</span>
+                </div>
+            </div>
+            <!-- الصورة 21 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/jvRtbdzx/IMG-20260212-WA0007olive.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون إسباني فاخر</span>
+                    <span class="keyword-badge">زيتون روماني فاخر</span>
+                    <span class="keyword-badge">زيتون مستورد</span>
+                    <span class="keyword-badge">زيتون عالي الجودة</span>
+                    <span class="keyword-badge">أجود أنواع الزيتون</span>
+                </div>
+            </div>
+            <!-- الصورة 22 -->
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/dJ1Ffkr1/image14.jpg" alt="زيتون">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">زيتون بكر ممتاز</span>
+                    <span class="keyword-badge">زيتون بكر عضوي</span>
+                    <span class="keyword-badge">زيتون بكر نقي</span>
+                    <span class="keyword-badge">زيتون بكر طبيعي</span>
+                    <span class="keyword-badge">زيتون بكر صحي</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات الزيتون -->
+        <h2><i class="fas fa-list-check"></i> خدمات الزيتون</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-seedling"></i>
+                <h3>شتلات زيتون</h3>
+                <p>توريد شتلات زيتون إسباني، روماني، شملالي، صوراني، كالاماتا.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-tree"></i>
+                <h3>غرس زيتون</h3>
+                <p>زراعة شتلات الزيتون بطرق علمية حديثة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-cut"></i>
+                <h3>تقليم وتطعيم</h3>
+                <p>تقليم أشجار الزيتون وتطعيمها بأفضل الأصناف.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bug"></i>
+                <h3>مكافحة ذبابة الزيتون</h3>
+                <p>مكافحة آفات الزيتون وخاصة ذبابة ثمار الزيتون.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>قطاف الزيتون</h3>
+                <p>قطاف يدوي وآلي مع فرق متخصصة.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-oil-can"></i>
+                <h3>عصر زيتون</h3>
+                <p>إنتاج زيت زيتون بكر ممتاز بطرق عصر باردة.</p>
+            </div>
+        </div>
+
+        <!-- أصناف الزيتون -->
+        <div class="varieties-section">
+            <h2 style="border-bottom: none; text-align: center;"><i class="fas fa-tags"></i> أصناف الزيتون</h2>
+            <div class="varieties-grid">
+                <span class="variety-item">إسباني</span>
+                <span class="variety-item">روماني</span>
+                <span class="variety-item">شملالي</span>
+                <span class="variety-item">صوراني</span>
+                <span class="variety-item">كالاماتا</span>
+                <span class="variety-item">مانزانيلو</span>
+                <span class="variety-item">أربيكينا</span>
+                <span class="variety-item">إيطالي</span>
+                <span class="variety-item">تركي</span>
+                <span class="variety-item">تونسي</span>
+                <span class="variety-item">مغربي</span>
+                <span class="variety-item">سوري</span>
+                <span class="variety-item">لبناني</span>
+                <span class="variety-item">فلسطيني</span>
+                <span class="variety-item">أردني</span>
+                <span class="variety-item">مصري</span>
+            </div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 200 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة للزيتون</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 200 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">زيتون</span>
+                <span class="keyword">شتلات زيتون</span>
+                <span class="keyword">زيتون إسباني</span>
+                <span class="keyword">زيتون روماني</span>
+                <span class="keyword">زيتون شملالي</span>
+                <span class="keyword">زيتون صوراني</span>
+                <span class="keyword">زيتون كالاماتا</span>
+                <span class="keyword">غرس زيتون</span>
+                <span class="keyword">تقليم زيتون</span>
+                <span class="keyword">تطعيم زيتون</span>
+                <span class="keyword">مكافحة ذبابة الزيتون</span>
+                <span class="keyword">قطاف الزيتون</span>
+                <span class="keyword">عصر زيتون</span>
+                <span class="keyword">زيت زيتون بكر</span>
+                <span class="keyword">زيتون مخلل</span>
+                <span class="keyword">أشجار زيتون</span>
+                <span class="keyword">مزرعة زيتون</span>
+                <span class="keyword">بستان زيتون</span>
+                <span class="keyword">زيتون أخضر</span>
+                <span class="keyword">زيتون أسود</span>
+                <span class="keyword">زيتون طري</span>
+                <span class="keyword">زيتون معصرة</span>
+                <span class="keyword">معصرة زيتون</span>
+                <span class="keyword">زيت زيتون عضوي</span>
+                <span class="keyword">زيت زيتون ممتاز</span>
+                <span class="keyword">زيت زيتون نقي</span>
+                <span class="keyword">استيراد زيتون</span>
+                <span class="keyword">تصدير زيتون</span>
+                <span class="keyword">زيتون عماني</span>
+                <span class="keyword">زيتون تونسي</span>
+                <span class="keyword">زيتون مغربي</span>
+                <span class="keyword">زيتون جزائري</span>
+                <span class="keyword">زيتون ليبي</span>
+                <span class="keyword">زيتون سعودي</span>
+                <span class="keyword">زيتون الجوف</span>
+                <span class="keyword">زيتون تبوك</span>
+                <span class="keyword">زيتون حائل</span>
+                <span class="keyword">زيتون القصيم</span>
+                <span class="keyword">زيتون المدينة</span>
+                <span class="keyword">زيتون الطائف</span>
+                <span class="keyword">زيتون الباحة</span>
+                <span class="keyword">زيتون عسير</span>
+                <span class="keyword">زيتون جازان</span>
+                <span class="keyword">زيتون نجران</span>
+                <span class="keyword">زيتون الجبيل</span>
+                <span class="keyword">زيتون الخبر</span>
+                <span class="keyword">زيتون الدمام</span>
+                <span class="keyword">زيتون الأحساء</span>
+                <span class="keyword">زيتون القطيف</span>
+                <span class="keyword">زيتون الخفجي</span>
+                <span class="keyword">زيتون حفر الباطن</span>
+                <span class="keyword">زيتون الرياض</span>
+                <span class="keyword">زيتون جدة</span>
+                <span class="keyword">زيتون مكة</span>
+                <span class="keyword">زيتون القنفذة</span>
+                <span class="keyword">زيتون الليث</span>
+                <span class="keyword">زيتون ينبع</span>
+                <span class="keyword">زيتون رابغ</span>
+                <span class="keyword">زيتون خليص</span>
+                <span class="keyword">زيتون الكامل</span>
+                <span class="keyword">زيتون تربة</span>
+                <span class="keyword">زيتون الخرمة</span>
+                <span class="keyword">زيتون رنية</span>
+                <span class="keyword">زيتون بيشة</span>
+                <span class="keyword">زيتون النماص</span>
+                <span class="keyword">زيتون بلجرشي</span>
+                <span class="keyword">زيتون المخواة</span>
+                <span class="keyword">زيتون الحجرة</span>
+                <span class="keyword">زيتون قلوة</span>
+                <span class="keyword">زيتون العقيق</span>
+                <span class="keyword">زيتون المندق</span>
+                <span class="keyword">زيتون بني حسن</span>
+                <span class="keyword">زيتون دوس</span>
+                <span class="keyword">زيتون زهران</span>
+                <span class="keyword">زيتون غامد</span>
+                <span class="keyword">زيتون فهم</span>
+                <span class="keyword">زيتون عدوان</span>
+                <span class="keyword">زيتون ثقيف</span>
+                <span class="keyword">زيتون هذيل</span>
+                <span class="keyword">زيتون مطير</span>
+                <span class="keyword">زيتون عتيبة</span>
+                <span class="keyword">زيتون حرب</span>
+                <span class="keyword">زيتون جهينة</span>
+                <span class="keyword">زيتون بلي</span>
+                <span class="keyword">زيتون بني عطية</span>
+                <span class="keyword">زيتون الحويطات</span>
+                <span class="keyword">زيتون شمران</span>
+                <span class="keyword">زيتون خثعم</span>
+                <span class="keyword">زيتون أكلب</span>
+                <span class="keyword">زيتون بلقرن</span>
+                <span class="keyword">زيتون بني شهر</span>
+                <span class="keyword">زيتون بني عمرو</span>
+                <span class="keyword">زيتون رجال ألمع</span>
+                <span class="keyword">زيتون المنظر</span>
+                <span class="keyword">زيتون بللسمر</span>
+                <span class="keyword">زيتون بللحمر</span>
+                <span class="keyword">زيتون بني مالك</span>
+                <span class="keyword">زيتون بالقرن</span>
+                <span class="keyword">زيتون زبيد</span>
+                <span class="keyword">زيتون خولان</span>
+                <span class="keyword">زيتون همدان</span>
+                <span class="keyword">زيتون أرحب</span>
+                <span class="keyword">زيتون نهم</span>
+                <span class="keyword">زيتون صعفان</span>
+                <span class="keyword">زيتون بني سعد</span>
+                <span class="keyword">زيتون بني تميم</span>
+                <span class="keyword">زيتون الدواسر</span>
+                <span class="keyword">زيتون يام</span>
+                <span class="keyword">زيتون سنحان</span>
+                <span class="keyword">زيتون مراد</span>
+                <span class="keyword">زيتون بكيل</span>
+                <span class="keyword">زيتون حاشد</span>
+                <span class="keyword">زيتون عنس</span>
+                <span class="keyword">زيتون ذي بين</span>
+                <span class="keyword">زيتون مأرب</span>
+                <span class="keyword">زيتون صعدة</span>
+                <span class="keyword">زيتون حجة</span>
+                <span class="keyword">زيتون المحويت</span>
+                <span class="keyword">زيتون ريمة</span>
+                <span class="keyword">زيتون إب</span>
+                <span class="keyword">زيتون تعز</span>
+                <span class="keyword">زيتون لحج</span>
+                <span class="keyword">زيتون أبين</span>
+                <span class="keyword">زيتون شبوة</span>
+                <span class="keyword">زيتون حضرموت</span>
+                <span class="keyword">زيتون المهرة</span>
+                <span class="keyword">زيتون سقطرى</span>
+                <span class="keyword">زيتون عربي</span>
+                <span class="keyword">زيتون أوروبي</span>
+                <span class="keyword">زيتون متوسطي</span>
+                <span class="keyword">زيتون يوناني</span>
+                <span class="keyword">زيتون إيطالي</span>
+                <span class="keyword">زيتون فرنسي</span>
+                <span class="keyword">زيتون برتغالي</span>
+                <span class="keyword">زيتون تركي</span>
+                <span class="keyword">زيتون سوري</span>
+                <span class="keyword">زيتون لبناني</span>
+                <span class="keyword">زيتون فلسطيني</span>
+                <span class="keyword">زيتون أردني</span>
+                <span class="keyword">زيتون مصري</span>
+                <span class="keyword">زيتون ليبي</span>
+                <span class="keyword">زيتون تونسي</span>
+                <span class="keyword">زيتون جزائري</span>
+                <span class="keyword">زيتون مغربي</span>
+                <span class="keyword">زيتون موريتاني</span>
+                <span class="keyword">زيتون صحي</span>
+                <span class="keyword">فوائد الزيتون</span>
+                <span class="keyword">فوائد زيت الزيتون</span>
+                <span class="keyword">زيتون للبشرة</span>
+                <span class="keyword">زيتون للشعر</span>
+                <span class="keyword">زيتون للطبخ</span>
+                <span class="keyword">زيتون للسلطة</span>
+                <span class="keyword">زيتون للمقبلات</span>
+                <span class="keyword">زيتون للبيتزا</span>
+                <span class="keyword">زيتون للمعجنات</span>
+                <span class="keyword">زيتون للفطائر</span>
+                <span class="keyword">زيتون للمناقيش</span>
+                <span class="keyword">زيتون للخبز</span>
+                <span class="keyword">زيتون للجبن</span>
+                <span class="keyword">زيتون للحم</span>
+                <span class="keyword">زيتون للدجاج</span>
+                <span class="keyword">زيتون للأسماك</span>
+                <span class="keyword">زيتون للمأكولات البحرية</span>
+                <span class="keyword">زيتون للباستا</span>
+                <span class="keyword">زيتون للبيتزا</span>
+                <span class="keyword">زيتون للسلطات</span>
+                <span class="keyword">زيتون للسندويشات</span>
+                <span class="keyword">زيتون للبرغر</span>
+                <span class="keyword">زيتون للشاورما</span>
+                <span class="keyword">زيتون للفلافل</span>
+                <span class="keyword">زيتون للحمص</span>
+                <span class="keyword">زيتون للمتبل</span>
+                <span class="keyword">زيتون للمقبلات العربية</span>
+                <span class="keyword">زيتون للمقبلات الغربية</span>
+                <span class="keyword">زيتون للمقبلات الإيطالية</span>
+                <span class="keyword">زيتون للمقبلات الإسبانية</span>
+                <span class="keyword">زيتون للمقبلات اليونانية</span>
+                <span class="keyword">زيتون للمقبلات التركية</span>
+                <span class="keyword">زيتون للمقبلات المغربية</span>
+                <span class="keyword">زيتون للمقبلات التونسية</span>
+                <span class="keyword">زيتون للمقبلات الجزائرية</span>
+                <span class="keyword">زيتون للمقبلات المصرية</span>
+                <span class="keyword">زيتون للمقبلات الشامية</span>
+                <span class="keyword">زيتون للمقبلات الخليجية</span>
+                <span class="keyword">زيتون للمقبلات السعودية</span>
+                <span class="keyword">زيتون للمقبلات اليمنية</span>
+                <span class="keyword">زيتون للمقبلات العمانية</span>
+                <span class="keyword">زيتون للمقبلات الإماراتية</span>
+                <span class="keyword">زيتون للمقبلات القطرية</span>
+                <span class="keyword">زيتون للمقبلات البحرينية</span>
+                <span class="keyword">زيتون للمقبلات الكويتية</span>
+                <span class="keyword">زيتون للمقبلات العراقية</span>
+                <span class="keyword">زيتون للمقبلات الأردنية</span>
+                <span class="keyword">زيتون للمقبلات الفلسطينية</span>
+                <span class="keyword">زيتون للمقبلات اللبنانية</span>
+                <span class="keyword">زيتون للمقبلات السورية</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0504152836" class="btn btn-call"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-olive"></i> زيتون - نخيل - شبوك - مظلات - برجولات</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+                  </html>
