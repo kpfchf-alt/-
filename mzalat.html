@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>مظلات وبرجولات - نخيل وزيتون الرياض</title>
+    <!-- تحسين محركات البحث -->
+    <meta name="description" content="مظلات سيارات، مظلات مدارس، برجولات، مظلات حدائق، مظلات خشبية وحديدية. تركيب وتوريد في الرياض.">
+    <meta name="keywords" content="مظلات, مظلات سيارات, برجولات, مظلات خشبية, مظلات حديد, تركيب مظلات, الرياض">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="shortcut icon" href="https://i.postimg.cc/N0SR4j4t/1999.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* حماية الصور ومنع الحركة */
+        img { pointer-events: none; user-select: none; -webkit-user-drag: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { overflow-x: hidden; width: 100%; }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: #f5f9f5;
+        }
+
+        /* ترويسة ثابتة */
+        .header {
+            height: 15vh;
+            min-height: 100px;
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            color: white;
+            width: 100%;
+            border-bottom: 4px solid #f5c542;
+            position: relative;
+            z-index: 1000;
+            flex-shrink: 0;
+        }
+        .right-images {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+            position: relative;
+            left: -30px;
+        }
+        .right-images img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+        .title-section {
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+            white-space: nowrap;
+            z-index: 5;
+        }
+        .title-section h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 0 #0a3a1e;
+        }
+        .title-section p {
+            font-size: 1rem;
+            background: rgba(0,0,0,0.2);
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+        }
+
+        /* زر القائمة */
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            border: 1px solid #f5c542;
+            z-index: 2000;
+        }
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+        }
+
+        /* قائمة جانبية */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(26, 77, 46, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 80px 20px 20px;
+            z-index: 1500;
+            border-left: 2px solid #f5c542;
+            overflow-y: auto;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+            transition: none;
+        }
+        .sidebar.active { right: 0; }
+        .sidebar ul { list-style: none; }
+        .sidebar li { margin-bottom: 10px; }
+        .sidebar a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 40px;
+            border: 1px solid transparent;
+        }
+        .sidebar a:hover {
+            background: #f5c542;
+            color: #1a4d2e;
+        }
+        .sidebar a i { margin-left: 10px; color: #f5c542; }
+        .sidebar a:hover i { color: #1a4d2e; }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background: #fefefe;
+        }
+
+        /* رأس الصفحة */
+        .page-header {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #f5c542;
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 4px 0 #1a4d2e;
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-size: 1.3rem;
+            color: #f5c542;
+        }
+
+        /* رقم الهاتف */
+        .phone-section {
+            background: rgba(245, 197, 66, 0.15);
+            border: 3px solid #f5c542;
+            border-radius: 80px;
+            padding: 20px 30px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #f5c542;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 0 #1a4d2e;
+        }
+        .phone-section i { font-size: 2.5rem; }
+        .phone-section span { direction: ltr; }
+
+        h2 {
+            color: #0a4d2e;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 4px solid #f5c542;
+            padding-bottom: 15px;
+            font-weight: 900;
+        }
+
+        /* معرض الصور - الآن كل صورة مع كلماتها المفتاحية */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .gallery-item {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 8px 0 #1a4d2e;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid #f5c542;
+            margin-bottom: 10px;
+        }
+        .keywords-under-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+        }
+        .keyword-badge {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 30px;
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            color: #0a4d2e;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* خدمات المظلات */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border: 2px solid #f5c542;
+            border-radius: 30px;
+            padding: 30px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .service-card i {
+            font-size: 2.5rem;
+            color: #f5c542;
+            margin-bottom: 20px;
+        }
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #0a4d2e;
+        }
+        .service-card p {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* قسم الكلمات المفتاحية الضخم */
+        .keywords-section {
+            background: white;
+            border: 3px solid #f5c542;
+            border-radius: 30px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 15px 0 #1a4d2e;
+        }
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 25px;
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 10px;
+            border: 1px solid #f5c542;
+            border-radius: 20px;
+        }
+        .keyword {
+            background: rgba(245, 197, 66, 0.1);
+            border: 1px solid #f5c542;
+            border-radius: 40px;
+            padding: 8px 12px;
+            color: #0a4d2e;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* أزرار التنقل */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 40px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #f5c542;
+            color: #0a4d2e;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.2rem;
+            border: 3px solid white;
+            box-shadow: 0 10px 0 #b38f2e;
+        }
+
+        .footer {
+            background: linear-gradient(145deg, #0a4d2e, #1e6b3b);
+            padding: 30px;
+            text-align: center;
+            color: white;
+            border-top: 4px solid #f5c542;
+            margin-top: 40px;
+        }
+
+        /* الأزرار العائمة */
+        .float-buttons {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 9999;
+        }
+        .float-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            text-decoration: none;
+            border: 2.5px solid;
+        }
+        .float-btn i { font-size: 26px; margin-bottom: 2px; }
+        .float-btn span { font-size: 10px; font-weight: 700; }
+        .whatsapp-btn { background: #25d366; border-color: #075e54; color: white; }
+        .call-btn { background: #0a4d2e; border-color: #f5c542; color: white; }
+
+        @media (max-width: 700px) {
+            .header { flex-wrap: wrap; height: auto; padding: 10px; }
+            .right-images { left: -15px; }
+            .right-images img { height: 60px; }
+            .title-section { white-space: normal; width: 100%; order: 3; margin-top: 5px; }
+            .title-section h1 { font-size: 1.2rem; }
+            .page-header h1 { font-size: 2rem; }
+            .phone-section { font-size: 1.3rem; padding: 15px; }
+            .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
+
+    <!-- الترويسة -->
+    <header class="header">
+        <div class="right-images">
+            <img src="https://i.postimg.cc/N0SR4j4t/1999.png" alt="شعار نخيل وزيتون الرياض">
+            <img src="https://i.postimg.cc/jSGz6jvr/Riyadh-Palms-and-Olives.png" alt="شعار إضافي">
+        </div>
+        <div class="title-section">
+            <h1>نخيل - زيتون - شبوك - مظلات - الرياض</h1>
+            <p>توفير جميع أنواع النخيل والزيتون</p>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- القائمة الجانبية -->
+    <aside class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+            <li><a href="torid-nakheel.html"><i class="fas fa-tree"></i> توريد نخيل السعودية</a></li>
+            <li><a href="zeraat-nakheel.html"><i class="fas fa-seedling"></i> زراعة النخيل</a></li>
+            <li><a href="nakheel-washingtonia.html"><i class="fas fa-palm-tree"></i> نخل واشنطن</a></li>
+            <li><a href="muqawil-mazarea.html"><i class="fas fa-tractor"></i> مقاول مزارع</a></li>
+            <li><a href="tarkeeb-shabouk.html"><i class="fas fa-fence"></i> تركيب شبوك</a></li>
+            <li><a href="tan-theef-nakheel.html"><i class="fas fa-broom"></i> تنظيف نخيل</a></li>
+            <li><a href="sayanat-hadayeq.html"><i class="fas fa-leaf"></i> صيانة حدائق</a></li>
+            <li><a href="sidr-zaytoon.html"><i class="fas fa-tree"></i> سدر وزيتون</a></li>
+            <li><a href="bey-wanaql.html"><i class="fas fa-truck"></i> بيع ونقل</a></li>
+            <li><a href="mzalat.html" style="background:#f5c542; color:#1a4d2e;"><i class="fas fa-umbrella"></i> مظلات</a></li>
+        </ul>
+    </aside>
+
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content">
+        <div class="page-header">
+            <h1><i class="fas fa-umbrella"></i> المظلات والبرجولات</h1>
+            <p>جميع أنواع المظلات - تركيب وتوريد وصيانة</p>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="phone-section">
+            <i class="fas fa-phone-alt"></i>
+            <span dir="ltr">0559945734</span>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+
+        <!-- معرض الصور مع كلمات مفتاحية تحت كل صورة (20 صورة، كل صورة تحتها كلماتها) -->
+        <h2><i class="fas fa-images"></i> معرض صور المظلات مع كلمات مفتاحية</h2>
+        <div class="gallery-grid">
+            <!-- الصورة 1 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/ydLgPCDS/5285107341525191501-120.jpg" alt="مظلات سيارات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات سيارات</span>
+                    <span class="keyword-badge">مظلات حديد</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات مواقف</span>
+                    <span class="keyword-badge">مظلات فلل</span>
+                    <span class="keyword-badge">مظلات قصور</span>
+                    <span class="keyword-badge">مظلات خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 2 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/W3Nqg11G/5285107341525191502-120.jpg" alt="برجولات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">برجولات</span>
+                    <span class="keyword-badge">برجولات خشبية</span>
+                    <span class="keyword-badge">برجولات حديدية</span>
+                    <span class="keyword-badge">برجولات حدائق</span>
+                    <span class="keyword-badge">برجولات فلل</span>
+                    <span class="keyword-badge">برجولات مودرن</span>
+                    <span class="keyword-badge">برجولات قماش</span>
+                </div>
+            </div>
+            <!-- الصورة 3 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/MT6fVppm/5285107341525191503-120.jpg" alt="مظلات مدارس">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات مدارس</span>
+                    <span class="keyword-badge">مظلات ساحات</span>
+                    <span class="keyword-badge">مظلات مشايات</span>
+                    <span class="keyword-badge">مظلات جامعات</span>
+                    <span class="keyword-badge">مظلات أطفال</span>
+                    <span class="keyword-badge">مظلات رياض أطفال</span>
+                    <span class="keyword-badge">مظلات تعليمية</span>
+                </div>
+            </div>
+            <!-- الصورة 4 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/TwtL9vK5/5285107341525191504-121.jpg" alt="مظلات مسابح">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات مسابح</span>
+                    <span class="keyword-badge">مظلات حمامات</span>
+                    <span class="keyword-badge">مظلات قماش عازل</span>
+                    <span class="keyword-badge">مظلات بي في سي</span>
+                    <span class="keyword-badge">مظلات مقاومة للكلور</span>
+                    <span class="keyword-badge">مظلات متحركة</span>
+                    <span class="keyword-badge">مظلات سحاب</span>
+                </div>
+            </div>
+            <!-- الصورة 5 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/cHFgmGvw/5285107341525191505-121.jpg" alt="مظلات حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات حدائق</span>
+                    <span class="keyword-badge">مظلات جلسات</span>
+                    <span class="keyword-badge">مظلات خشبية</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات استراحات</span>
+                    <span class="keyword-badge">مظلات منازل</span>
+                    <span class="keyword-badge">مظلات خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 6 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/nzF9BhhK/5285107341525191506-121.jpg" alt="مظلات خشبية">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات خشبية</span>
+                    <span class="keyword-badge">مظلات خشب طبيعي</span>
+                    <span class="keyword-badge">مظلات خشب صناعي</span>
+                    <span class="keyword-badge">مظلات عازلة</span>
+                    <span class="keyword-badge">مظلات كلاسيك</span>
+                    <span class="keyword-badge">برجولات خشبية</span>
+                    <span class="keyword-badge">مظلات فلل</span>
+                </div>
+            </div>
+            <!-- الصورة 7 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/j5xnPSSN/5285107341525191525-121.jpg" alt="مظلات حديد">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات حديد</span>
+                    <span class="keyword-badge">مظلات حديد مجلفن</span>
+                    <span class="keyword-badge">مظلات مقاومة للصدأ</span>
+                    <span class="keyword-badge">مظلات مودرن</span>
+                    <span class="keyword-badge">مظلات قوية</span>
+                    <span class="keyword-badge">مظلات مواقف</span>
+                    <span class="keyword-badge">مظلات شركات</span>
+                </div>
+            </div>
+            <!-- الصورة 8 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/yd13c88Z/5289875884800150848-121.jpg" alt="مظلات قماش">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات قماش بي في سي</span>
+                    <span class="keyword-badge">مظلات قماش عازل</span>
+                    <span class="keyword-badge">مظلات متحركة</span>
+                    <span class="keyword-badge">مظلات سحاب</span>
+                    <span class="keyword-badge">مظلات كهربائية</span>
+                    <span class="keyword-badge">مظلات يدوية</span>
+                </div>
+            </div>
+            <!-- الصورة 9 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/j5xnPSSw/5309895887007977391-121.jpg" alt="مظلات سحاب">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات سحاب</span>
+                    <span class="keyword-badge">مظلات متحركة</span>
+                    <span class="keyword-badge">مظلات كهربائية</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات مسابح</span>
+                    <span class="keyword-badge">مظلات حدائق</span>
+                    <span class="keyword-badge">مظلات آلية</span>
+                </div>
+            </div>
+            <!-- الصورة 10 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/1tmVw33F/5309895887007977392-121.jpg" alt="مظلات بي في سي">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات بي في سي</span>
+                    <span class="keyword-badge">مظلات شفافة</span>
+                    <span class="keyword-badge">مظلات عازلة</span>
+                    <span class="keyword-badge">مظلات مقاومة</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات متعددة الاستخدامات</span>
+                    <span class="keyword-badge">مظلات خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 11 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/rmVRxwwt/5309895887007977393-121.jpg" alt="مظلات استراحات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات استراحات</span>
+                    <span class="keyword-badge">مظلات فلل</span>
+                    <span class="keyword-badge">مظلات قصور</span>
+                    <span class="keyword-badge">مظلات حدائق</span>
+                    <span class="keyword-badge">برجولات</span>
+                    <span class="keyword-badge">مظلات جلسات</span>
+                    <span class="keyword-badge">مظلات خارجية</span>
+                </div>
+            </div>
+            <!-- الصورة 12 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/hjDQTttf/5309895887007977394-121.jpg" alt="مظلات مواقف">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات مواقف</span>
+                    <span class="keyword-badge">مظلات سيارات</span>
+                    <span class="keyword-badge">مظلات حديد</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات شركات</span>
+                    <span class="keyword-badge">مظلات مصانع</span>
+                    <span class="keyword-badge">مظلات عامة</span>
+                </div>
+            </div>
+            <!-- الصورة 13 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/26kLhSS1/5309895887007977406-121.jpg" alt="مظلات مدارس">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات مدارس</span>
+                    <span class="keyword-badge">مظلات ساحات</span>
+                    <span class="keyword-badge">مظلات مشايات</span>
+                    <span class="keyword-badge">مظلات أطفال</span>
+                    <span class="keyword-badge">مظلات رياض أطفال</span>
+                    <span class="keyword-badge">مظلات تعليمية</span>
+                    <span class="keyword-badge">مظلات آمنة</span>
+                </div>
+            </div>
+            <!-- الصورة 14 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/504QL22H/5309895887007977407-119.jpg" alt="برجولات حدائق">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">برجولات حدائق</span>
+                    <span class="keyword-badge">برجولات خشبية</span>
+                    <span class="keyword-badge">برجولات حديدية</span>
+                    <span class="keyword-badge">برجولات جلسات</span>
+                    <span class="keyword-badge">برجولات فلل</span>
+                    <span class="keyword-badge">برجولات مظلات</span>
+                    <span class="keyword-badge">برجولات مودرن</span>
+                </div>
+            </div>
+            <!-- الصورة 15 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/cJM8vn0y/5348356309826342707-119.jpg" alt="مظلات قماش متحركة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات متحركة</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات سحاب</span>
+                    <span class="keyword-badge">مظلات كهربائية</span>
+                    <span class="keyword-badge">مظلات يدوية</span>
+                    <span class="keyword-badge">مظلات آلية</span>
+                    <span class="keyword-badge">مظلات حديثة</span>
+                </div>
+            </div>
+            <!-- الصورة 16 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/qRJ6yvvg/5348356309826342708-121.jpg" alt="مظلات كافيهات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات كافيهات</span>
+                    <span class="keyword-badge">مظلات مطاعم</span>
+                    <span class="keyword-badge">مظلات مقاهي</span>
+                    <span class="keyword-badge">مظلات جلسات خارجية</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات خشبية</span>
+                    <span class="keyword-badge">مظلات عصرية</span>
+                </div>
+            </div>
+            <!-- الصورة 17 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/RFSJKZZZ/5348356309826342709-121.jpg" alt="مظلات فلل">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات فلل</span>
+                    <span class="keyword-badge">مظلات قصور</span>
+                    <span class="keyword-badge">مظلات مداخل</span>
+                    <span class="keyword-badge">مظلات حدائق</span>
+                    <span class="keyword-badge">مظلات جلسات</span>
+                    <span class="keyword-badge">مظلات خشبية</span>
+                    <span class="keyword-badge">مظلات حديدية</span>
+                </div>
+            </div>
+            <!-- الصورة 18 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/k5Ft2bqP/5348356309826342710-119.jpg" alt="مظلات شركات">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات شركات</span>
+                    <span class="keyword-badge">مظلات مصانع</span>
+                    <span class="keyword-badge">مظلات مواقف</span>
+                    <span class="keyword-badge">مظلات حديد</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات مداخل</span>
+                    <span class="keyword-badge">مظلات مؤسسات</span>
+                </div>
+            </div>
+            <!-- الصورة 19 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/PxXvY55q/5348356309826342711-121.jpg" alt="مظلات مساجد">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات مساجد</span>
+                    <span class="keyword-badge">مظلات مصليات</span>
+                    <span class="keyword-badge">مظلات ساحات</span>
+                    <span class="keyword-badge">مظلات مشايات</span>
+                    <span class="keyword-badge">مظلات قماش</span>
+                    <span class="keyword-badge">مظلات بي في سي</span>
+                    <span class="keyword-badge">مظلات عازلة</span>
+                </div>
+            </div>
+            <!-- الصورة 20 -->
+            <div class="gallery-item">
+                <img src="https://i.postimg.cc/xCfNM118/5348356309826342712-121.jpg" alt="مظلات متعددة">
+                <div class="keywords-under-image">
+                    <span class="keyword-badge">مظلات متنوعة</span>
+                    <span class="keyword-badge">مظلات حسب الطلب</span>
+                    <span class="keyword-badge">مظلات جاهزة</span>
+                    <span class="keyword-badge">مظلات تركيب</span>
+                    <span class="keyword-badge">مظلات توريد</span>
+                    <span class="keyword-badge">مظلات صيانة</span>
+                    <span class="keyword-badge">مظلات ضمان</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- خدمات المظلات -->
+        <h2><i class="fas fa-list-check"></i> خدمات المظلات</h2>
+        <div class="services-grid">
+            <div class="service-card"><i class="fas fa-car"></i><h3>مظلات سيارات</h3><p>مظلات سيارات حديد، خشب، قماش، بي في سي - مقاسات وأشكال حسب الطلب.</p></div>
+            <div class="service-card"><i class="fas fa-school"></i><h3>مظلات مدارس</h3><p>مظلات للمدارس والجامعات والروضات بأعلى معايير السلامة.</p></div>
+            <div class="service-card"><i class="fas fa-swimmer"></i><h3>مظلات مسابح</h3><p>مظلات حمامات السباحة لحماية السباحين من أشعة الشمس.</p></div>
+            <div class="service-card"><i class="fas fa-tree"></i><h3>برجولات</h3><p>برجولات خشبية وحديدية للحدائق والاستراحات والفلل.</p></div>
+            <div class="service-card"><i class="fas fa-home"></i><h3>مظلات حدائق</h3><p>مظلات منزلية للحدائق والجلسات الخارجية.</p></div>
+            <div class="service-card"><i class="fas fa-umbrella"></i><h3>مظلات قماش</h3><p>مظلات قماش بي في سي عازلة للحرارة والماء.</p></div>
+        </div>
+
+        <!-- كلمات مفتاحية مكثفة (أكثر من 200 كلمة) -->
+        <div class="keywords-section">
+            <h2 style="border-bottom: none;"><i class="fas fa-key"></i> كلمات مفتاحية شاملة للمظلات</h2>
+            <p style="color: #f5c542; margin-bottom: 20px;">أكثر من 200 كلمة مفتاحية لتحسين البحث</p>
+            <div class="keywords-grid">
+                <span class="keyword">مظلات</span>
+                <span class="keyword">مظلات سيارات</span>
+                <span class="keyword">مظلات مدارس</span>
+                <span class="keyword">مظلات مسابح</span>
+                <span class="keyword">برجولات</span>
+                <span class="keyword">مظلات حدائق</span>
+                <span class="keyword">مظلات خشبية</span>
+                <span class="keyword">مظلات حديد</span>
+                <span class="keyword">مظلات قماش</span>
+                <span class="keyword">مظلات سحاب</span>
+                <span class="keyword">مظلات متحركة</span>
+                <span class="keyword">مظلات بي في سي</span>
+                <span class="keyword">تركيب مظلات</span>
+                <span class="keyword">توريد مظلات</span>
+                <span class="keyword">صيانة مظلات</span>
+                <span class="keyword">مظلات فلل</span>
+                <span class="keyword">مظلات قصور</span>
+                <span class="keyword">مظلات شركات</span>
+                <span class="keyword">مظلات مواقف</span>
+                <span class="keyword">مظلات كافيهات</span>
+                <span class="keyword">مظلات مطاعم</span>
+                <span class="keyword">مظلات فنادق</span>
+                <span class="keyword">مظلات مستشفيات</span>
+                <span class="keyword">مظلات مساجد</span>
+                <span class="keyword">مظلات استراحات</span>
+                <span class="keyword">مظلات حديد مجلفن</span>
+                <span class="keyword">مظلات خشب طبيعي</span>
+                <span class="keyword">مظلات خشب صناعي</span>
+                <span class="keyword">مظلات بي في سي شفاف</span>
+                <span class="keyword">مظلات قماش بي في سي</span>
+                <span class="keyword">مظلات قماش عازل</span>
+                <span class="keyword">مظلات قماش متحركة</span>
+                <span class="keyword">مظلات قماش كهربائية</span>
+                <span class="keyword">مظلات قماش يدوية</span>
+                <span class="keyword">برجولات خشبية</span>
+                <span class="keyword">برجولات حديدية</span>
+                <span class="keyword">برجولات قماش</span>
+                <span class="keyword">برجولات سيارات</span>
+                <span class="keyword">برجولات حدائق</span>
+                <span class="keyword">برجولات فلل</span>
+                <span class="keyword">برجولات مودرن</span>
+                <span class="keyword">برجولات كلاسيك</span>
+                <span class="keyword">مظلات مداخل</span>
+                <span class="keyword">مظلات مداخل فلل</span>
+                <span class="keyword">مظلات مداخل قصور</span>
+                <span class="keyword">مظلات مداخل بيوت</span>
+                <span class="keyword">مظلات مداخل محلات</span>
+                <span class="keyword">مظلات مداخل فنادق</span>
+                <span class="keyword">مظلات مشايات</span>
+                <span class="keyword">مظلات مشايات مدارس</span>
+                <span class="keyword">مظلات مشايات جامعات</span>
+                <span class="keyword">مظلات مشايات مستشفيات</span>
+                <span class="keyword">مظلات مشايات مساجد</span>
+                <span class="keyword">مظلات مشايات فنادق</span>
+                <span class="keyword">مظلات مشايات مطارات</span>
+                <span class="keyword">مظلات مشايات محطات</span>
+                <span class="keyword">مظلات مشايات استراحات</span>
+                <span class="keyword">مظلات مشايات حدائق</span>
+                <span class="keyword">مظلات مشايات فلل</span>
+                <span class="keyword">مظلات مشايات قصور</span>
+                <span class="keyword">مظلات مشايات بيوت</span>
+                <span class="keyword">مظلات مشايات شقق</span>
+                <span class="keyword">مظلات مشايات عمائر</span>
+                <span class="keyword">مظلات مشايات مجمعات</span>
+                <span class="keyword">مظلات مشايات مكاتب</span>
+                <span class="keyword">مظلات مشايات مصانع</span>
+                <span class="keyword">مظلات مشايات شركات</span>
+                <span class="keyword">مظلات مشايات مطاعم</span>
+                <span class="keyword">مظلات مشايات كافيهات</span>
+                <span class="keyword">مظلات مشايات مولات</span>
+                <span class="keyword">مظلات مشايات أسواق</span>
+                <span class="keyword">مظلات مشايات مراكز تجارية</span>
+                <span class="keyword">مظلات مشايات مراكز طبية</span>
+                <span class="keyword">مظلات مشايات مراكز تعليمية</span>
+                <span class="keyword">مظلات مشايات مراكز تدريب</span>
+                <span class="keyword">مظلات مشايات مراكز مؤتمرات</span>
+                <span class="keyword">مظلات مشايات مراكز معارض</span>
+                <span class="keyword">مظلات مشايات مراكز ترفيهية</span>
+                <span class="keyword">مظلات مشايات مراكز رياضية</span>
+                <span class="keyword">مظلات مشايات مراكز شباب</span>
+                <span class="keyword">مظلات مشايات مراكز أطفال</span>
+                <span class="keyword">مظلات مشايات مراكز عجزة</span>
+                <span class="keyword">مظلات مشايات مراكز إيواء</span>
+                <span class="keyword">مظلات مشايات مراكز تأهيل</span>
+                <span class="keyword">مظلات مشايات مراكز رعاية</span>
+                <span class="keyword">مظلات مشايات مراكز اجتماعية</span>
+                <span class="keyword">مظلات مشايات مراكز ثقافية</span>
+                <span class="keyword">مظلات مشايات مراكز إعلامية</span>
+                <span class="keyword">مظلات مشايات مراكز بحثية</span>
+                <span class="keyword">مظلات مشايات مراكز علمية</span>
+                <span class="keyword">مظلات مشايات مراكز ابتكار</span>
+                <span class="keyword">مظلات مشايات مراكز تقنية</span>
+                <span class="keyword">مظلات مشايات مراكز رقمية</span>
+                <span class="keyword">مظلات مشايات مراكز خدمات</span>
+                <span class="keyword">مظلات مشايات مراكز حكومية</span>
+                <span class="keyword">مظلات مشايات مراكز خاصة</span>
+                <span class="keyword">مظلات مشايات مراكز أهلية</span>
+                <span class="keyword">مظلات مشايات مراكز خيرية</span>
+                <span class="keyword">مظلات مشايات مراكز تطوعية</span>
+                <span class="keyword">مظلات مشايات مراكز تنموية</span>
+                <span class="keyword">مظلات مشايات مراكز إنسانية</span>
+                <span class="keyword">مظلات مواقف سيارات</span>
+                <span class="keyword">مظلات مواقف عامة</span>
+                <span class="keyword">مظلات مواقف خاصة</span>
+                <span class="keyword">مظلات مواقف فلل</span>
+                <span class="keyword">مظلات مواقف قصور</span>
+                <span class="keyword">مظلات مواقف شركات</span>
+                <span class="keyword">مظلات مواقف مصانع</span>
+                <span class="keyword">مظلات مواقف مستشفيات</span>
+                <span class="keyword">مظلات مواقف مدارس</span>
+                <span class="keyword">مظلات مواقف جامعات</span>
+                <span class="keyword">مظلات مواقف مساجد</span>
+                <span class="keyword">مظلات مواقف فنادق</span>
+                <span class="keyword">مظلات مواقف مطاعم</span>
+                <span class="keyword">مظلات مواقف كافيهات</span>
+                <span class="keyword">مظلات مواقف مولات</span>
+                <span class="keyword">مظلات مواقف أسواق</span>
+                <span class="keyword">مظلات مواقف مراكز تجارية</span>
+                <span class="keyword">مظلات مواقف مراكز طبية</span>
+                <span class="keyword">مظلات مواقف مراكز تعليمية</span>
+                <span class="keyword">مظلات مواقف مراكز تدريب</span>
+                <span class="keyword">مظلات مواقف مراكز مؤتمرات</span>
+                <span class="keyword">مظلات مواقف مراكز معارض</span>
+                <span class="keyword">مظلات مواقف مراكز ترفيهية</span>
+                <span class="keyword">مظلات مواقف مراكز رياضية</span>
+                <span class="keyword">مظلات مواقف مراكز شباب</span>
+                <span class="keyword">مظلات مواقف مراكز أطفال</span>
+                <span class="keyword">مظلات مواقف مراكز عجزة</span>
+                <span class="keyword">مظلات مواقف مراكز إيواء</span>
+                <span class="keyword">مظلات مواقف مراكز تأهيل</span>
+                <span class="keyword">مظلات مواقف مراكز رعاية</span>
+                <span class="keyword">مظلات مواقف مراكز اجتماعية</span>
+                <span class="keyword">مظلات مواقف مراكز ثقافية</span>
+                <span class="keyword">مظلات مواقف مراكز إعلامية</span>
+                <span class="keyword">مظلات مواقف مراكز بحثية</span>
+                <span class="keyword">مظلات مواقف مراكز علمية</span>
+                <span class="keyword">مظلات مواقف مراكز ابتكار</span>
+                <span class="keyword">مظلات مواقف مراكز تقنية</span>
+                <span class="keyword">مظلات مواقف مراكز رقمية</span>
+                <span class="keyword">مظلات مواقف مراكز خدمات</span>
+                <span class="keyword">مظلات مواقف مراكز حكومية</span>
+                <span class="keyword">مظلات مواقف مراكز خاصة</span>
+                <span class="keyword">مظلات مواقف مراكز أهلية</span>
+                <span class="keyword">مظلات مواقف مراكز خيرية</span>
+                <span class="keyword">مظلات مواقف مراكز تطوعية</span>
+                <span class="keyword">مظلات مواقف مراكز تنموية</span>
+                <span class="keyword">مظلات مواقف مراكز إنسانية</span>
+                <span class="keyword">مظلات حديد مجلفن</span>
+                <span class="keyword">مظلات حديد مقاوم للصدأ</span>
+                <span class="keyword">مظلات حديد مودرن</span>
+                <span class="keyword">مظلات حديد كلاسيك</span>
+                <span class="keyword">مظلات خشب طبيعي</span>
+                <span class="keyword">مظلات خشب صناعي</span>
+                <span class="keyword">مظلات خشب معالج</span>
+                <span class="keyword">مظلات خشب مقاوم</span>
+                <span class="keyword">مظلات قماش عازل للحرارة</span>
+                <span class="keyword">مظلات قماش عازل للماء</span>
+                <span class="keyword">مظلات قماش عازل للأشعة</span>
+                <span class="keyword">مظلات قماش متحرك كهربائي</span>
+                <span class="keyword">مظلات قماش متحرك يدوي</span>
+                <span class="keyword">مظلات بي في سي شفاف</span>
+                <span class="keyword">مظلات بي في سي ملون</span>
+                <span class="keyword">مظلات بي في سي عازل</span>
+                <span class="keyword">مظلات سحاب كهربائية</span>
+                <span class="keyword">مظلات سحاب يدوية</span>
+                <span class="keyword">مظلات سحاب للمسابح</span>
+                <span class="keyword">مظلات سحاب للحدائق</span>
+                <span class="keyword">مظلات سحاب للاستراحات</span>
+                <span class="keyword">مظلات متحركة للمدارس</span>
+                <span class="keyword">مظلات متحركة للمساجد</span>
+                <span class="keyword">مظلات متحركة للفنادق</span>
+                <span class="keyword">مظلات متحركة للمطاعم</span>
+                <span class="keyword">مظلات متحركة للكافيهات</span>
+                <span class="keyword">مظلات متحركة للفلل</span>
+                <span class="keyword">مظلات متحركة للقصور</span>
+                <span class="keyword">مظلات متحركة للشركات</span>
+                <span class="keyword">مظلات متحركة للمصانع</span>
+                <span class="keyword">مظلات متحركة للمستشفيات</span>
+                <span class="keyword">مظلات متحركة للمدارس</span>
+                <span class="keyword">مظلات متحركة للجامعات</span>
+                <span class="keyword">مظلات متحركة لمراكز التسوق</span>
+                <span class="keyword">مظلات متحركة للأسواق</span>
+                <span class="keyword">مظلات متحركة للمولات</span>
+                <span class="keyword">مظلات متحركة للفنادق</span>
+                <span class="keyword">مظلات متحركة للمطاعم</span>
+                <span class="keyword">مظلات متحركة للكافيهات</span>
+                <span class="keyword">مظلات متحركة للفلل</span>
+                <span class="keyword">مظلات متحركة للقصور</span>
+                <span class="keyword">مظلات متحركة للاستراحات</span>
+                <span class="keyword">مظلات متحركة للحدائق</span>
+                <span class="keyword">مظلات متحركة للمسابح</span>
+                <span class="keyword">مظلات متحركة للمشايات</span>
+                <span class="keyword">مظلات متحركة للمداخل</span>
+                <span class="keyword">مظلات متحركة للمواقف</span>
+                <span class="keyword">مظلات متحركة للشوارع</span>
+                <span class="keyword">مظلات متحركة للميادين</span>
+                <span class="keyword">مظلات متحركة للمتنزهات</span>
+                <span class="keyword">مظلات متحركة للمنتزهات</span>
+                <span class="keyword">مظلات متحركة للحدائق العامة</span>
+            </div>
+        </div>
+
+        <!-- أزرار التنقل -->
+        <div class="nav-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> العودة للرئيسية</a>
+            <a href="tel:0559945734" class="btn" style="background: #0a4d2e; color: white; box-shadow: 0 10px 0 #1a4d2e;"><i class="fas fa-phone-alt"></i> اتصل الآن</a>
+        </div>
+    </main>
+
+    <!-- الفوتر مع توقيع المصمم -->
+    <footer class="footer">
+        <p>نخيل وزيتون الرياض - جميع الحقوق محفوظة © 2026</p>
+        <p>للاستفسار: 0559945734 | 0504152836</p>
+        <p style="margin-top: 10px;"><i class="fas fa-umbrella"></i> مظلات - برجولات - شبوك - نخيل - زيتون</p>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.7;">
+            <i class="fas fa-code"></i> تصميم: سليمان الحكمي - 0551987351
+        </p>
+    </footer>
+
+    <!-- الأزرار العائمة -->
+    <div class="float-buttons">
+        <a href="https://wa.me/966504152836" class="float-btn whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i><span>واتساب</span></a>
+        <a href="tel:0504152836" class="float-btn call-btn"><i class="fas fa-phone-alt"></i><span>اتصل</span></a>
+    </div>
+
+    <script>
+        // منع النسخ والحفظ
+        document.addEventListener('copy', e => e.preventDefault());
+        document.addEventListener('dragstart', e => e.preventDefault());
+        document.addEventListener('contextmenu', e => { if(e.target.tagName === 'IMG') e.preventDefault(); });
+
+        // القائمة الجانبية
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        menuToggle.addEventListener('click', () => sidebar.classList.toggle('active'));
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !menuToggle.contains(e.target) && sidebar.classList.contains('active'))
+                sidebar.classList.remove('active');
+        });
+    </script>
+</body>
+  </html>
